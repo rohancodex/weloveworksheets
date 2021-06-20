@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const twig = require('twig');
+const ejs = require('ejs');
 const studentRoutes =  require("./routes/student");
 const mysqlConnection = require('./database');
 
@@ -9,8 +9,7 @@ const app = express();
 app.use('/student', studentRoutes);
 
 // SET VIEW ENGINE
-app.set('view engine','html');
-app.engine('html', twig.__express);
+app.set('view engine', 'ejs');
 app.set('views','views');
 
 // USE BODY-PARSER MIDDLEWARE

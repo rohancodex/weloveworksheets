@@ -7,11 +7,27 @@ const bodyParser = require("body-parser");
 
 router.use(bodyParser.urlencoded({extended: true}));
 
-//post data
+
+//show data
+
+// function getStudents(result) {
+//     var textnode = document.createTextNode(result);
+//     document.getElementById("s_list").appendChild(textnode);
+//   }
+
 router.get('/',(req,res)=>{
-    res.sendFile(path.resolve('views/student.html'));
+    mysqlConnection.query('SELECT * FROM `students`', (err, data) => {
+        if (err) throw err;
+        
+        console.log(data);
+        res.render('student', { title: 'Student List', studentData: data});
+    });
+    // res.sendFile(path.resolve('views/student.html'));
+    
 });
 
+
+//post data
 router.post("/create",(req,res)=>{
 
     function capitalizeFirstLetter(str) {
@@ -38,18 +54,7 @@ router.post("/create",(req,res)=>{
             });
           });
 
-// router.post('/create', function(req, res, next) {
-//     var first_name = req.body.firstname;
-//     var last_name = req.body.lastname;
-//     var age = req.body.age;
-//     var name = first_name.concat(last_name);
-//     var sql = 'INSERT INTO students (full_name, age) VALUES ("${name}", "${age}")';
-//     mysqlConnection.query(sql, function(err, result) {
-//       if (err) throw err;
-//       console.log('record inserted');
-//       res.redirect('/student');
-//     });
-//   });
+
 
 //obtain data
 // router.get('/',(req,res) => {
