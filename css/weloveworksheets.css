@@ -1,3 +1,23 @@
+/* colors */
+.pastel-purple{
+     background-color: #51548C;
+}         
+.pastel-red{
+     background-color: #F25270;
+}  
+.pastel-green{
+     background-color: #49A68B;
+} 
+.text-pastel-purple{
+     color: #51548C;
+}         
+.text-pastel-red{
+     color: #F25270;
+}  
+.text-pastel-green{
+     color: #49A68B;
+}
+/* end of colors */
 .homepage {
      background-image: url(../img/headerImage.jpg);
      background-size:100%;
@@ -11,3 +31,18 @@
      background-image:url(../img/playingcube.jpg) ;
      
 }
+.WorksheetTxt{
+     height: 200px;
+     width: 200px;
+}
+.popupWords{
+     height: 400px;
+     width: 400px;
+}
+.popUpTxt{
+     font-size:3rem;
+}
+.fullHeight{
+     min-height: 100vh;
+}
+
