@@ -7,31 +7,37 @@ const ejsLint = require('ejs-lint');
 const ejs = require('ejs');
 var flash = require('express-flash');
 var session = require('express-session');
+const authRoutes = require("./auth");
+var cookieParser = require('cookie-parser');
+const app = require('../app');
+router.use(cookieParser());
+// const authController = require("../controller/auth");
 
-router.use(session({ 
-    cookie: { maxAge: 60000 },
-    store: new session.MemoryStore,
-    saveUninitialized: true,
-    resave: 'true',
-    secret: 'secret'
-}));
-router.use(flash());
+
+// router.use(flash());
 router.use(bodyParser.urlencoded({extended: true}));
 
 
 //view and retrieve data
 router.get('/',(req,res)=>{
-    mysqlConnection.query('SELECT * FROM `students`', (err, results) => {
-        if (err) throw err;
+    if(req.session.loggedin){
+        var id = req.session.user[0].id;
+        mysqlConnection.query('SELECT * FROM students WHERE teacher_id = ?',[id], (err, results) => {
+            if (err) throw err;
+            
+            console.log(results);
+            res.render('student', { title: 'Student List', data: results});
+        });
+    }
+    else{
+        res.redirect('/login');
+    }    
         
-        console.log(results);
-        res.render('student', { title: 'Student List', data: results});
-    });
-    
-    
 });
 
 router.get('/edit/(:id)', (req, res)=>{
+
+
     let id = req.params.id;
    
     mysqlConnection.query('SELECT * FROM students WHERE sid = ' + id, function(err, rows, fields) {
@@ -68,7 +74,7 @@ router.post('/update/:id', function(req, res, next) {
         errors = true;
         
         // set flash message
-        req.flash('error', "Please enter name and age");
+        // req.flash('error', "Please enter name and age");
         // render to add.ejs with flash message
         res.render('student-edit', {
             id: req.params.id,
@@ -99,7 +105,7 @@ router.post('/update/:id', function(req, res, next) {
                 // })
             } else {
                 
-                req.flash('success', 'student successfully updated');
+                // req.flash('success', 'student successfully updated');
                 res.redirect('/student');
             }
         })
@@ -107,7 +113,7 @@ router.post('/update/:id', function(req, res, next) {
 })
 
 
-// delete book
+// delete data
 router.get('/delete/(:id)', function(req, res, next) {
 
     let id = req.params.id;
@@ -154,8 +160,9 @@ router.post("/create",(req,res)=>{
     var fullname = fname.concat(lname);
     var age = req.body.age;
     console.log(fullname);
+    var teacher_id = req.session.user[0].id;
     console.log('post request received');
-    var sql = mysqlConnection.format("INSERT INTO students (full_name, age) VALUES (?, ?)", [fullname,age]);
+    var sql = mysqlConnection.format("INSERT INTO students (full_name, age,teacher_id) VALUES (?, ?, ?)", [fullname,age,teacher_id]);
 
     mysqlConnection.query(sql, function(err, result) {
               if (err) throw err;
