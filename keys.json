@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hazel-strand-318017",
+  "private_key_id": "8169e6bcd626565f5c8f825ca06bdfb94fa9eb7d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCTaInATl07AY13\n0necfSUDto1t9M2Vk4jG+k6iGeiCMiRlmbkd34JLkTOb/eCrs7AcUYE9tmVw4Iae\nmuwkDpUXhfoUBCbIoZxf6D06D1Yw7RYtY+las8WWJQra8JxwchJHqpx+WSxnxZn5\nOtOIe7L3lWNGj0dNVoXtomXXT5OLRuzl8lV3U2DHCYdxRWZjKjALx3UQIKsRrxc1\numG3IHAaDK5tS8ltcs48iqKerzp5fxctGoxZjXGAuuNIYo+iybiqFOrADVqfaXRm\nXzft1oK5um+Qy7jIdDzzh7W6DpDPhrLe9IU223WXmklquPhUNHwmwnaQhcgybqSv\nX5HCfzhxAgMBAAECggEABy4vjpnqnfATjG+IwstQSSPkdAOZm5SEFEA3YhtNuYDY\nh8fzDd7YNZbhOxMk9Wwzcw+v0lofCx5uxE1S3SdGMS8GKWEx4/JGYCAbkmdSmR/F\nZajhIjlRUcDkbFmN30bZN9s6VAfDO1tTZqHsUbDH3RpOa46ZaC2jqLmRSSmPy/gR\nrCA/6NCEyq9U6NRulX4l3uyTViUlKUiAe38kE1xnEGI/rBL+/mCY4nnSOc6Eh43P\nKYGDHiQpRfnHAxEPeTneAO9WyNO7Xu1a7KUgWRHOMkgT9FurQDymiFLd+AyNYElJ\nnVBwEb9JR22QVLkMzlIam2+LTziuHGR6vmgEn4+IgQKBgQDJlzjLnFlkDuqnJvXe\nN6hySHDxuTQaUQoHu7+dbZ69/B54Cmd74yrXrejLfcNC8K6y9XIvtDfZGNOEyKVo\nUGs7msAzwQiwBYYAW1S8XZq7wkHLfG4Wx/GLPJc9tu5DT1LYldCegQizX4o7Z4bv\nkZDoUE3tkck6iC96MA3gwcgCMQKBgQC7MZ8kjIFZ6j17REJJiWboglZcoTFI4IH0\nn2OKZigZKNdsdZU4EbJOOF7DrpmQTX7etD2Wa9XEf/9EXoOQKy2vEJtGgTy5YjUu\nDmzJl/rNFZS/wCe8VQ9T5zPOS2WNwb7hw/BMLV6jzzSXURSfMGhh2G2E0FjKAMQC\n+3lX8bzKQQKBgFxPbOh/rcdNtVHZW1job6/1UBLAVgV++nLUHEhAfCJPIryhNwXZ\n3jJpJmKYMiOjBrxX/HOvuKsm3SS+pE+CE7h1gnGwgQPpY5UiPUkMK+CycWJ2lgrE\nf+zcT/0omS4lUrBu2drbB1rr8uaE35swMwTOUQDqcxTka6kt/Azhb27hAoGBAKBM\ngOQycb5GqXl6XW1NfVNT8ZKG8oZewspxBzOIAYRyBe+5zRtjhBYZjYTyakw5IJCj\nNi4uj7MijLzGVtFJOGi2xtEccJyrrbCP57bGL54ZgfSmHyDWkjaeQS3CQOegZs48\nFPWW0HlkQbvmUct0D57iT/6wz6fD+hY3tJSLzMhBAoGAco9qFLHzx8ZSoFcnhSzk\n/n3YEuVxlRKrgWdr+2hWAs1YIWlXpqUVJhlJ9rp0FiOErunvxckNxK2f5YjgyHHr\ngHJQAyG3VSBTTxs5JWtqZlywdW46p9TwxR7P0iIOFUQuMytjpLpjE8Nu3duXWTCh\n/0a3LEiIjIRzKFymuuzgkdY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "worksheet@hazel-strand-318017.iam.gserviceaccount.com",
+  "client_id": "104358181158244678192",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/worksheet%40hazel-strand-318017.iam.gserviceaccount.com"
+}
