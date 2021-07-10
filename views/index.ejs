@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,320 +11,328 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="undefined" crossorigin="anonymous">
-    
-   
+
+
 </head>
+
 <body class="bg-light">
     <!-- nav bar -->
-    <div class="jumbotron bg-white text-dark shadow-sm">
-        <div class="container">
+    <div class="jumbotron bg-white text-dark shadow-sm round">
+        <div class="container-fluid">
             <div class="row justify-content-right">
-                
-                <div class="col-md-5">
+
+                <div class="col-md-2 d-flex justify-content-center">
                     <!-- Hav to add logo and stuff -->
+                    <img src="/img/logo.png" alt="" height="55px" width="55px" class="align-self-start mt-1 pl-5 ml-5">
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-7 d-flex justify-content-end">
                     <!-- navigation code from bootstrap lib -->
-                    <nav class="navbar navbar-expand-lg navbar-light">
+                    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
                         <div class="container-fluid">
-                          
-                          <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                              <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">About us</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="/files">Worksheets</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">Data Tracking</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">IEP's Info</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">Contact Us</a>
-                              </li>
-                            </ul>
-                          </div>
+
+                            <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link " aria-current="page" href="/files">Downloadables</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/about">About us</a>
+                                    </li>
+
+                                    <!-- <li class="nav-item">
+                                        <a class="nav-link" href="#">IEP's Info</a>
+                                    </li> -->
+
+
+                                </ul>
+
+                            </div>
                         </div>
-                      </nav>
+                    </nav>
+                </div>
+                <div class="col-2 d-flex justify-content-center mt-2">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ml-5">
+                            <a href="/register"><button type="submit" class="btn text-white col-12" style=" background-color: #51548C">Subscribe</button></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
     <!-- navbar ends here -->
-   <!-- the big header Div starts here  -->
+    <!-- the big header Div starts here  -->
     <div class="homepage">
-        
-    </div>
-<!-- the big header Div Ends here  -->
-     
-<!-- the 4 cards of illustrations -->
-<div class="container mt-5 bg-white p-2 shadow-lg rounded-2 text-dark mb-5">
-    <div class="container mt-3">
-        <div class="row d-flex justify-content-center">
-            <div class="col-6">
-                <div class="container mt-3">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-12 text-success Roboto-Slab d-flex justify-content-center">
-                            <h2><strong>Explore "We love Worksheets"</strong></h2>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            Fill your children with joy of learning
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-11">
-            <div class="illustrationParent mt-5 mb-5">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="img/playingcube.jpg" alt="nothing to see here" height="210px" width="200px"> 
-                            <h5 class="m-3">
-                                To think creatively
-                            </h5>
-                        </div>
-                        <div class="col-3">
-                            <img src="img/kidsbook.jpg" alt="nothing to see here" height="210px" width="200px"> 
-                            <h5 class="m-3">sa
-                                To feel free and understand emotions
-                            </h5>
-                        </div>
-                        <div class="col-3">
-                            <img src="img/kid.jpg" alt="nothing to see here" height="210px" width="200px"> 
-                            <h5 class="m-3">
-                                To be independant and active    
-                            </h5>
-                        </div>
-                        <div class="col-3">
-                            <img src="img/4kids.jpg " alt="nothing to see here" height="210px" width="200px"> 
-                            <h5 class="m-3">
-                                To Apply knowledge In real life
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- the big illusteration parent ends here -->
 
-<!-- the about page starts here -->
-<div class="about mt-3 mb-3">
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="col-8">
-                <!-- the text holder -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 d-flex justify-content-center">
-                            <h1 class="text-success">
-                                About
-                            </h1>
+    </div>
+    <!-- the big header Div Ends here  -->
+
+    <!-- the 4 cards of illustrations -->
+    <div class="container mt-5 bg-white p-2 shadow-lg rounded-2 text-dark mb-5">
+        <div class="container mt-3">
+            <div class="row d-flex justify-content-center">
+                <div class="col-6">
+                    <div class="container mt-3">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-12 text-success Roboto-Slab d-flex justify-content-center">
+                                <h2><strong>Explore "We love Worksheets"</strong></h2>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                Fill your children with joy of learning
+                            </div>
                         </div>
-                        <div class="col-12">
-                            <p class="text-justify">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            </p>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                           <div class="btn btn-success text-white text-center">
-                               <h4>Subscribe
-                               </h4>
-                           </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-11">
+                <div class="illustrationParent mt-5 mb-5">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="img/playingcube.jpg" alt="nothing to see here" height="210px" width="200px">
+                                <h5 class="m-3">
+                                    To think creatively
+                                </h5>
+                            </div>
+                            <div class="col-3">
+                                <img src="img/kidsbook.jpg" alt="nothing to see here" height="210px" width="200px">
+                                <h5 class="m-3">sa To feel free and understand emotions
+                                </h5>
+                            </div>
+                            <div class="col-3">
+                                <img src="img/kid.jpg" alt="nothing to see here" height="210px" width="200px">
+                                <h5 class="m-3">
+                                    To be independant and active
+                                </h5>
+                            </div>
+                            <div class="col-3">
+                                <img src="img/4kids.jpg " alt="nothing to see here" height="210px" width="200px">
+                                <h5 class="m-3">
+                                    To Apply knowledge In real life
+                                </h5>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- end of the about -->
-<div>
-    <div class="container">
-        <div class="row d-flex justify-content-center bg-white mt-5 mb-3 shadow-lg rounded">
-            <div class="col-10">
-                <div class="container my-5">
-                    <div class="row">
-                        <!-- the left side -->
-                        <div class="col-6 mt-5 ">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-12 my-1  ">
-                                        <h1 class="text-success">
-                                           We love Worksheets
-                                        </h1>
+    <!-- the big illusteration parent ends here -->
+
+    <!-- the about page starts here -->
+    <div class="about mt-3 mb-3">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-8">
+                    <!-- the text holder -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center">
+                                <h1 class="text-success">
+                                    About
+                                </h1>
+                            </div>
+                            <div class="col-12">
+                                <p class="text-justify">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                </p>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <a href="/register">
+                                    <div class="btn btn-success text-white text-center">
+                                        <h4>Subscribe</h4>
                                     </div>
-                                    <div class="col-12 my-1">
-                                        <p class="text-justify">
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                        </p>
-                                    </div>
-                                    <div class="col-12 my-1">
-                                       <a href="/register">
-                                        <div class="btn btn-success text-white text-center">
-                                            <h4>Subscribe</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- end of the about -->
+    <div>
+        <div class="container">
+            <div class="row d-flex justify-content-center bg-white mt-5 mb-3 shadow-lg rounded">
+                <div class="col-10">
+                    <div class="container my-5">
+                        <div class="row">
+                            <!-- the left side -->
+                            <div class="col-6 mt-5 ">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-12 my-1  ">
+                                            <h1 class="text-success">
+                                                We love Worksheets
+                                            </h1>
                                         </div>
-                                       </a>
+                                        <div class="col-12 my-1">
+                                            <p class="text-justify">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                            </p>
+                                        </div>
+                                        <div class="col-12 my-1">
+                                            <a href="/register">
+                                                <div class="btn btn-success text-white text-center">
+                                                    <h4>Subscribe</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- the right side -->
+                            <div class="col-6">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-2">
+
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h4 class="text-success">
+                                                            Worksheets Info
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <p class="text-justify">
+                                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+                                                    </p>
+                                                </div>
+                                                <div class="row">
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+
+                                        </div>
+                                        <div class="col-10 ">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h4 class="text-success">
+                                                            Data Tracking Trideo
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <p class="text-justify">
+                                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+                                                    </p>
+                                                </div>
+                                                <div class="row">
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h4 class="text-success">
+                                                            IEP's Info
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <p class="text-justify">
+                                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+                                                    </p>
+                                                </div>
+                                                <div class="row">
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- the right side -->
-                        <div class="col-6">
-                           <div class="container">
-                               <div class="row">
-                                   <div class="col-2">
-
-                                   </div>
-                                   <div class="col-10">
-                                     <div class="container">
-                                         <div class="row">
-                                             <div class="col-12">
-                                                <h4 class="text-success">
-                                                    Worksheets Info
-                                                 </h4>
-                                             </div>
-                                         </div>
-                                         <div class="row">
-                                            <p class="text-justify">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                                
-                                            </p>
-                                         </div>
-                                         <div class="row">
-                                             <hr>
-                                         </div>
-                                     </div>
-                                   </div>
-                               </div>
-                               <div class="row">
-                                <div class="col-2">
-
-                                </div>
-                                <div class="col-10 ">
-                                  <div class="container">
-                                      <div class="row">
-                                          <div class="col-12">
-                                             <h4 class="text-success">
-                                                 Data Tracking Trideo
-                                              </h4>
-                                          </div>
-                                      </div>
-                                      <div class="row">
-                                         <p class="text-justify">
-                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                             
-                                         </p>
-                                      </div>
-                                      <div class="row">
-                                          <hr>
-                                      </div>
-                                  </div>
-                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of that big about explainer -->
+    <!-- footer here -->
+    <div class=" bg-dark text-white pt-2 pb-5">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-4">
+                    <div class="container mt-3">
+                        <div class="row">
+                            <div class="col-12 m-2">
+                                <h4>Ready to Subscribe?</h4>
                             </div>
-                            <div class="row">
-                                <div class="col-2">
-
-                                </div>
-                                <div class="col-10">
-                                  <div class="container">
-                                      <div class="row">
-                                          <div class="col-12">
-                                             <h4 class="text-success">
-                                                IEP's Info
-                                              </h4>
-                                          </div>
-                                      </div>
-                                      <div class="row">
-                                         <p class="text-justify">
-                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                             
-                                         </p>
-                                      </div>
-                                      <div class="row">
-                                          <hr>
-                                      </div>
-                                  </div>
-                                </div>
+                            <div class="col-12 m-2">
+                                <a href="/register">
+                                    <div class="btn btn-success text-white text-center">
+                                        <h4>Subscribe</h4>
+                                    </div>
+                                </a>
                             </div>
-                           </div>
+                        </div>
+                        <div class="row">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <ul class="nav flex-column pt-3 px-1 text-white">
+                        <li>
+                            <h5 class="px-2">Navigations</h5>
+                        </li>
+                        <hr>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/files">Downloadables</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">IEP's Info</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4>News letter</h4>
+                            </div>
+                            <div class="col-12">
+                                <input type="email" id="" placeholder="your email id" class="form-control mt-2">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
-</div> 
-<!-- end of that big about explainer -->
-<!-- footer here -->
-<div class=" bg-dark text-white pt-2 pb-5">
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-4">
-            <div class="container mt-3">
-                <div class="row">
-                    <div class="col-12 m-2">
-                        <h4>Ready to Subscribe?</h4>
-                    </div>
-                    <div class="col-12 m-2">
-                        <div class="btn  bg-success text-white"><h4>Subscribe</h4></div>
-                    </div>
-                </div>
-                <div class="row">
 
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <ul class="nav flex-column pt-3 px-1 text-white">
-                <li><h5 class="px-2">Navigations</h5></li>
-                <hr>
-                <li class="nav-item">
-                  <a class="nav-link active text-white" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="/files">Downloadables</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">IEP's Info</a>
-                  </li>
-                
-              </ul>
-        </div>
-        <div class="col-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h4>News letter</h4>
-                    </div>
-                    <div class="col-12">
-                        <input type="email"  id="" placeholder="your email id" class="form-control mt-2">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-</div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
+
 </html>

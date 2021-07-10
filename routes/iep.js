@@ -15,7 +15,7 @@ router.use(cookieParser());
 
 
 router.get('/', (req, res) => {
-    res.render('files');
+    res.render('iep');
 })
 
 

@@ -1,0 +1,2182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEP</title>
+    <link rel="stylesheet" href="../css/weloveworksheets.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+</head>
+
+<body class="'bg-light" style="background-image:url(../img/blobs.svg) ;background-repeat: no-repeat; background-size:cover;">
+    <!-- nav bar -->
+    <div class="jumbotron bg-white text-dark shadow-sm round">
+        <div class="container-fluid">
+            <div class="row justify-content-right">
+
+                <div class="col-md-2 d-flex justify-content-center">
+                    <!-- Hav to add logo and stuff -->
+                    <img src="/img/logo.png" alt="" height="55px" width="55px" class="align-self-start mt-1 pl-5 ml-5">
+                </div>
+                <div class="col-md-7 d-flex justify-content-end">
+                    <!-- navigation code from bootstrap lib -->
+                    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+                        <div class="container-fluid">
+
+                            <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/student">Home</a>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                      <a class="nav-link " aria-current="page" href="/">Home</a>
+                                  </li> -->
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/about">About us</a>
+                                    </li>
+
+                                    <!-- <li class="nav-item">
+                                      <a class="nav-link" href="#">IEP</a>
+                                  </li> -->
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/files">Downloadables</a>
+                                    </li>
+
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-2 d-flex justify-content-center mt-2">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ml-5">
+                            <a href="/logout"><button type="submit" class="btn text-white col-12" style=" background-color: #51548C">Sign out</button></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- navbar ends here -->
+
+    <section id="element-to-print">
+        <div class="container">
+            <div class="row d-flex justify-content-center  ">
+                <div class="col-11">
+
+                    <div class="container-fluid bg-white shadow rounded rounded-5x  m-2 p-4 px-5">
+                        <div class="text-pastel-purple text-center  px-5">
+                            <h4 class="text-pastel-purple">Indiviualized Education plan</h4>
+                        </div>
+                        <hr class="text-pastel-purple" width="auto" style="height:3px;border:none;"><br>
+                        <!-- Student profile -->
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="inputEmail4"> <strong>Student profile</strong></label>
+
+                                </div>
+
+                                <br>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-2">
+                                    Student name :
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="text" class="form-control col-6" id="inputAddress" placeholder="Jarvis">
+                                </div>
+                                <div class="col-md-1">
+                                    ID:
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="text" class="form-control col-6" id="inputAddress" placeholder="1163830">
+                                </div>
+                                <div class="col-md-1">
+                                    Grade:
+                                </div>
+                                <div class="col-md-1">
+                                    <input type="text" class="form-control col-6" id="inputAddress" placeholder="A">
+                                </div>
+                                <br><br>
+                                <div class="col-md-1">
+                                    <label for="grade"> Class:</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="text" class="form-control col-6" id="inputAddress" placeholder="Pre Primary" name="grade">
+                                </div>
+                                <div class="col-md-2">
+                                    School year
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="text" class="form-control col-6" id="inputAddress" placeholder="2022">
+                                </div>
+
+                            </div> <br>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    Learning experience:
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control col-6" id="inputAddress" placeholder="Reading and writing">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    Placement :
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control col-6" id="inputAddress" placeholder="Out of class">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    Frequency of classes:
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="text" class="form-control col-6" id="inputAddress" placeholder="Five times a week for 40 minutes each ">
+                                </div>
+                            </div> <br>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    Case Manager:
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control col-6" id="inputAddress" placeholder="Five times a week for 40 minutes each ">
+                                </div>
+                                <div class="col-md-3 ">
+                                    &nbsp;&nbsp; &nbsp; Homeroom Teacher:
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control col-6" id="inputAddress" placeholder="John Blake">
+                                </div>
+                            </div> <br> <br>
+
+                        </form> <br> <br>
+                        <!-- end of student Profile -->
+                        <hr class="text-pastel-purple" width="auto" style="height:3px;border:none; page-break-after: always;">
+                        <!-- assesment data -->
+                        <form>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <strong>ASSESSMENT DATA</strong>
+                                </div>
+                                <div class="col-12">
+                                    <p>List relevant educational, medical/health (hearing, vision, physical, neurological), psychological, speech/language, occupational, physiotherapy, and behavioral assessments</p>
+                                </div>
+                            </div>
+                            <!-- table no. 1 in assesment profile -->
+                            <div class="row">
+                                <div class="col-3">
+                                    <strong>Information Source</strong>
+                                </div>
+                                <div class="col-3">
+                                    <strong>Date</strong>
+                                </div>
+                                <div class="col-6">
+                                    <strong>Summary of Results</strong>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-3">
+                                    <input type="text" class="form-control col-6" id="inputAddress">
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control col-6" id="inputAddress">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control col-6" id="inputAddress">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <input type="text" class="form-control col-6" id="inputAddress">
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control col-6" id="inputAddress">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control col-6" id="inputAddress">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <input type="text" class="form-control col-6" id="inputAddress">
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control col-6" id="inputAddress">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control col-6" id="inputAddress">
+                                </div>
+                            </div><br>
+                            <!-- end of table no.1 in assesment profile -->
+                            <!-- table no.2 in assesment profile -->
+                            <div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <strong>Additional services recommended</strong>
+                                    </div>
+                                    <div class="col-7">
+                                        <strong>Description of what support will target</strong>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                </div>
+                            </div><br>
+
+                            <!-- end of table 2 in assesment profile -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <strong>STUDENT’S STRENGTHS AND NEEDS</strong>
+                                </div>
+
+                            </div>
+                            <!-- table no.3  -->
+                            <div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        Areas of Strength
+                                    </div>
+                                    <div class="col-6">
+                                        Areas of Need
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input type="text" class="form-control " id="inputAddress" placeholder="Eager to learn">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" class="form-control " id="inputAddress" placeholder="Reading">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input type="text" class="form-control " id="inputAddress" placeholder="Confident">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" class="form-control " id="inputAddress" placeholder="Writing">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input type="text" class="form-control " id="inputAddress" placeholder="Risk Taker">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of table no.3 -->
+
+                        </form>
+                        <!-- End of assesment data -->
+                        <hr class="text-pastel-purple" width="auto" style="height:3px;border:none; page-break-after: always;">
+                        <!-- start of accomodation data -->
+                        <form>
+                            <div class="col-md-12">
+                                <strong>ACCOMMODATIONS</strong>
+                            </div>
+                            <div class="col-12">
+                                <p>Accommodations are assumed to be the same for all subjects, unless otherwise indicated
+                                </p>
+                            </div>
+                            <!-- table 1 in accomodation data -->
+                            <div>
+
+                                <div class="row">
+                                    <div class="col-4 border boder-light p-1">
+                                        Instructional Accommodations
+                                    </div>
+                                    <div class="col-4 border boder-light p-1">
+                                        Environmental Accommodations
+                                    </div>
+                                    <div class="col-4 border boder-light p-1">
+                                        Assessment Accommodations
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-4 border boder-light p-1">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Chunk assignments
+                                        </label>
+                                    </div>
+                                    <div class="col-4 border boder-light p-1">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Own Room
+                                        </label>
+                                    </div>
+                                    <div class="col-4 border boder-light p-1">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Extra Time
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-4 border boder-light p-1">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Providing audio recording
+                                        </label>
+                                    </div>
+                                    <div class="col-4 border boder-light p-1">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Learning Support Room
+                                        </label>
+                                    </div>
+                                    <div class="col-4 border boder-light p-1">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Computer
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-4 border boder-light p-1">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Reduced learning outcome
+                                        </label>
+                                    </div>
+                                    <div class="col-4 border boder-light p-1">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Sit in front of the room
+                                        </label>
+                                    </div>
+                                    <div class="col-4 border boder-light p-1">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Scribe
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 border boder-light p-1">
+
+                                    </div>
+                                    <div class="col-4 border boder-light p-1">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Copy from sheets instead of white board.
+                                        </label>
+                                    </div>
+                                    <div class="col-4 border boder-light p-1">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Fewer questions/Tasks
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 border boder-light p-1">
+
+                                    </div>
+                                    <div class="col-4 border boder-light p-1">
+
+                                    </div>
+                                    <div class="col-4 border boder-light p-1">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Allow calculator.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 border boder-light p-1">
+
+                                    </div>
+                                    <div class="col-4 border boder-light p-1">
+
+                                    </div>
+                                    <div class="col-4 border boder-light p-1">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Reader
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of table 1 in accomodation data -->
+                            <hr class="text-pastel-purple" width="auto" style="height:3px;border:none;">
+                            <div class="col-md-12">
+                                <strong>Developmental Progress Descriptors</strong>
+                            </div> <br>
+                            <!-- table no.2 in accomodation data -->
+                            <div>
+                                <div class="row">
+                                    <div class="col-2 border border-light border-2">
+                                        1
+                                    </div>
+                                    <div class="col-10 border border-light border-2">
+                                        The student is beginning to develop the knowledge and skills to be able to achieve the tasks.
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 border border-light border-2">
+                                        2
+                                    </div>
+                                    <div class="col-10 border border-light border-2">
+                                        The student is developing the knowledge and skills to achieve the tasks independently.
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 border border-light border-2">
+                                        3
+                                    </div>
+                                    <div class="col-10 border border-light border-2">
+                                        The student is independently using the knowledge and skills to achieve the tasks.
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 border border-light border-2">
+                                        4
+                                    </div>
+                                    <div class="col-10 border border-light border-2">
+                                        The student is independently and consistently achieving the tasks.
+                                    </div>
+                                </div>
+                            </div> <br>
+                            <!-- end of table no. 2 in accomodation data -->
+
+                            <hr class="text-pastel-purple" width="auto" style="height:3px;border:none;page-break-after: always; ">
+                            <br>
+                            <div class="col-md-12">
+                                <strong>Term 1</strong>
+                                <p>September 2020 to July 2021</p>
+                            </div>
+                            <div class="col-md-12">
+                                <strong>No. of session</strong>
+                            </div> <br>
+                            <!-- table no 3 in accomodation -->
+                            <div>
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+                                        <strong>Area</strong>
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+                                        <strong>Current level of functioning</strong>
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+                                        <strong>Learning Objectives</strong>
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <strong>Materials</strong>
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <strong>Outcome</strong>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+                                        Is able to:
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+                                        To be able to:
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                1
+                                            </div>
+                                            <div class="col-3">
+                                                2
+                                            </div>
+                                            <div class="col-3">
+                                                3
+                                            </div>
+                                            <div class="col-3">
+                                                4
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- data row 1 -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+                                        Spelling/Phonics
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+                                        <ul>
+                                            <li>Identify short vowels sounds</li>
+                                            <li>Identify individual consonant letters and sounds</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li> Identify/use double vowel sounds e.g. ‘ee’, ‘ea,’oa’</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <ul style="overflow:auto;">
+                                            <li>Worksheets.</li>
+                                            <li>Interactive games.</li>
+                                            <li>Teacher explanations.</li>
+                                            <li>Flash cards.</li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of the first row -->
+                                <!-- start of second row -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li> Identify/use vowel diphthongs oy/oi and ow/ou</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <ul>
+                                            <li>Quiz.</li>
+                                            <li>Dolch sight words.</li>
+
+
+                                        </ul>
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of second row -->
+                                <!-- start of the third row -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li> Identify/use ‘r’ controlled vowel words: ar, er, ir ,or, ur</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of third row -->
+                                <!-- the start of fourth row -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li>Review, Identify and distinguish between short vowel sounds a, e, i, o, u,
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- the end of the fourth row -->
+
+                                <!-- the start of 5th row -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li>Identify/use initial consonant blends: sc, sn,br, gl, dr, tr, sk, bl, cr, pr, dr, cl, pl, sm</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- the end of 5th form-row -->
+
+                                <!-- the start of sixth row -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li>Identify/use final consonant blends: st, sk, sp, nd, nk, mp, rd, ld, lp, rl, lt, lf, pt, ft, ct</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- the end of sixth row -->
+                                <!-- the start of seventh row -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li>Break words into syllables parts</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- the end of the seventh row -->
+                                <!-- this is grammar section -->
+                                <!-- row 1 in grammar -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+                                        <ul>
+                                            <li>Grammar</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+                                        <ul>
+                                            <li>Use parts of speech appropriately to communicate meaning clearly, with a focus on the use of nouns for names of people, places, and things; the personal subject pronouns I, you, he, she it, we, they, us, them;</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li>Punctuate using a capital letter at the beginning of a sentence and uses a period, question mark, or exclamation mark at the end.</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <ul>
+                                            <li>Worksheets.</li>
+                                            <li>Games.</li>
+                                            <li>PPT.</li>
+                                            <li>Handouts</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of row 1 in grammar -->
+                                <!-- the row 2 in grammar -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li>Arrange words in the correct order to form a meaningful sentence</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- the end of row 2 grammar -->
+                                <!-- the row 3 in grammar -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li>Recognize and use correct subject-verb agreement</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- the end of row 3 grammar -->
+
+                                <!-- the writing part starts here -->
+                                <!-- the start of row 1 in writing -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+                                        Writing
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+                                        <ul>
+                                            <li>Develop ideas that are usually connected to the topic.</li>
+                                            <li>Use simple graphic organizers to plan before writing, including pictures
+                                            </li>
+                                            <li>Generate own ideas for writing </li>
+                                            <li>Demonstrate a clear purpose.</li>
+                                            <li>Group common ideas together.</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li>Form a complete simple sentence</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <ul>
+                                            <li>Modeling</li>
+                                            <li>Worksheets</li>
+                                            <li>Interactive activities</li>
+                                            <li>Writing Prompts</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- the end of frow 1 in writing -->
+                                <!-- the start of row 2 in writing -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li>Combine subjects and predicates into complete sentences</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- the end of row 2 in wrinting -->
+                                <!-- the start of row 3 -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li>Form a complete complex sentence</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- the end of row 3  -->
+                                <!-- the start of row 4 -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li>Write a main idea with some supporting details on a topic</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- the end of row 4 -->
+                                <!-- the start of row 5 -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li>Write a paragraph for a given topic</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- the end of row 5 -->
+                                <!-- the start of row 6 -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li>Support a topic or thesis with relevant details in expository writing
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- the end of row 6 -->
+                                <!-- the start of row 6 -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li>Determine which details will support a main/central idea in narrative writing
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- the end of row 6 -->
+                                <!-- the start of row 7 -->
+                                <div class="row">
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+
+                                    </div>
+                                    <div class="col-3 border border-secondary">
+
+                                        <ul>
+                                            <li>Create a writing framework for narrative writing</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+
+                                    </div>
+                                    <div class="col-2 border border-secondary">
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                            <div class="col-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- the end of row 7 -->
+
+                            </div>
+                            <!-- end of table no. 3 in accomodation -->
+                            <!-- the start of comprhension table -->
+                            <!-- the row 1 comprehension -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+                                    Comprehension
+                                </div>
+                                <div class="col-3 border border-secondary">
+                                    <ul>
+                                        <li>Locate some details about events in literary text</li>
+                                        <li>Locate some details about setting in literary texts </li>
+                                        <li>Read some of the text with natural rhythm and phrasing reflecting understanding
+                                        </li>
+                                        <li>Retell main events in sequence without assistance from teacher prompts</li>
+                                        <li>Include details of main events</li>
+                                        <li>Interpret picture information</li>
+                                        <li>Retell coherently using appropriate vocabulary </li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Read text consistently with natural rhythm and phrasing reflecting a depth of understanding
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- the end row 1 comprehension -->
+                            <!-- row 2 comprehension -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Comprehend literal and inferential questions related to text at PM Level 8 and above
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end row 2 comprehension -->
+                            <!-- row 3 comprehension -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Make inferences about events, plots, characters and setting in literary texts
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end row 3 comprehension -->
+                            <!-- row 4 comprehension -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Retell, summarize, and paraphrase when reading or listening to others
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end row 4 comprehension -->
+                            <!-- row 5 comprehension -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Locate details about characters, events, plot, and setting in literary text
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end row 5 comprehension -->
+                            <!-- row 6 comprehension -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Adjust pace during reading for understanding
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end row 6 comprehension -->
+                            <!-- row 7 comprehension -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Return to text to locate information, support conclusions and answer questions
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end row 7 comprehension -->
+                            <!-- the end of comprhension table -->
+                            <!-- Reading section starts here -->
+                            <!-- row 1 reading section -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+                                    Reading
+                                </div>
+                                <div class="col-3 border border-secondary">
+                                    <ul>
+                                        <li>Accurately decode most text-specific vocabulary at current PM level</li>
+                                        <li>Read some of the text with natural rhythm and phrasing reflecting understanding
+                                        </li>
+                                        <li>Identify conflict and resolution in literary text</li>
+                                        <li>Understand sequence in literary text</li>
+                                        <li>Analyze some information in illustrations</li>
+
+                                        <li>Locate information in title pages </li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Recognize and read high-frequency words in text: Second Grade Dolch Sight Words, Third Grade Dolch Sight Words</li>
+
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <ul style="word-break: break-word;">
+                                        <li>Comprehension passages. </li>
+                                        <li>Cloze exercises. </li>
+                                        <li>Interactive activities. </li>
+                                        <li>Ipad applications. </li>
+
+
+                                    </ul>
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- row 1 end reading section -->
+                            <!-- row 2 reading -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Use beginning and ending consonants, vowel pattern and blends to predict unknown words
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end row 2 reading -->
+                            <!-- row 3 reading -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Read words with dipthongs in context
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end row 3 reading -->
+                            <!-- row 4 reading -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Apply knowledge of syllabication to decode words in text
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end row 4 reading -->
+                            <!-- row 5 reading -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Determine the main/central idea in informational text
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end row 5 reading -->
+                            <!-- the perception section starts here -->
+                            <!-- row 1 percepetion -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+                                    Perception
+                                </div>
+                                <div class="col-3 border border-secondary">
+                                    <ul>
+                                        <li>Visual awareness – focusing attention on a specific visual stimulus</li>
+                                        <li>Visual tracking – following moving object with the eyes (essential pre-reading skill)</li>
+                                        <li>Visual discrimination of quantity – recognizing/ demonstrating how much or how many.</li>
+                                        <li>Visual discrimination of direction – recognizing/ demonstrating up/down, right/left, etc.</li>
+                                        <li>Visual discrimination of distance.</li>
+
+                                        <li>Visual memory – recalling something that was seen.</li>
+                                        <li>Visual sequencing – recalling something that was seen in order </li>
+                                        <li>Sound Awareness – discriminating between sounds.</li>
+                                        <li>Sound discrimination of intensity – loud vs. soft.</li>
+                                        <li>Visual discrimination of shape – recognizing objects by their distinctive form </li>
+                                        <li>Visual discrimination of size – recognizing how large and small things are
+                                        </li>
+                                        <li>Visual discrimination of quantity – recognizing/ demonstrating how much or how many</li>
+                                        <li>Auditory memory and sequencing – recalling things you learned by rote or by listening.
+                                        </li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li><strong>Visual perception activities in 3 out 5 situations for the
+                                                following;</strong> <br> Focus and figure ground – focusing attention on a specific visual stimulus when background stimuli is present
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <ul>
+                                        <li>Worksheets. </li>
+                                        <li>Games. </li>
+
+
+
+                                    </ul>
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- row 1 end perception -->
+                            <!-- row 2 percepetion -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Visual discrimination of color – recognizing/ identifying different hues</li>
+
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- row 2 end perception -->
+                            <!-- row 3 percepetion -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li><strong>Auditory Perception activities in 3 out of 5 situations for the
+                                                following;</strong><br> Sound Localization – discriminating where sound is coming from
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- row 3 end perception -->
+                            <!-- row 4 percepetion -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Sound discrimination of duration – difference between different tempos, rhythms, meters
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- row 4 end perception -->
+                            <!-- row 5 percepetion -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Sound discrimination of pitch – recognizing same and different, high and low, up and down as they relate to a melody
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- row 5 end perception -->
+                            <!-- row 6 percepetion -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Sound discrimination of timbre – recognizing sound quality or identifying characteristics of a sound
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- row 6 end perception -->
+                            <!-- row 7 percepetion -->
+                            <div class="row">
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+
+
+                                </div>
+                                <div class="col-3 border border-secondary">
+
+                                    <ul>
+                                        <li>Auditory Figure Ground – Identifying a specific sound when lots of sounds are present in the environment
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+
+                                </div>
+                                <div class="col-2 border border-secondary">
+                                    <div class="row mt-2">
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- row 7 end perception -->
+                            <!-- the perception section ends here -->
+                        </form> <br><br><br><br><br><br>
+                        <!-- end of accomodation data -->
+                        <hr class="text-pastel-purple" width="auto" style="height:3px;border:none;"><br>
+                        <!-- the last table  --><br> <br>
+                        <form>
+                            <div>
+                                <div class="row mt-5 pt-5 ">
+                                    <div class="col-1 ">
+                                        Sr no
+                                    </div>
+                                    <div class="col-3 ">
+                                        Area
+                                    </div>
+                                    <div class="col-4 ">
+                                        Teacher goal
+                                    </div>
+                                    <div class="col-4 ">
+                                        Parent goal
+                                    </div>
+
+                                </div>
+                                <div class="row mt-1">
+                                    <div class="col-1">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+
+                                </div>
+                                <div class="row ">
+                                    <div class="col-1">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" class="form-control " id="inputAddress">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <br><br>
+
+                            <p>Comments</p> <input type="text" class="form-control " id="inputAddress">
+                            <br><br>
+
+                        </form><br> <br>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <button id="generate-pdf" class="btn" onclick="pdf()">
+        <h1>Generate Pdf</h1>
+    </button> -->
+    <div class="d-flex">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-11 ">
+                    <div class="container-fluid bg-white shadow rounded rounded-5x  mx-2  pt-4 px-5 pb-3 d-flex justify-content-center">
+                        <button id="generate-pdf" class="  btn text-white" onclick="pdf()" style="  background-color: #51548C;">
+                            
+                            <h4>Generate Pdf</h4>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="../js/html2pdf.bundle.min.js"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">  -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> -->
+    <script>
+        var element = document.getElementById('element-to-print');
+        var opt = {
+            margin: 1,
+            pagebreak: {
+                mode: 'css',
+                avoid: ['.row', 'li']
+            },
+            filename: 'myfile.pdf',
+            image: {
+                type: 'jpeg',
+                quality: 1
+            },
+            html2canvas: {
+                scale: 1
+            },
+            jsPDF: {
+                unit: 'in',
+                format: 'tabloid',
+                orientation: 'landscape'
+            }
+
+        };
+
+        function pdf() {
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>  -->
+</body>
+
+</html>

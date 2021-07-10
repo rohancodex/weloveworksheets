@@ -1,261 +1,71 @@
-<!doctype html>
-                        <html>
-                            <head>
-                                <meta charset='utf-8'>
-                                <meta name='viewport' content='width=device-width, initial-scale=1'>
-                                <title>Login</title>
-                                <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'>
-                                <link href='' rel='stylesheet'>
-                                <script type='text/javascript' src=''></script>
-                                <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+<!DOCTYPE html>
+<html lang="en">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif
-}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login 2 nix</title>
+    <link rel="stylesheet" href="/css/weloveworksheets.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script type='text/javascript' src=''></script>
+</head>
 
-body {
-    background: #00E5FF;
-    min-height: 100vh
-}
+<body oncontextmenu='return false' style="background-image: url(/img/blobsBg.png);">
 
-.wrapper {
-    max-width: 850px;
-    background-color: #fff;
-    border-radius: 10px;
-    position: relative;
-    display: flex;
-    margin: 50px auto;
-    box-shadow: 0 8px 20px 0px #1f1f1f1a;
-    overflow: hidden
-}
+    <section class="fullHeight d-flex align-items-center">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center mt-3">
+                <div class="col-8">
+                    <div class="container-fluid bg-white rounded shadow-lg py-5 align-self-center">
+                        <div class="row">
+                            <!-- the image container -->
+                            <div class="col-6 my-3">
+                                <img src="/img/kingdom-sign-in.png" alt="" height="350px" width="auto" class="pt-5">
+                            </div>
+                            <!-- the image container ends here -->
+                            <!-- the form starts here -->
+                            <div class="col-6 d-flex justify-content-center">
+                                <form action="/auth/login" method="POST">
+                                    <h2 class="text-pastel-purple">Login</h2>
+                                    <div class="row">
+                                        <div class="col-sm-12 mb-3"> <label>Email</label> <input type="text" name="email" id="first_name" class="form-control col-md-6"> </div>
 
-.wrapper .form-left {
-    background: #3786bd;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    padding: 20px 40px;
-    position: relative;
-    width: 100%;
-    color: #fff
-}
+                                    </div>
 
-.wrapper h2 {
-    font-weight: 700;
-    font-size: 25px;
-    padding: 5px 0 0;
-    margin-bottom: 34px;
-    pointer-events: none
-}
+                                    <div class="row">
+                                        <div class="col-sm-12 mb-3"> <label>Password</label> <input type="password" name="password" id="pwd" class="form-control"> </div>
 
-.wrapper .form-left p {
-    font-size: 0.9rem;
-    font-weight: 300;
-    line-height: 1.5;
-    pointer-events: none
-}
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div> <input type="submit" value="Login" class="login btn btn-lg text-white" name="login" style=" background-color: #51548C;"> </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <a href="/register" class="text-secondary">
+                                            <p class="text-secondary mt-3"> Don't have an account yet?</p>
+                                        </a>
+                                        <% if(message){ %>
+                                            <h6 class="alert alert-danger mt-4">
+                                                <%= message %>
+                                            </h6>
+                                            <% } %>
+                                    </div>
 
-.wrapper .form-left .text {
-    margin: 20px 0 25px
-}
 
-.wrapper .form-left p span {
-    font-weight: 700
-}
 
-.wrapper .form-left input {
-    padding: 15px;
-    background: #fff;
-    border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    width: 180px;
-    border: none;
-    margin: 15px 0 50px 0px;
-    cursor: pointer;
-    color: #333;
-    font-weight: 700;
-    font-size: 0.9rem;
-    appearance: unset;
-    outline: none
-}
-
-.wrapper .form-left input:hover {
-    background-color: #f2f2f2
-}
-
-.wrapper .form-right {
-    padding: 20px 40px;
-    position: relative;
-    width: 100%
-}
-
-.wrapper .form-right h2 {
-    color: #3786bd
-}
-
-.wrapper .form-right label {
-    font-weight: 600;
-    font-size: 15px;
-    color: #666;
-    display: block;
-    margin-bottom: 8px
-}
-
-.wrapper .form-right .input-field {
-    width: 100%;
-    padding: 10px 15px;
-    border: 1px solid #e5e5e5;
-    border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    outline: none;
-    color: #333
-}
-
-.wrapper .form-right .input-field:focus {
-    border: 1px solid #31a031
-}
-
-.wrapper .option {
-    display: block;
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 12px;
-    font-size: 0.95rem;
-    font-weight: 900;
-    cursor: pointer;
-    user-select: none
-}
-
-.wrapper .option input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0
-}
-
-.wrapper .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 18px;
-    width: 18px;
-    background-color: #fff;
-    border: 2px solid #ddd;
-    border-radius: 2px
-}
-
-.wrapper .option:hover input~.checkmark {
-    background-color: #f1f1f1
-}
-
-.wrapper .option input:checked~.checkmark {
-    border: 2px solid #e5e5e5;
-    background-color: #fff;
-    transition: 300ms ease-in-out all
-}
-
-.wrapper .checkmark:after {
-    content: "\2713";
-    position: absolute;
-    display: none;
-    color: #3786bd;
-    font-size: 1rem
-}
-
-.wrapper .option input:checked~.checkmark:after {
-    display: block
-}
-
-.wrapper .option .checkmark:after {
-    left: 2px;
-    top: -4px;
-    width: 5px;
-    height: 10px
-}
-
-.wrapper .register {
-    padding: 12px;
-    background: #3786bd;
-    border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    width: 130px;
-    border: none;
-    margin: 6px 0 50px 0px;
-    cursor: pointer;
-    color: #fff;
-    font-weight: 700;
-    font-size: 15px
-}
-
-.wrapper .register:hover {
-    background-color: #3785bde0
-}
-
-.wrapper a {
-    text-decoration: none
-}
-
-@media (max-width: 860.5px) {
-    .wrapper {
-        margin: 50px 5px
-    }
-}
-
-@media (max-width: 767.5px) {
-    .wrapper {
-        flex-direction: column;
-        margin: 30px 20px
-    }
-
-    .wrapper .form-left {
-        border-bottom-left-radius: 0px
-    }
-}
-
-@media (max-width: 575px) {
-    .wrapper {
-        margin: 30px 15px
-    }
-
-    .wrapper .form-left {
-        padding: 25px
-    }
-
-    .wrapper .form-right {
-        padding: 25px
-    }
-}</style>
-                                </head>
-                                <body oncontextmenu='return false' class='snippet-body'>
-                                <div class="wrapper">
-    <div class="form-left">
-        <h2 class="text-uppercase">information</h2>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et molestie ac feugiat sed. Diam volutpat commodo. </p>
-        <p class="text"> <span>Sub Head:</span> Vitae auctor eu augudsf ut. Malesuada nunc vel risus commodo viverra. Praesent elementum facilisis leo vel. </p>
-        <a href="/register"><div class="form-field"> <input type="submit"  length="20" class="account" value="No accout?"> </div></a>
-    </div>
-    <form class="form-right" action="/auth/login" method="POST">
-        <h2 class="text-uppercase">Login</h2>
-        <div class="row">
-            <div class="col-sm-6 mb-3"> <label>Email</label> <input type="text" name="email" id="first_name" class="input-field"> </div>
-            
+                                </form>
+                            </div>
+                            <!-- the form ends here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-       
-        <div class="row">
-            <div class="col-sm-6 mb-3"> <label>Password</label> <input type="password" name="password" id="pwd" class="input-field"> </div>
-            
-        </div>
-        <!-- <div class="mb-3"> <label class="option">I agree to the <a href="#">Terms and Conditions</a> <input type="checkbox" checked> <span class="checkmark"></span> </label> </div> -->
-        <div class="form-field"> <input type="submit" value="Login" class="register" name="login"> </div>
-    </form>
-</div>
-<% if(message){ %> 
-    <h6 class="alert alert-danger mt-4"><%= message %> </h6>
-    <% } %> 
-                                <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
-                                <script type='text/javascript'></script>
-                                </body>
-                            </html>
+    </section>
+
+
+    <script type='text/javascript'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+
+</html>

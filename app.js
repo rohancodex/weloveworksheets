@@ -1,60 +1,81 @@
 const express = require("express");
 var createError = require('http-errors');
-var cookieParser = require('cookie-parser');
+const app = express();
 
 const bodyParser = require("body-parser");
 const ejs = require('ejs');
 var flash = require('express-flash');
-const app = express();
-app.use( express.static( "public" ) );
+
+app.use(express.static("public"));
 var session = require('express-session');
 
-
-app.use(session({ 
-    secret: '123456cat',
-    resave: true,
-    saveUninitialized: true,
-    cookie: { maxAge: 60000 }
-  }));
+var cookieParser = require('cookie-parser');
 
 
-
-const studentRoutes =  require("./routes/student");
-const homeRoutes =  require("./routes/home");
+// console.log(session);
+const studentRoutes = require("./routes/student");
+const homeRoutes = require("./routes/home");
 const authRoutes = require("./routes/auth");
+const iepRoutes = require("./routes/iep");
 // const sheet = require('./sheets');
-const mysqlConnection = require('./database');
-const ejsLint = require('ejs-lint');
-const serveIndex = require('serve-index');
+const mysqlConnection = require('./config/database');
+// const ejsLint = require('ejs-lint');
+
 const expressLayouts = require('express-ejs-layouts');
 const files = require('./routes/files');
-
-
+const dataRoutes = require('./routes/datatracking');
+const worksheetRoutes = require('./routes/worksheets');
+// const teacher = require('./routes/auth/sess')
 app.use(cookieParser());
 
 
-// app.use('/pdf',sheet);
-app.use('/student', studentRoutes);
-app.use('/', homeRoutes);
-app.use('/auth',authRoutes);
-app.use('/files',files);
-app.use(express.json());
-// SET VIEW ENGINE
-app.use(expressLayouts);
-app.set('view engine', 'ejs');
-app.set('views','views');
 
-app.use(flash());
+
+var myLogger = function(req, res, next) {
+        console.log('LOGGED')
+        next()
+    }
+    // app.use(myLogger);
+
+
+
+app.use(session({
+    secret: 'worksheetswelove',
+    resave: true,
+    saveUninitialized: true,
+    maxAge: Date.now() + (30 * 86400 * 1000)
+})); // session secret
+
+
+// var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+// if(fullUrl!== 'http://localhost:3000/login'){
+// res.redirect('/login');
+// }
+
+
+
+
 
 
 // USE BODY-PARSER MIDDLEWARE
-app.use(bodyParser.urlencoded({extended:false}));
-
- 
-
-
+app.use(express.urlencoded({ extended: false }));
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 
+app.use('/datatracking', dataRoutes);
+app.use('/student', studentRoutes);
+app.use('/', homeRoutes);
+app.use('/auth', authRoutes);
+app.use('/worksheet', worksheetRoutes);
+app.use('/files', files);
+app.use('/iep', iepRoutes);
+app.use(express.json());
+
+// SET VIEW ENGINE
+app.use(expressLayouts);
+app.set('view engine', 'ejs');
+app.set('views', 'views');
 
 
 
@@ -62,7 +83,20 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 
 
-app.listen('3000',()=>{
+
+
+
+
+
+
+
+
+
+
+
+
+
+app.listen('3000', () => {
     console.log("server started on port 3000");
 });
 
