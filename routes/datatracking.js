@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express();
-const mysqlConnection = require("../config/database");
+const connectionRequest = require("../config/database");
 const path = require('path');
 const bodyParser = require("body-parser");
 var session = require('express-session');
@@ -12,35 +12,7 @@ const ejs = require('ejs');
 const studentRoutes = require('./student');
 const authRoutes = require('./auth');
 
-
-
-
-
-
 router.use(cookieParser());
-
-// import sess from studentRoutes;
-
-
-
-
-
-
-
-
-// mysqlConnection.query("SELECT full_name,count(correct) as correct,COUNT(incorrect) as incorrect FROM datatracking WHERE teacher_id = ? GROUP BY full_name", function(err, rows) {
-//     if (err) {
-//         throw err;
-//     } else {
-//         setValue(rows);
-//     }
-// });
-
-// function setValue(value) {
-
-//     someVar = value;
-
-// }
 
 
 router.get('/', (req, res) => {
@@ -56,93 +28,111 @@ router.get('/', (req, res) => {
 
 
     var sql_correct = 'SELECT dayname(created_at) as day, count(correct) as correct, count(incorrect) as incorrect from datatracking  WHERE YEARWEEK(created_at)=YEARWEEK(NOW()) AND teacher_id = ? GROUP BY dayname(created_at);SELECT full_name,count(correct) as correct,COUNT(incorrect) as incorrect FROM datatracking WHERE teacher_id = ? GROUP BY full_name;';
-
+    mysqlConnection = connectionRequest();
     mysqlConnection.query(sql_correct, [teacher, teacher], (err, results) => {
         if (err) {
+            mysqlConnection.destroy();
             console.log(err);
-            res.redirect('/datatracking');
-        }
 
+        } else {
 
-        //line graph
-        let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-        var avg = [0, 0, 0, 0, 0, 0, 0];
-        var row = new Array();
-        row = results[0];
-        for (var i in days) {
-            for (var j in row) {
-                if (row[j].day === days[i]) {
-                    var percentage = (row[j].correct / (row[j].correct + row[j].incorrect)) * 100;
-                    avg[i] = Math.floor(percentage);
+            //line graph
+            let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            var avg = [0, 0, 0, 0, 0, 0, 0];
+            var row = new Array();
+            row = results[0];
+            for (var i in days) {
+                for (var j in row) {
+                    if (row[j].day === days[i]) {
+                        var percentage = (row[j].correct / (row[j].correct + row[j].incorrect)) * 100;
+                        avg[i] = Math.floor(percentage);
 
+                    }
                 }
             }
-        }
 
-        let name = new Array();
-        let progress = new Array();
-        var someVar = new Array();
-        someVar = results[1];
-        for (var i in someVar) {
-            name.push(someVar[i].full_name);
-            progress.push(Math.floor((someVar[i].correct / (someVar[i].correct + someVar[i].incorrect)) * 100));
-        }
-        console.log(name);
-        console.log(progress);
+            let name = new Array();
+            let progress = new Array();
+            var someVar = new Array();
+            someVar = results[1];
+            for (var i in someVar) {
+                name.push(someVar[i].full_name);
+                progress.push(Math.floor((someVar[i].correct / (someVar[i].correct + someVar[i].incorrect)) * 100));
+            }
+            console.log(name);
+            console.log(progress);
 
-        function json(name, progress) {
-            let student = new Array();
-            for (let i = 0; i < name.length; i++) {
-                student.push({
-                    name: name[i],
-                    progress: progress[i]
-                });
+            function json(name, progress) {
+                let student = new Array();
+                for (let i = 0; i < name.length; i++) {
+                    student.push({
+                        name: name[i],
+                        progress: progress[i]
+                    });
+                };
+                return student;
             };
-            return student;
-        };
-        let student = json(name, progress);
-        console.log(student);
-        console.log(avg);
-        res.render('datatracking', { result: avg, student: student });
+            let student = json(name, progress);
+            console.log(student);
+            console.log(avg);
+            mysqlConnection.destroy();
+            res.render('datatracking', { result: avg, student: student });
+        }
+
+
+
 
     })
 });
 
+router.get('/(:student)', (req, res) => {
 
+    if (!req.session.loggedin) {
+        res.redirect('/login');
+        return;
+    }
 
+    let name = req.params.student;
+    let teacherId = req.session.user[0].id;
+    let type = 'Alphabet';
+    mysqlConnection = connectionRequest();
+    let sql = "SELECT * FROM datatracking where full_name = ? AND teacher_id = ? AND type=? GROUP BY(word); SELECT count(correct) as correct,COUNT(incorrect) as incorrect FROM datatracking where full_name = ? AND teacher_id = ? AND type= ?";
+    mysqlConnection.query(sql, [name, teacherId, type, name, teacherId, type], (err, results) => {
+        if (err) {
+            console.error(err);
+            mysqlConnection.destroy();
+        } else {
+            mysqlConnection.destroy();
+            let today = new Date().toISOString().slice(0, 10)
+            res.render('student-data', { word: results[0], chart: results[1], name: name, type: type, date: today });
+        }
+    })
+})
 
+router.post('/', (req, res) => {
+    if (!req.session.loggedin) {
+        res.redirect('/login');
+        return;
+    }
 
+    let type = req.body.type;
 
+    let date = req.body.date;
+    let name = req.body.name;
+    let teacher = req.session.user[0].id;
+    date = date.toString();
+    mysqlConnection = connectionRequest();
+    let sql = "SELECT * FROM datatracking where full_name = ? AND teacher_id = ? AND type=? AND DATE(created_at) = ? GROUP BY(word); SELECT count(correct) as correct,COUNT(incorrect) as incorrect FROM datatracking where full_name = ? AND teacher_id = ? AND type= ? AND DATE(created_at) = ?";
+    mysqlConnection.query(sql, [name, teacher, type, date, name, teacher, type, date], (err, results) => {
+        if (err) {
+            console.error(err);
+            mysqlConnection.destroy();
+        } else {
+            mysqlConnection.destroy();
 
-// router.get('/student-data', (req, res) => {
-//     var student_query = 'SELECT full_name,count(correct) as correct,COUNT(incorrect) as incorrect FROM datatracking GROUP BY full_name ORDER BY full_name;';
-//     mysqlConnection.query(student_query, (err, result) => {
-//         // console.log(result);
-
-//         let name = new Array();
-//         let progress = new Array();
-//         for (var i in someVar) {
-//             name.push(someVar[i].full_name);
-//             progress.push(Math.floor((someVar[i].correct / (someVar[i].correct + someVar[i].incorrect)) * 100));
-//         }
-//         console.log(name);
-//         console.log(progress);
-
-//         function json(name, progress) {
-//             let student = new Array();
-//             for (let i = 0; i < name.length; i++) {
-//                 student.push({
-//                     name: name[i],
-//                     progress: progress[i]
-//                 });
-//             };
-//             return student;
-//         };
-//         let student = json(name, progress);
-//         console.log(student);
-
-//         res.render('student_data', { student: student });
-//     });
-// });
+            res.render('student-data', { word: results[0], chart: results[1], name: name, type: type, date: date });
+        }
+    })
+})
 
 module.exports = router;

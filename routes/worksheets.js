@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express();
-const mysqlConnection = require("../config/database");
+const connectionRequest = require("../config/database");
 const path = require('path');
 const bodyParser = require("body-parser");
 var session = require('express-session');
@@ -22,22 +22,32 @@ router.get('/', (req, res) => {
     var teacher = req.session.user[0].id;
     if (type !== null) {
         var sql = "SELECT * FROM worksheets where type_id = ?;SELECT * FROM students WHERE teacher_id = ?;";
+        mysqlConnection = connectionRequest();
         mysqlConnection.query(sql, [type, teacher], (err, results, fields) => {
             if (err) {
+                mysqlConnection.destroy();
                 console.log(err);
                 res.redirect('/worksheet');
+            } else {
+                console.log(results[1]);
+                console.log(results[0]);
+                mysqlConnection.destroy();
+                res.render('worksheets', { result: results[0], student: results[1] });
             }
-            console.log(results[1]);
-            console.log(results[0]);
-            res.render('worksheets', { result: results[0], student: results[1] });
         });
     } else {
         var teacher = req.session.user[0].id;
         var sql = "SELECT * FROM students WHERE teacher_id = ?;"
+        mysqlConnection = connectionRequest();
         mysqlConnection.query(sql, [teacher], (err, results) => {
-            if (err) err;
+            if (err) {
+                console.error(err);
+                mysqlConnection.destroy();
+                res.redirect('/worksheet');
+            } else {
+                res.render('worksheets', { result: '', student: results });
+            }
 
-            res.render('worksheets', { result: '', student: results });
         })
     }
 
@@ -69,6 +79,7 @@ router.post('/', (req, res) => {
     if (sid) {
         var final = json(word_id, result);
         console.log(final[0]);
+        mysqlConnection = connectionRequest();
         var sql = 'INSERT INTO responses (teacher_id,student_id,type_id,word_id,correct,incorrect) VALUES';
         final.forEach(element => {
             if (element.response.length !== 0) {
@@ -98,14 +109,20 @@ router.post('/', (req, res) => {
 
         sql = sql.slice(0, -1);
         mysqlConnection.query(sql, (err, result) => {
-            if (err) throw err;
-            console.log(result);
-            res.redirect('/worksheet');
+            if (err) {
+                mysqlConnection.destroy();
+                console.error(err);
+            } else {
+                console.log(result);
+                mysqlConnection.destroy();
+                res.redirect('/worksheet');
+            }
         })
     } else {
+        mysqlConnection.destroy();
         res.redirect('/worksheet');
     }
-})
+});
 
 // router.get('/(:typeid)',(req,res)=>{
 //     if(!req.session.loggedin){

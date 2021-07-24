@@ -17,6 +17,7 @@ const studentRoutes = require("./routes/student");
 const homeRoutes = require("./routes/home");
 const authRoutes = require("./routes/auth");
 const iepRoutes = require("./routes/iep");
+const adminRoute = require("./routes/admin.js");
 // const sheet = require('./sheets');
 const mysqlConnection = require('./config/database');
 // const ejsLint = require('ejs-lint');
@@ -31,11 +32,11 @@ app.use(cookieParser());
 
 
 
-var myLogger = function(req, res, next) {
-        console.log('LOGGED')
-        next()
-    }
-    // app.use(myLogger);
+// var myLogger = function(req, res, next) {
+//         console.log('LOGGED')
+//         next()
+//     }
+// app.use(myLogger);
 
 
 
@@ -70,6 +71,7 @@ app.use('/auth', authRoutes);
 app.use('/worksheet', worksheetRoutes);
 app.use('/files', files);
 app.use('/iep', iepRoutes);
+app.use('/admin', adminRoute);
 app.use(express.json());
 
 // SET VIEW ENGINE
@@ -96,8 +98,8 @@ app.set('views', 'views');
 
 
 
-app.listen('3000', () => {
-    console.log("server started on port 3000");
+app.listen('50000', () => {
+    console.log("server started on port 50000");
 });
 
 module.exports = app;
