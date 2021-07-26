@@ -59,7 +59,7 @@ router.get('/edit/(:id)', (req, res) => {
             if (rows.length <= 0) {
                 mysqlConnection.destroy();
                 // req.flash('error', 'Book not found with id = ' + id)
-                res.redirect('/student')
+                res.redirect('/student');
             }
             // if book found
             else {
@@ -70,7 +70,8 @@ router.get('/edit/(:id)', (req, res) => {
                     id: rows[0].sid,
                     name: rows[0].full_name,
                     age: rows[0].age,
-                    grade: rows[0].grade
+                    grade: rows[0].grade,
+                    rollno: rows[0].Rollno
                 })
             }
         }
@@ -86,8 +87,9 @@ router.post('/update/:id', function(req, res, next) {
     let age = req.body.age;
     let grade = req.body.grade;
     let errors = false;
+    let rollno = req.body.rollno;
 
-    if (full_name.length === 0 || age.length === 0 || grade.length === 0) {
+    if (full_name.length === 0 || age.length === 0 || grade.length === 0 || rollno.length === 0) {
         errors = true;
 
         // set flash message
@@ -98,7 +100,8 @@ router.post('/update/:id', function(req, res, next) {
             id: req.params.id,
             name: full_name,
             age: age,
-            grade: grade
+            grade: grade,
+            rollno: rollno
         })
     }
 
@@ -108,7 +111,8 @@ router.post('/update/:id', function(req, res, next) {
         var form_data = {
             full_name: full_name,
             age: age,
-            grade: grade
+            grade: grade,
+            rollno: rollno
         }
         mysqlConnection = connectionRequest();
         // update query
@@ -197,11 +201,12 @@ router.post("/create", (req, res) => {
     var fullname = fname.concat(lname);
     var age = req.body.age;
     var grade = req.body.grade;
+    var rollno = req.body.rollno;
     console.log(fullname);
     var teacher_id = req.session.user[0].id;
     console.log('post request received');
     mysqlConnection = connectionRequest();
-    var sql = mysqlConnection.format("INSERT INTO students (full_name, age,teacher_id,grade) VALUES (?, ?, ?,?)", [fullname, age, teacher_id, grade]);
+    var sql = mysqlConnection.format("INSERT INTO students (full_name, age,teacher_id,grade,rollno) VALUES (?, ?, ?,?,?)", [fullname, age, teacher_id, grade, rollno]);
 
     mysqlConnection.query(sql, function(err, result) {
         if (err) {
@@ -223,7 +228,7 @@ router.post("/create-bulk", upload.any(), (req, res) => {
         dynamicTyping: true,
         complete: function(results, temp) {
             let data = results["data"];
-            let sql = "INSERT INTO students (full_name,age,grade,teacher_id) VALUES ";
+            let sql = "INSERT INTO students (full_name,age,grade,rollno,teacher_id) VALUES ";
             data.forEach(temp => {
                 temp[1] = temp[0].split(' ').join("") + ' ' + temp[1];
 
@@ -231,7 +236,7 @@ router.post("/create-bulk", upload.any(), (req, res) => {
 
                 temp.shift();
                 console.log(temp);
-                sql = sql + "('" + temp[0] + "'," + temp[1] + ",'" + temp[2] + "'," + temp[3] + "),";
+                sql = sql + "('" + temp[0] + "'," + temp[1] + ",'" + temp[2] + "','" + temp[3] + "'," + temp[4] + "),";
 
             });
             sql = sql.slice(0, -1);

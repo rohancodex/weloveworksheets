@@ -78,7 +78,7 @@ router.post('/login', (req, res) => {
                 req.session.cookie.maxAge = 3600 * hour;
                 req.session.save();
                 mysqlConnection.destroy();
-                return res.redirect('/student');
+                return res.redirect('/dashboard');
             }
         } catch {
             mysqlConnection.destroy();

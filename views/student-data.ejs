@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 </head>
 
@@ -19,7 +19,7 @@
     <!-- nav bar -->
     <div class="jumbotron bg-white text-dark shadow-sm round">
         <div class="container-fluid">
-            <div class="row justify-content-right">
+            <div class="row justify-content-center">
 
                 <div class="col-md-2 d-flex justify-content-center">
                     <!-- Hav to add logo and stuff -->
@@ -32,16 +32,13 @@
 
                             <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
                                 <ul class="navbar-nav">
-                                    <!-- <li class="nav-item">
-                                        <a class="nav-link " aria-current="page" href="/">Home</a>
-                                    </li> -->
+                                    <li class="nav-item">
+                                        <a class="nav-link " aria-current="page" href="/dashboard">Home</a>
+                                    </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="/about">About us</a>
                                     </li>
 
-                                    <!-- <li class="nav-item">
-                                        <a class="nav-link" href="#">IEP</a>
-                                    </li> -->
                                     <li class="nav-item">
                                         <a class="nav-link" href="/files">Downloadables</a>
                                     </li>
@@ -55,8 +52,11 @@
                 <div class="col-2 d-flex justify-content-center mt-2">
                     <ul class="navbar-nav">
                         <li class="nav-item ml-5">
-                            <a href="/logout"><button type="submit" class="btn text-white col-12"
-                                    style=" background-color: #51548C">Sign out</button></a>
+                            <a href="/logout">
+                                <button type="submit" class="btn text-pastel-purple px-4 rounded rounded-pill" style=" background-color: #51548C; color:white;">
+                                Log Out
+                            </button>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -67,36 +67,50 @@
 
 
 
-    <!-- side nave bar starts here -->
+
     <div class="bigWrapper container-fluid">
         <div class="row">
 
-            <div class="col-2 align-self-left bg-white shadow-sm mt-0 height-100">
-                <ul class="nav flex-column pt-3 px-1">
-                    <li>
-                        <a class="px-2 btn">
-                            <h5>Navigations</h5>
-                        </a>
-                    </li>
+            <!-- side nav bar starts here -->
+            <div class="col-2 align-self-left bg-white shadow-sm mt-0 fullHeight py-3">
+                <!-- <div class="d-flex justify-content-center"> <img src="/img/logo.png" alt="" height="75px" width="75px" class="align-self-center"></div> -->
+
+                <h5 class=" text-pastel-purple pt-2 px-3">Navigations</h5>
+                <ul class="nav flex-column pt-1 px-1">
+
                     <hr>
                     <li class="nav-item">
-                        <a class="nav-link active text-dark" href="/student">Students</a>
+                        <a class="nav-link active text-dark" href="#"><i class="bi bi-person-fill  text-secondary"></i>
+                        Students</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link text-dark" href="/worksheet">Worksheets</a>
+                        <a class="nav-link text-dark" href="/worksheet"><i
+                            class="bi bi-file-earmark-word-fill text-secondary"></i> Worksheets</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link text-dark" href="/datatracking">Data tracking</a>
+                        <a class="nav-link text-dark" href="/datatracking"><i class="bi bi-graph-up text-secondary"></i> Data
+                        tracking</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link text-dark" href="/iep">IEP</a>
+                        <a class="nav-link text-dark" href="/iep"><i class="bi bi-card-list text-secondary"></i> Iep
+                        Info</a>
                     </li>
-
                 </ul>
-
-
+                <h5 class=" text-pastel-purple pt-4 px-3">Account</h5>
+                <ul class="nav flex-column pt-1 px-1">
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark" href="/profile"><i class="bi bi-person-circle text-secondary"></i>
+                        Profile</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-dark" href="/logout"><i class="bi bi-box-arrow-in-left text-secondary"></i>
+                        Sign out</a>
+                    </li>
+                </ul>
             </div>
             <!-- side bar ends here -->
+
             <div class="col-10 mt-2">
                 <div class="col-12 pastel-purple text-shadow-sm text-center text-white p-1 mx-0 rounded">
                     <div class="container-fluid py-2">
@@ -148,7 +162,7 @@
                                 <div class="container bg-white shadow-sm rounded">
                                     <div class="row">
                                         <div class="col-12 d-flex justify-content-center">
-                                            <div id="chart" style="height: 400px; width: 400px">
+                                            <div id="chart" style="height: 400px; width: 400px; padding: 20px;">
                                                 <canvas id="myChart" height="100px" width="100px"></canvas>
 
                                             </div>
@@ -253,8 +267,9 @@
                         label: 'My First Dataset',
                         data: [correct, incorrect],
                         backgroundColor: [
-                            '#49A68B',
+                            'rgb(181, 103, 226)',
                             'lightgrey',
+
                         ],
                         hoverOffset: 4
                     }]

@@ -35,6 +35,11 @@ router.get('/login', (req, res) => {
 router.get('/about', function(req, res) {
     res.render('about');
 });
+
+router.get('/dashboard', function(req, res) {
+    res.render('dashboard');
+});
+
 /* GET users listing. */
 router.get('/logout', function(req, res) {
     req.session.destroy();

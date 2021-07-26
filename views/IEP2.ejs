@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEP Info</title>
+    <link rel="stylesheet" href="/css/weloveworksheets.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body class="bg-light">
+    <!-- nav bar -->
+    <div class="jumbotron bg-white text-dark shadow-sm round">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+
+                <div class="col-md-2 d-flex justify-content-center">
+                    <!-- Hav to add logo and stuff -->
+                    <img src="/img/logo.png" alt="" height="55px" width="55px" class="align-self-start mt-1 pl-5 ml-5">
+                </div>
+                <div class="col-md-7 d-flex justify-content-end">
+                    <!-- navigation code from bootstrap lib -->
+                    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+                        <div class="container-fluid">
+
+                            <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link " aria-current="page" href="/dashboard">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/about">About us</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/files">Downloadables</a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-2 d-flex justify-content-center mt-2">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ml-5">
+                            <a href="/logout">
+                                <button type="submit" class="btn text-pastel-purple px-4 rounded rounded-pill" style=" background-color: #51548C; color:white;">
+                                    Log Out
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- navbar ends here -->
+
+
+
+    <div class="bigWrapper container-fluid">
+        <div class="row">
+            <!-- side nav bar starts here -->
+            <div class="col-2 align-self-left bg-white shadow-sm mt-0 fullHeight py-3">
+                <!-- <div class="d-flex justify-content-center"> <img src="/img/logo.png" alt="" height="75px" width="75px" class="align-self-center"></div> -->
+
+                <h5 class=" text-pastel-purple pt-2 px-3">Navigations</h5>
+                <ul class="nav flex-column pt-1 px-1">
+
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark" href="#"><i class="bi bi-person-fill  text-secondary"></i>
+                            Students</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-dark" href="#"><i
+                                class="bi bi-file-earmark-word-fill text-secondary"></i> Worksheets</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-dark" href="#"><i class="bi bi-graph-up text-secondary"></i> Data
+                            tracking</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-dark" href="#"><i class="bi bi-card-list text-secondary"></i> Iep
+                            Info</a>
+                    </li>
+
+
+                </ul>
+
+                <h5 class=" text-pastel-purple pt-4 px-3">Account</h5>
+                <ul class="nav flex-column pt-1 px-1">
+
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark" href="#"><i class="bi bi-person-circle text-secondary"></i>
+                            Profile</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-dark" href="#"><i class="bi bi-box-arrow-in-left text-secondary"></i>
+                            Sign out</a>
+                    </li>
+
+
+
+                </ul>
+
+
+
+            </div>
+            <!-- side bar ends here -->
+
+            <!-- the main section starts here -->
+            <div class="col-10">
+                <!-- the Iep sections here -->
+                <div id="main">
+                    <div class="container d-flex justify-content-center mt-5">
+                        <div class="row d-flex justify-content-center">
+                            <!-- first column student goes in here -->
+                            <div class="col-5 d-flex justify-content-center">
+                                <div class="container bg-white shadow-sm rounded rounded-5 py-3 ">
+                                    <div class="row ">
+                                        <div class="col-12 d-flex justify-content-center">
+                                            <img src="/img/dizzy-education.png" alt="nothing to see here" height="200px" width="auto">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h5>
+                                                Academic IEP
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit neque ,
+                                        </p>
+                                    </div>
+                                    <div class="row">
+                                        <a href="student.ejs">
+                                            <button type="submit" class="btn text-pastel-purple px-4 rounded rounded-pill" style=" color: #51548C; border:2px solid #51548C ;">
+                                                Academic IEP
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- first column student ends in here -->
+                            <!-- second column student goes in here -->
+                            <div class="col-5 d-flex justify-content-center">
+                                <div class="container bg-white shadow-sm rounded rounded-5 py-3 ">
+                                    <div class="row">
+                                        <div class="col-12 d-flex justify-content-center">
+                                            <img src="/img/dizzy-relaxed-time.png" alt="nothing to see here" height="200px" width="auto">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h5>
+                                                Behavioural IEP
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit neque ,
+                                        </p>
+                                    </div>
+                                    <div class="row">
+                                        <a href="student.ejs">
+                                            <button type="submit" class="btn text-pastel-purple px-4 rounded rounded-pill" style=" color: #51548C; border:2px solid #51548C ;">
+                                                Behavioural IEP
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- second column student ends in here -->
+                        </div>
+                    </div>
+                </div>
+                <!-- end of IEP sections -->
+            </div>
+            <!-- the main section ends here -->
+        </div>
+    </div>
+    <footer class="pastel-purple">
+        <div>
+            <div class="container pt-5"> <br>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="col-6 text-white">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, velit! Praesentium porro consequuntur cupiditate, molestias impedit aspernatur earum ea odio non, asperiores sequi eius accusamus iusto illum aperiam consectetur
+                            incidunt.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+
+</html>
