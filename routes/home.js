@@ -11,7 +11,7 @@
 
 const express = require('express');
 var router = express.Router();
-const mysqlConnection = require("../config/database");
+const connectionRequest = require("../config/database");
 const ejs = require('ejs');
 router.use(express.static("public"));
 
@@ -29,7 +29,6 @@ router.get('/login', (req, res) => {
     } else {
         res.render('login', { message: '' });
     }
-
 });
 
 router.get('/about', function(req, res) {

@@ -333,3 +333,22 @@ body::-webkit-scrollbar-thumb {
     background-color: #51548C;
     border-radius: 10px;
 }
+
+.modal-dialog {
+    max-width: 730px;
+}
+
+.wrap-modal-slider {
+    padding: 0 30px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.wrap-modal-slider.open {
+    opacity: 1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: red;
+}

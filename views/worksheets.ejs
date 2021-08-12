@@ -142,14 +142,11 @@
                                 <select id="student" onchange=url(this.value); class="form-select pastel-purple border-white " aria-label="Default select example">
                   <option selected>Select a student</option>
                   <% if(student.length> 0) { %>
-
                     <% student.forEach(student=>{ %>
-
                       <option value="<%= student.sid%>">
                         <%= student.full_name %>
                       </option>
                       <% }); %>
-
                         <% } %>
                 </select>
 
@@ -168,11 +165,9 @@
                         <!-- working of t
             he card -->
                         <% if(result.length> 0) { %>
-
                             <% result.forEach(result=>{ %>
                                 <!-- This is the card -->
                                 <div class="col-2 m-3 ">
-
                                     <div class=" borderColorChange card bg-white shadow-sm rounded WorksheetTxt align-items-center ">
                                         <div class="words mt-5">
                                             <!-- the word thats actually going to change here  -->
@@ -183,8 +178,6 @@
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-6 ">
-
-
                                                 <label>
                             <!-- <input id="response" type="button" name="correct" value=""/> -->
                           <button type="button" onclick="studentResponse('correct','response <%= result.id%>')">
@@ -192,24 +185,19 @@
                             <!-- <input type="hidden" name="correct"  value=""/> -->
                             </i></button></label>
                                             </div>
-
                                             <input id="response <%= result.id%>" type="hidden" name="response" value="" />
-
                                             <div class="col-6">
                                                 <label>
                           <!-- <input type = "button" onclick="test()"> -->
                           <!-- <input type="submit" name="incorrect"/> -->
                         <button type="button" onclick="studentResponse('incorrect','response <%= result.id%>')">
                         <i class="incorrect tored btn bi bi-emoji-neutral-fill fa-2x" style="color:rgb(236, 108, 108);"></i></button></label>
-
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                                 <!-- end of the card  -->
                                 <% }); %>
-
                                     <% } %>
 
 
@@ -218,9 +206,7 @@
 
 
                     <% if(result.length> 0) { %>
-
                         <input type="submit" id="fixedbutton" style=" background-color: #51548C" class="btn btn-success btn-lg px-5" value="Submit">
-
                         <% } %>
                 </form>
 
@@ -233,10 +219,8 @@
     <!-- put this at the end before body ends -->
     <script>
         function studentResponse(type, id) {
-
             if (type === 'correct') {
                 document.getElementById(id).value = true;
-
                 console.log(type, id)
             } else {
                 document.getElementById(id).value = false;
@@ -260,7 +244,6 @@
                 "border-color": "rgb(181, 103, 226)"
             });
         });
-
         $(".tored").click(function() {
             $(this).parent().parent().parent().parent().parent().css({
                 "border": "solid",

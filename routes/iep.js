@@ -18,7 +18,12 @@ router.get('/', (req, res) => {
     res.render('IEP2');
 })
 
+router.get('/behavioural-iep', (req, res) => {
+    res.render('behavioural-iep');
+})
 
-
+router.get('/academic-iep', (req, res) => {
+    res.render('academic-iep');
+})
 
 module.exports = router;
