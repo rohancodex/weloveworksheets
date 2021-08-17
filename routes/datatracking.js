@@ -26,7 +26,6 @@ router.get('/', (req, res) => {
     // console.log(sess);
     //view values
 
-
     var sql_correct = 'SELECT dayname(created_at) as day, count(correct) as correct, count(incorrect) as incorrect from datatracking  WHERE YEARWEEK(created_at)=YEARWEEK(NOW()) AND teacher_id = ? GROUP BY dayname(created_at);SELECT full_name,count(correct) as correct,COUNT(incorrect) as incorrect FROM datatracking WHERE teacher_id = ? GROUP BY full_name;';
     mysqlConnection = connectionRequest();
     mysqlConnection.query(sql_correct, [teacher, teacher], (err, results) => {
@@ -86,53 +85,77 @@ router.get('/', (req, res) => {
 });
 
 router.get('/(:student)', (req, res) => {
-
     if (!req.session.loggedin) {
         res.redirect('/login');
         return;
     }
-
     let name = req.params.student;
     let teacherId = req.session.user[0].id;
     let type = 'Alphabet';
+    let today = new Date().toISOString().slice(0, 10);
+    console.log(today);
     mysqlConnection = connectionRequest();
-    let sql = "SELECT * FROM datatracking where full_name = ? AND teacher_id = ? AND type=? GROUP BY(word); SELECT count(correct) as correct,COUNT(incorrect) as incorrect FROM datatracking where full_name = ? AND teacher_id = ? AND type= ?";
-    mysqlConnection.query(sql, [name, teacherId, type, name, teacherId, type], (err, results) => {
+    let sql = "SELECT * FROM datatracking where full_name = ? AND teacher_id = ? AND type=? AND DATE(created_at) = ? GROUP BY(word); SELECT count(correct) as correct,COUNT(incorrect) as incorrect FROM datatracking where full_name = ? AND teacher_id = ? AND type= ? AND DATE(created_at) = ?;SELECT w.id, w.word, type FROM worksheets as w INNER JOIN worksheet_type as t ON w.type_id = t.id WHERE type = ?;";
+    mysqlConnection.query(sql, [name, teacherId, type, today, name, teacherId, type, today, type], (err, results) => {
         if (err) {
             console.error(err);
             mysqlConnection.destroy();
         } else {
             mysqlConnection.destroy();
-            let today = new Date().toISOString().slice(0, 10)
-            res.render('student-data', { word: results[0], chart: results[1], name: name, type: type, date: today });
+            console.log(results[1]);
+            res.render('student-data', { word: results[0], chart: results[1], name: name, type: type, date: today, worksheet: results[2] });
         }
     })
 })
 
-router.post('/', (req, res) => {
+router.post('/(:student)', (req, res) => {
     if (!req.session.loggedin) {
         res.redirect('/login');
         return;
     }
 
     let type = req.body.type;
-
     let date = req.body.date;
     let name = req.body.name;
     let teacher = req.session.user[0].id;
     date = date.toString();
     mysqlConnection = connectionRequest();
-    let sql = "SELECT * FROM datatracking where full_name = ? AND teacher_id = ? AND type=? AND DATE(created_at) = ? GROUP BY(word); SELECT count(correct) as correct,COUNT(incorrect) as incorrect FROM datatracking where full_name = ? AND teacher_id = ? AND type= ? AND DATE(created_at) = ?";
-    mysqlConnection.query(sql, [name, teacher, type, date, name, teacher, type, date], (err, results) => {
+    let sql = "SELECT * FROM datatracking where full_name = ? AND teacher_id = ? AND type=? AND DATE(created_at) = ? GROUP BY(word); SELECT count(correct) as correct,COUNT(incorrect) as incorrect FROM datatracking where full_name = ? AND teacher_id = ? AND type= ? AND DATE(created_at) = ?;SELECT w.id, w.word, type FROM worksheets as w INNER JOIN worksheet_type as t ON w.type_id = t.id WHERE type = ?;";
+    mysqlConnection.query(sql, [name, teacher, type, date, name, teacher, type, date, type], (err, results) => {
         if (err) {
             console.error(err);
             mysqlConnection.destroy();
         } else {
             mysqlConnection.destroy();
-
-            res.render('student-data', { word: results[0], chart: results[1], name: name, type: type, date: date });
+            console.log(results[1]);
+            res.render('student-data', { word: results[0], chart: results[1], name: name, type: type, date: date, worksheet: results[2] });
         }
     })
 })
+
+router.get('/(:student)/(:word)', (req, res) => {
+    if (!req.session.loggedin) {
+        res.redirect('/login');
+        return;
+    }
+    let name = req.params.student;
+    let word = req.params.word;
+    let teacher = req.session.user[0].id;
+    let today = new Date().toISOString().slice(0, 10);
+    mysqlConnection = connectionRequest();
+    //"SELECT count(correct) as correct,COUNT(incorrect) as incorrect FROM datatracking where full_name = ? AND teacher_id = ? AND type= ?"
+
+    let sql = "SELECT COUNT(correct) as correct, COUNT(incorrect) as incorrect FROM datatracking WHERE teacher_id = ? AND full_name = ? AND word = ? AND DATE(created_at) = ?; "
+    mysqlConnection.query(sql, [teacher, name, word, today], (err, results) => {
+        if (err) {
+            console.error(err);
+            mysqlConnection.destroy();
+        } else {
+            mysqlConnection.destroy();
+            res.render('word-analysis', { count: results });
+        }
+    })
+})
+
 
 module.exports = router;

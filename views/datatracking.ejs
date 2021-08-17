@@ -13,7 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 
 <body class="bg-light" style="background-image:url(/img/blobs.svg) ;background-repeat: no-repeat; background-size:cover;">
@@ -44,7 +44,9 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="/files">Downloadables</a>
                                     </li>
-
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/iep">IEP Info</a>
+                                    </li>
                                 </ul>
 
                             </div>
@@ -69,34 +71,43 @@
 
 
 
-    <!-- side nave bar starts here -->
+
     <div class="bigWrapper container-fluid">
         <div class="row">
+            <!-- side nav bar starts here -->
+            <div class="col-2 align-self-left bg-white shadow-sm mt-0 fullHeight py-3">
+                <!-- <div class="d-flex justify-content-center"> <img src="/img/logo.png" alt="" height="75px" width="75px" class="align-self-center"></div> -->
 
-            <div class="col-2 align-self-left bg-white shadow-sm mt-0 height-100">
-                <ul class="nav flex-column pt-3 px-1">
-                    <li>
-                        <a class="px-2 btn">
-                            <h5>Navigations</h5>
-                        </a>
-                    </li>
+                <h5 class=" text-pastel-purple pt-2 px-3">Data Tracking</h5>
+                <ul class="nav flex-column pt-1 px-1">
+
                     <hr>
                     <li class="nav-item">
-                        <a class="nav-link active text-dark" href="/student">Students</a>
+                        <a class="nav-link active text-dark" href="/student"><i class="bi bi-person-fill  text-secondary"></i>
+                    Students</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link text-dark" href="/worksheet">Worksheets</a>
+                        <a class="nav-link text-dark" href="/worksheet"><i
+                        class="bi bi-file-earmark-word-fill text-secondary"></i> Worksheets</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link text-dark" href="#">Data tracking</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link text-dark" href="/iep">IEP</a>
+                        <a class="nav-link text-dark" href="/datatracking"><i class="bi bi-graph-up text-secondary"></i>
+                    Analytics</a>
                     </li>
 
                 </ul>
-
-
+                <h5 class=" text-pastel-purple pt-4 px-3">Account</h5>
+                <ul class="nav flex-column pt-1 px-1">
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark" href="/profile"><i class="bi bi-person-circle text-secondary"></i>
+                    Profile</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-dark" href="/logout"><i class="bi bi-box-arrow-in-left text-secondary"></i>
+                    Sign out</a>
+                    </li>
+                </ul>
             </div>
             <!-- side bar ends here -->
             <div class="col-10 my-2 mx-0 px-1">

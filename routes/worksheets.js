@@ -147,26 +147,4 @@ router.post('/', (req, res) => {
 //     console.log(teacher);
 
 //     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 module.exports = router;
