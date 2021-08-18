@@ -41,13 +41,27 @@
         /* end of colors */
         
         .overflowTxtGen {
-            height: 450px;
+            height: 500px;
             width: auto;
             overflow-y: scroll;
         }
         
+        .overflowTxtGen::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .overflowTxtGen::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0);
+            box-shadow: inset 0 0 2px rgba(0, 0, 0, 0);
+        }
+        
+        .overflowTxtGen::-webkit-scrollbar-thumb {
+            background-color: #51548C;
+            border-radius: 10px;
+        }
+        
         .chartHolderHeight {
-            height: 300px;
+            height: 400px;
         }
     </style>
 </head>
@@ -155,7 +169,7 @@
                             <!-- Filter tab starts here -->
                             <div class="container-fluid py-2">
                                 <div class="row d-flex align-items-center">
-                                    <form action="/datatracking" method="post">
+                                    <form id="filters" action="" method="post">
                                         <div class="container">
                                             <div class="row d-flex align-items-center">
                                                 <div class="col-5">
@@ -165,28 +179,22 @@
                                                                 <label for="fromDate"> <strong>From:</strong> </label>
                                                             </div>
                                                             <div class="col-6">
-                                                                <input id="date" name="fromDate" type="date" class=" form-date form-control " required>
+                                                                <input id="date" name="fromDate" type="date" class=" form-date form-control" value="<%= fromDate %>" required>
                                                             </div>
                                                         </div>
                                                     </div>
-
-
                                                 </div>
                                                 <div class="col-5">
                                                     <div class="container justify-content-center m-0">
                                                         <div class="row d-flex align-items-center">
-
                                                             <div class="col-4">
                                                                 <label for="endDate"><strong>To:</strong> </label>
                                                             </div>
                                                             <div class="col-6">
-                                                                <input id="date" name="endDate" type="date" class="form-date form-control " required>
+                                                                <input id="date" name="endDate" type="date" class="form-date form-control" value="<%= toDate %>" required>
                                                             </div>
-
                                                         </div>
                                                     </div>
-
-
                                                 </div>
                                                 <div class="col-2 pr-3">
                                                     <!-- <input id="type_res" name="type" type="hidden" value=""> -->
@@ -212,16 +220,23 @@
                             <div class="container bg-white rounded justify-content-center shadow-sm mt-2  py-2">
                                 <div class="row d-flex justify-content-center text-center">
                                     <h4 class="text-pastel-purple">Words</h4>
-                                </div>
 
+                                </div>
+                                <hr>
                                 <div class="row overflowTxtGen">
                                     <!-- the word generator code from backend starts here -->
-                                    <a href="/a" style="text-decoration:none;">
-                                        <h5 class="text-center text-secondary col-12 my-3" style="cursor: pointer;">
-                                            Sample word
-                                        </h5>
-                                    </a>
-                                    <!-- the word generator code from backend ends here -->
+                                    <% if(word.length <=0){ %>
+                                        <h5 class="text-center text-secondary col-12 my-3"> Nothing to show here </h5>
+                                        <% }else{ %>
+
+                                            <% word.forEach(word => { %>
+                                                <h5 class="text-center text-secondary col-12 my-3">
+                                                    <a class="genWord " href="<%=word.id%>" style="text-decoration:none;">
+                                                        <%=word.word%>
+                                                    </a>
+                                                </h5>
+                                                <% });} %>
+                                                    <!-- the word generator code from backend ends here -->
 
                                 </div>
 
@@ -236,28 +251,54 @@
                                         <div class="container ">
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <h4 class="text-pastel-purple">
+                                                    <h6 class="text-secondary">
                                                         <!-- this word is the one selected by user -->
-                                                        Selected Word
+                                                        <strong>Selected Word:</strong>
                                                         <!-- end of selected word -->
+                                                    </h6>
+                                                    <h1 class="text-pastel-purple" style="font-size:3.2rem;text-transform: capitalize;">
+
+                                                        <%=selectedWord[0].word%>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                            <hr class="my-1">
+                                            <div class="row mt-3">
+                                                <div class="col-12 my-1">
+                                                    <h6 class="text-secondary">
+                                                        <strong>Student Name:</strong>
+                                                    </h6>
+                                                    <h4 class="col-12 text-pastel-purple">
+
+                                                        <%= name%>
                                                     </h4>
                                                 </div>
+                                                <hr>
+
                                             </div>
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <p><strong>Student name: </strong> </p>
+                                                    <h6 class="text-secondary">
+                                                        <strong>Worksheet type:</strong>
+                                                    </h6>
+                                                    <h4 class="text-pastel-purple" style="text-transform: capitalize;">
+
+                                                        <%= word[0].type %>
+                                                    </h4>
                                                 </div>
-                                                <div class="col-12">
-                                                    <p><strong>Worksheet name: </strong> </p>
-                                                </div>
+                                                <hr>
                                             </div>
+
+
+
                                         </div>
 
                                     </div>
-                                    <div class="col-7">
+
+                                    <div class="col-7 d-flex align-items-center justify-content-center">
 
 
-                                        <div id="chart" style="height: 250px; width: 250px;padding: 2px;">
+                                        <div id="chart" style="height: 250px; width: 250px;padding: 2px;" class="my-0">
                                             <canvas id="myChart" height="100px" width="100px"></canvas>
 
                                         </div>
@@ -278,10 +319,12 @@
                                                     <div class="container">
                                                         <div class="row">
                                                             <div class="col-12">
-                                                                <strong> Number of times word attempted</strong>
+                                                                <strong class="text-secondary"> Number of times word attempted</strong>
                                                             </div>
                                                             <div class="col-12 text-center py-3">
-                                                                <h1> 15</h1>
+                                                                <h1>
+                                                                    <%= (count[0].correct + count[0].incorrect) %>
+                                                                </h1>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -292,10 +335,12 @@
                                                     <div class="container">
                                                         <div class="row">
                                                             <div class="col-12">
-                                                                <strong>Number of times correct</strong>
+                                                                <strong class="text-secondary">Number of times correct</strong>
                                                             </div>
                                                             <div class="col-12 text-center py-3" style="color:rgb(181, 103, 226);">
-                                                                <h1>10</h1>
+                                                                <h1>
+                                                                    <%= count[0].correct %>
+                                                                </h1>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -306,10 +351,12 @@
                                                     <div class="container">
                                                         <div class="row">
                                                             <div class="col-12">
-                                                                <strong>Number of times incorrect</strong>
+                                                                <strong class="text-secondary">Number of times incorrect</strong>
                                                             </div>
                                                             <div class="col-12 text-center py-3" style="color: #F25270;">
-                                                                <h1>5</h1>
+                                                                <h1>
+                                                                    <%= count[0].incorrect %>
+                                                                </h1>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -336,17 +383,10 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script>
-        // select option dynamic display
-
-        // document.getElementById('type').value = '';
-
-        // document.getElementById('date').value = '';
-        // if (!'') {
-        //     var target = document.getElementById("chart");
-        //     target.innerHTML += "<p>There's nothing to show here... Try submitting the worksheets:)</p>";
-        // }
-        let correct = '';
-        let incorrect = '';
+        var url = window.location.href;
+        document.getElementById("filters").action = url;
+        let correct = '<%= count[0].correct %>';
+        let incorrect = '<%= count[0].incorrect %>';
         let mychart = document.getElementById('myChart').getContext('2d');
         let linechart = new Chart(mychart, {
             type: 'doughnut',
@@ -357,7 +397,7 @@
                 ],
                 datasets: [{
                     label: 'My First Dataset',
-                    data: [40, 30],
+                    data: [correct, incorrect],
                     backgroundColor: [
                         'rgb(181, 103, 226)',
                         'lightgrey',

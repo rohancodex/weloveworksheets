@@ -25,7 +25,7 @@ router.get('/register', (req, res) => {
 
 router.get('/login', (req, res) => {
     if (req.session.loggedin) {
-        res.redirect('/student');
+        res.redirect('/dashboard');
     } else {
         res.render('login', { message: '' });
     }

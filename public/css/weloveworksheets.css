@@ -333,3 +333,11 @@ body::-webkit-scrollbar-thumb {
     background-color: #51548C;
     border-radius: 10px;
 }
+
+.genWord {
+    color: rgb(71, 71, 71);
+}
+
+.genWord:hover {
+    color: #51548C;
+}
