@@ -162,36 +162,39 @@
                 <!-- this is the row thats holding the word cards -->
                 <form id="response" action="" class="hide-submit" method="POST">
                     <div class="row">
-                        <!-- working of t
-            he card -->
+                        <!-- working of the card -->
                         <% if(result.length> 0) { %>
                             <% result.forEach(result=>{ %>
                                 <!-- This is the card -->
                                 <div class="col-2 m-3 ">
-                                    <div class=" borderColorChange card bg-white shadow-sm rounded WorksheetTxt align-items-center ">
+                                    <div class="borderColorChange card bg-white shadow-sm rounded WorksheetTxt align-items-center ">
                                         <div class="words mt-5">
                                             <!-- the word thats actually going to change here  -->
-                                            <h1 class="text-secondary">
-                                                <%= result.word%>
-                                            </h1>
-                                            <input type="hidden" name="wordid" value=" <%= result.id%>">
+                                            <div id="<%= result.id%>" class="cards" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                <h1 class="text-secondary">
+                                                    <%= result.word%>
+                                                </h1>
+                                            </div>
+                                            <input type="hidden" name="wordid" value="<%= result.id%>">
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-6 ">
                                                 <label>
-                            <!-- <input id="response" type="button" name="correct" value=""/> -->
-                          <button type="button" onclick="studentResponse('correct','response <%= result.id%>')">
-                          <i class="correct togreen btn bi bi-emoji-laughing-fill fa-2x" style="color:rgb(181, 103, 226);">
-                            <!-- <input type="hidden" name="correct"  value=""/> -->
-                            </i></button></label>
+                                                     <!-- <input id="response" type="button" name="correct" value=""/> -->
+                                                    <button id="correct<%= result.id%>" type="button" onclick="studentResponse('correct','response<%= result.id%>')">
+                                                        <i class="correct togreen btn bi bi-emoji-laughing-fill fa-2x" style="color:rgb(181, 103, 226);">
+                                                         <!-- <input type="hidden" name="correct"  value=""/> -->
+                                                         </i>
+                                                    <button>
+                                                </label>
                                             </div>
-                                            <input id="response <%= result.id%>" type="hidden" name="response" value="" />
+                                            <input id="response<%= result.id%>" type="hidden" name="response" value="" />
                                             <div class="col-6">
                                                 <label>
-                          <!-- <input type = "button" onclick="test()"> -->
-                          <!-- <input type="submit" name="incorrect"/> -->
-                        <button type="button" onclick="studentResponse('incorrect','response <%= result.id%>')">
-                        <i class="incorrect tored btn bi bi-emoji-neutral-fill fa-2x" style="color:rgb(236, 108, 108);"></i></button></label>
+                                                    <!-- <input type = "button" onclick="test()"> -->
+                                                     <!-- <input type="submit" name="incorrect"/> -->
+                                                    <button id="incorrect<%= result.id%>" type="button" onclick="studentResponse('incorrect','response <%= result.id%>')">
+                                                    <i class="incorrect tored btn bi bi-emoji-neutral-fill fa-2x" style="color:rgb(236, 108, 108);"></i></button></label>
                                             </div>
                                         </div>
                                     </div>
@@ -214,6 +217,60 @@
 
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content d-flex align-items-center" style="min-height:400px;">
+
+                <div class="modal-body d-flex justify-content-center align-items-center">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-2 d-flex justify-content-center">
+                            <i class="bi bi-arrow-left-circle-fill" style="font-size:30px" id="modal-left"> </i>
+                        </div>
+                        <!-- column that holds card start -->
+                        <div class="col-8 d-flex justify-content-center align-items-center">
+                            <div class="card d-flex justify-content-center align-items-center" style="width: 15rem; height:15rem;">
+                                <div class="card-body d-flex align-items-center">
+                                    <div class="container">
+
+                                        <div class="row d-flex justify-content-center">
+                                            <h1 id="modal-word" class="text-center text-secondary"></h1>
+                                            <input id="" type="hidden" name="card-id" value="" />
+                                        </div>
+                                        <div class="row mt-2 d-flex justify-content-center align-items-center">
+                                            <div class="col-6 ">
+                                                <label>
+                        <!-- <input id="response" type="button" name="correct" value=""/> -->
+                        <button id="modal-correct" type="button" class="mx-0 px-0"> 
+                        <i class="correct modal-togreen btn bi bi-emoji-laughing-fill fa-2x" style="color:rgb(181, 103, 226);">
+                        </i></button>
+                      </label>
+                                            </div>
+                                            <div class="col-6">
+                                                <label>
+                        <button id="modal-incorrect" type="button" class="mx-0 px-0">
+                        <i class="incorrect modal-tored btn bi bi-emoji-neutral-fill fa-2x" style="color:rgb(236, 108, 108);"></i></button>
+                    </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of column that holds card -->
+                        <div class="col-2 d-flex justify-content-center">
+                            <i class="bi bi-arrow-right-circle-fill" style="font-size:30px" id="modal-right"> </i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
 
     <!-- put this at the end before body ends -->
@@ -238,18 +295,124 @@
 
     <!-- Under Jquery cdn path -->
     <script>
+        // $(".togreen").click(function() {
+        //     $(this).parent().parent().parent().parent().parent().css({
+        //         "border": "solid",
+        //         "border-color": "rgb(181, 103, 226)"
+        //     });
+        // });
+        // $(".tored").click(function() {
+        //     $(this).parent().parent().parent().parent().parent().css({
+        //         "border": "solid",
+        //         "border-color": "rgb(236, 108, 108)"
+        //     });
+        // });
+        $(".cards").click(function() {
+            $(this).css({
+                "cursor": "pointer"
+            })
+            var id = this.id;
+            var word = $(this).children().text();
+            $("#modal-word").text(word);
+            $("input[name='card-id']").val(id);
+            console.log($("input[name='card-id']").val());
+        });
+
+        $("#modal-correct").click(function() {
+            var cardId = $("input[name='card-id']").val();
+            console.log(cardId);
+            $("#" + cardId).parent().parent().css({
+                "border": "none",
+                "border": "solid",
+                "border-color": "rgb(181, 103, 226)"
+            });
+            $("#response" + cardId).val(true);
+            console.log($("#response" + cardId).val())
+        })
+
+        $("#modal-incorrect").click(function() {
+            var cardId = $("input[name='card-id']").val();
+            console.log(cardId);
+            $("#" + cardId).parent().parent().css({
+                "border": "none",
+                "border": "solid",
+                "border-color": "rgb(236, 108, 108)"
+            });
+            $("#response" + cardId).val(false);
+            console.log($("#response" + cardId).val())
+        })
+
+        $("#modal-left").click(function() {
+
+            $(".modal-togreen").parent().parent().parent().parent().parent().parent().css({
+                "border": "none",
+            })
+            console.log("Hey left")
+            var currentWord = $("input[name='card-id']").val();
+            previousWord = parseInt(currentWord) - 1;
+            $("input[name='card-id']").val(previousWord);
+            console.log(previousWord)
+            var word = $("#" + previousWord).children().text();
+            console.log(word)
+
+            $("#modal-word").text(word);
+
+        });
+
+
+        $("#modal-right").click(function() {
+            $(".modal-tored").parent().parent().parent().parent().parent().parent().css({
+                "border": "none",
+            });
+
+            console.log("Hey right")
+            var currentWord = $("input[name='card-id']").val();
+            previousWord = parseInt(currentWord) + 1;
+            $("input[name='card-id']").val(previousWord);
+            console.log(previousWord)
+            var word = $("#" + previousWord).children().text();
+            console.log(word)
+            $("#modal-word").text(word);
+
+        })
+
+
         $(".togreen").click(function() {
             $(this).parent().parent().parent().parent().parent().css({
                 "border": "solid",
                 "border-color": "rgb(181, 103, 226)"
             });
         });
+
+        $(".modal-togreen").click(function() {
+            $(this).parent().parent().parent().parent().parent().parent().css({
+                "border": "solid",
+                "border-color": "rgb(181, 103, 226)"
+            });
+        });
+
         $(".tored").click(function() {
             $(this).parent().parent().parent().parent().parent().css({
                 "border": "solid",
                 "border-color": "rgb(236, 108, 108)"
             });
         });
+
+        $(".modal-tored").click(function() {
+            $(this).parent().parent().parent().parent().parent().parent().css({
+                "border": "solid",
+                "border-color": "rgb(236, 108, 108)"
+            });
+        });
+
+        function studentResponse(type, id) {
+            if (type === 'correct') {
+                document.getElementById(id).value = true;
+                console.log(type, id)
+            } else {
+                document.getElementById(id).value = false;
+            }
+        }
     </script>
 
     <script src="/js/worksheet.js"></script>

@@ -9,8 +9,6 @@ router.use(express.static("public"));
 
 const bodyParser = require("body-parser");
 
-
-
 router.use(bodyParser.urlencoded({ extended: false }));
 
 

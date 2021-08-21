@@ -162,7 +162,7 @@
             <!-- side bar ends here -->
 
             <div class="col-10 mt-2">
-                <div class="container">
+                <div id="element-to-print" class="container">
                     <div class="row">
                         <!-- the purple filter tab starts here -->
                         <div class="col-12 pastel-purple text-shadow-sm text-center text-white p-1 mx-0 rounded">
@@ -214,7 +214,7 @@
                         </div>
                         <!-- the purple filter tab end here -->
                     </div>
-                    <div class="row">
+                    <div class="row ">
                         <!-- word list generator col -->
                         <div class="col-5 px-2">
                             <div class="container bg-white rounded justify-content-center shadow-sm mt-2  py-2">
@@ -380,6 +380,14 @@
         </div>
     </div>
 
+
+
+    <button id="generate-pdf" class="btn text-white pastel-purple" onclick="pdf()" style="position: absolute;right: 10px;bottom: 10px;">
+        <h4>Generate Pdf</h4>
+    </button>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script>
@@ -406,6 +414,41 @@
                 }]
             }
         })
+    </script>
+
+
+
+
+
+
+    <script src="/js/html2pdf.bundle.min.js"></script>
+
+    <script>
+        var element = document.getElementById('element-to-print');
+        var opt = {
+            margin: 1,
+            pagebreak: {
+                mode: 'css'
+            },
+            filename: 'student-report.pdf',
+            image: {
+                type: 'jpeg',
+                quality: 1
+            },
+            html2canvas: {
+                scale: 1
+            },
+            jsPDF: {
+                unit: 'in',
+                format: 'tabloid',
+                orientation: 'landscape'
+            }
+
+        };
+
+        function pdf() {
+            html2pdf().set(opt).from(element).save();
+        }
     </script>
 
     <script src="https://kit.fontawesome.com/ffcb45aa63.js" crossorigin="anonymous"></script>

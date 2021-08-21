@@ -173,7 +173,7 @@ router.post('/(:student)/(:wordId)', (req, res) => {
     console.log("word id is " + wordId);
     let teacher = req.session.user[0].id;
     mysqlConnection = connectionRequest();
-    let sql = "SELECT word,COUNT(correct) as correct, COUNT(incorrect) as incorrect FROM datatracking WHERE teacher_id = ? AND full_name LIKE ? AND word = (SELECT word from worksheets where id = ?) AND DATE(created_at) BETWEEN ? AND ?;Select w.id, w.word, t.type from worksheets as w INNER JOIN worksheet_type as t on w.type_id = t.id where type_id = (select type_id from worksheets where id = ? group by type_id);SELECT word from worksheets where id = ?";
+    let sql = "SELECT COUNT(correct) as correct, COUNT(incorrect) as incorrect FROM datatracking WHERE teacher_id = ? AND full_name LIKE ? AND word = (SELECT word from worksheets where id = ?) AND DATE(created_at) BETWEEN ? AND ?;Select w.id, w.word, t.type from worksheets as w INNER JOIN worksheet_type as t on w.type_id = t.id where type_id = (select type_id from worksheets where id = ? group by type_id);SELECT word from worksheets where id = ?";
     mysqlConnection.query(sql, [teacher, name, wordId, fromDate, toDate, wordId, wordId], (err, results) => {
         if (err) {
             console.error(err);

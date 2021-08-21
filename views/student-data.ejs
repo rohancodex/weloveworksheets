@@ -16,6 +16,7 @@
 </head>
 
 <body class="bg-light">
+
     <!-- nav bar -->
     <div class="jumbotron bg-white text-dark shadow-sm round">
         <div class="container-fluid">
@@ -72,7 +73,6 @@
 
     <div class="bigWrapper container-fluid">
         <div class="row">
-
             <!-- side nav bar starts here -->
             <div class="col-2 align-self-left bg-white shadow-sm mt-0 fullHeight py-3">
                 <!-- <div class="d-flex justify-content-center"> <img src="/img/logo.png" alt="" height="75px" width="75px" class="align-self-center"></div> -->
@@ -111,14 +111,16 @@
             <!-- side bar ends here -->
 
             <div class="col-10 mt-2">
-                <div class="col-12 pastel-purple text-shadow-sm text-center text-white p-1 mx-0 rounded">
-                    <div class="container-fluid py-2">
-                        <div class="row d-flex align-items-center">
-                            <form id="filters" action="" method="post">
-                                <div class="container">
-                                    <div class="row d-flex align-items-center">
-                                        <div class="col-5">
-                                            <select name="type" id="type" onchange="this.value" class="form-select pastel-purple border-white">
+                <!-- pdf start -->
+                <div id="element-to-print">
+                    <div class="col-12 pastel-purple text-shadow-sm text-center text-white p-1 mx-0 rounded">
+                        <div class="container-fluid py-2">
+                            <div class="row d-flex align-items-center">
+                                <form id="filters" action="" method="post">
+                                    <div class="container">
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col-5">
+                                                <select name="type" id="type" onchange="this.value" class="form-select pastel-purple border-white">
                                                 <option value="Alphabet">Alphabet</option>
                                                 <option value="Dolche Preprimary" >Dolche Pre Primary</option>
                                                 <option value="Dolche primary">Dolche primary</option>
@@ -133,109 +135,115 @@
                                                 <option value="Fry 5">Fry 5</option>
                                                 <option value="Fry 6">Fry 6 <br> </option>
                                             </select>
-                                        </div>
-                                        <div class="col-3">
-                                            <input id="date" name="date" type="date" class="form-date form-control pastel-purple" required>
-                                        </div>
-                                        <div class="col-3">
-                                            <!-- <input id="type_res" name="type" type="hidden" value=""> -->
-                                            <input name="name" type="hidden" value="<%= name %>">
-                                            <input type="submit" class="pastel-purple text-white btm border border-white border-2 rounded rounded-pill px-5 py-2 align-self-end" value="Apply Filter">
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>
-
-
-                    </div>
-                </div>
-                <br>
-                <!-- after filters graph and stuff holder -->
-                <div class="graphHolder">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <!-- graph goes here -->
-                            <div class="col-6">
-                                <div class="container bg-white shadow-sm rounded">
-                                    <div class="row">
-                                        <div class="col-12 d-flex justify-content-center">
-                                            <div id="chart" style="height: 515px; width: 400px; padding: 20px;">
-                                                <canvas id="myChart" height="100px" width="100px"></canvas>
-
                                             </div>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- graph ends here -->
-                            <!-- correct words here -->
-                            <div class="col-3">
-                                <div class="container bg-white shadow-sm rounded ">
-                                    <div class="row pt-2">
-                                        <div class="col-12">
-                                            <div class=" text-center pt-1">
-                                                <h4 class="text-center text-pastel-green p-1">Correct</h4>
+                                            <div class="col-3">
+                                                <input id="date" name="date" type="date" class="form-date form-control pastel-purple" required>
+                                            </div>
+                                            <div class="col-3">
+                                                <!-- <input id="type_res" name="type" type="hidden" value=""> -->
+                                                <input name="name" type="hidden" value="<%= name %>">
+                                                <input type="submit" class="pastel-purple text-white btm border border-white border-2 rounded rounded-pill px-5 py-2 align-self-end" value="Apply Filter">
                                             </div>
                                         </div>
                                     </div>
-                                    <hr> <br>
-                                    <div id="correct-scroll" class="overflow-auto text-center">
-                                        <% if(word.length > 0) { %>
-                                            <% word.forEach(word=>{ %>
-                                                <% if(word.correct === 1){ %>
-                                                    <p>
-                                                        <%= word.word %>
-                                                    </p>
 
-                                                    <% }});}else{ %>
-
-                                                        <p>
-                                                            There's nothing to show here try submitting the worksheets:)
-                                                        </p>
-                                                        <%} %>
-                                    </div>
-
-                                </div>
+                                </form>
                             </div>
-                            <!-- end of correct words -->
-                            <!-- start of incorrect words -->
-                            <div class="col-3">
-                                <div class="container bg-white shadow-sm rounded ">
-                                    <div class="row pt-2">
-                                        <div class="col-12">
-                                            <div class=" text-center pt-1">
-                                                <h4 class="text-center text-pastel-red p-1">Incorrect</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr> <br>
 
-                                    <div id="incorrect-scroll" class="overflow-auto text-center">
-                                        <% if(word.length > 0) { %>
-                                            <% word.forEach(word=>{ %>
-                                                <% if(word.incorrect === 1){ %>
-                                                    <p>
-                                                        <%= word.word %>
-                                                    </p>
 
-                                                    <% }});} else{ %>
-                                                        <p>
-                                                            There's nothing to show here try submitting the worksheets:)
-                                                        </p>
-                                                        <%} %>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- end of incorrect words -->
                         </div>
                     </div>
+                    <br>
+                    <!-- after filters graph and stuff holder -->
+                    <div class="graphHolder">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <!-- graph goes here -->
+                                <div class="col-6">
+                                    <div class="container bg-white shadow-sm rounded">
+                                        <div class="row">
+                                            <div class="col-12 d-flex justify-content-center">
+                                                <div id="chart" style="height: 515px; width: 400px; padding: 20px;">
+                                                    <canvas id="myChart" height="100px" width="100px"></canvas>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- graph ends here -->
+                                <!-- correct words here -->
+                                <div class="col-3">
+                                    <div class="container bg-white shadow-sm rounded ">
+                                        <div class="row pt-2">
+                                            <div class="col-12">
+                                                <div class=" text-center pt-1">
+                                                    <h4 class="text-center text-pastel-green p-1">Correct</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr> <br>
+                                        <div id="correct-scroll" class="overflow-auto text-center">
+                                            <% if(word.length > 0) { %>
+                                                <% word.forEach(word=>{ %>
+                                                    <% if(word.correct === 1){ %>
+                                                        <p>
+                                                            <%= word.word %>
+                                                        </p>
+
+                                                        <% }});}else{ %>
+
+                                                            <p>
+                                                                There's nothing to show here try submitting the worksheets:)
+                                                            </p>
+                                                            <%} %>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- end of correct words -->
+                                <!-- start of incorrect words -->
+                                <div class="col-3">
+                                    <div class="container bg-white shadow-sm rounded ">
+                                        <div class="row pt-2">
+                                            <div class="col-12">
+                                                <div class=" text-center pt-1">
+                                                    <h4 class="text-center text-pastel-red p-1">Incorrect</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr> <br>
+
+                                        <div id="incorrect-scroll" class="overflow-auto text-center">
+                                            <% if(word.length > 0) { %>
+                                                <% word.forEach(word=>{ %>
+                                                    <% if(word.incorrect === 1){ %>
+                                                        <p>
+                                                            <%= word.word %>
+                                                        </p>
+
+                                                        <% }});} else{ %>
+                                                            <p>
+                                                                There's nothing to show here try submitting the worksheets:)
+                                                            </p>
+                                                            <%} %>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- end of incorrect words -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of the graph holder -->
                 </div>
-                <!-- end of the graph holder -->
+                <!-- end of pdf -->
+                <button id="generate-pdf" class="btn text-white pastel-purple" onclick="pdf()" style="z-index:10;position: fixed;right: 10px;bottom: 50px; background-color: #51548C;">
+                    <h4>Generate Pdf</h4>
+                </button>
+
                 <!-- this is start of word populater -->
                 <div class="wordanalytics my-2 container">
                     <div class="container bg-white rounded shadow-sm py-2">
@@ -268,6 +276,7 @@
                 <!-- this is the end of word populater -->
             </div>
         </div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -318,6 +327,37 @@
             }
         })
     </script>
+
+    <script src="/js/html2pdf.bundle.min.js"></script>
+
+    <script>
+        var element = document.getElementById('element-to-print');
+        var opt = {
+            margin: 1,
+            pagebreak: {
+                mode: 'css'
+            },
+            filename: 'student-report.pdf',
+            image: {
+                type: 'jpeg',
+                quality: 1
+            },
+            html2canvas: {
+                scale: 1
+            },
+            jsPDF: {
+                unit: 'in',
+                format: 'tabloid',
+                orientation: 'landscape'
+            }
+
+        };
+
+        function pdf() {
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
+
 
     <script src="https://kit.fontawesome.com/ffcb45aa63.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

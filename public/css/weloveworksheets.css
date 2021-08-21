@@ -341,3 +341,13 @@ body::-webkit-scrollbar-thumb {
 .genWord:hover {
     color: #51548C;
 }
+
+.topurple {
+    border: "solid";
+    border-color: rgb(181, 103, 226);
+}
+
+.topink {
+    border: "solid";
+    border-color: rgb(236, 108, 108);
+}
