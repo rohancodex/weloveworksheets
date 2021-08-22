@@ -170,8 +170,8 @@
                                     <div class="borderColorChange card bg-white shadow-sm rounded WorksheetTxt align-items-center ">
                                         <div class="words mt-5">
                                             <!-- the word thats actually going to change here  -->
-                                            <div id="<%= result.id%>" class="cards" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                <h1 class="text-secondary">
+                                            <div id="<%= result.id%>" class="cards" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer;">
+                                                <h1 class="text-secondary" data-bs-toggle="tooltip" title="Click to popup">
                                                     <%= result.word%>
                                                 </h1>
                                             </div>
