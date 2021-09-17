@@ -36,13 +36,17 @@ router.get('/about', function(req, res) {
 });
 
 router.get('/dashboard', function(req, res) {
+    if (!req.session.loggedin) {
+        res.redirect('/login');
+        return;
+    }
     res.render('dashboard');
 });
 
 /* GET users listing. */
 router.get('/logout', function(req, res) {
     req.session.destroy();
-    res.redirect('/login');
+    res.redirect('/');
 });
 
 
