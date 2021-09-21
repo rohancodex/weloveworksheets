@@ -31,6 +31,10 @@ router.get('/login', (req, res) => {
     }
 });
 
+router.get('/datatrackingandanalytics', (req, res) => {
+    res.render('datatracking-landing');
+})
+
 router.get('/about', function(req, res) {
     res.render('about');
 });
