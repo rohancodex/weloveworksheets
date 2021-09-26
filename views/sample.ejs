@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic IEP Perception</title>
+    <link rel="stylesheet" href="/css/weloveworksheets.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+        .PrintMessage {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-light" style="background-image: url(/img/blobs.svg); background-repeat: no-repeat;background-size: cover;">
+    <div class="PrintMessage">You are not authorized to print this document</div>
+    <div id="AllContent">
+        <!-- nav bar -->
+        <div class="jumbotron bg-white text-dark shadow-sm round">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+
+                    <div class="col-md-2 d-flex justify-content-center">
+                        <!-- Hav to add logo and stuff -->
+                        <img src="/img/logo.png" alt="" height="55px" width="55px" class="align-self-start mt-1 pl-5 ml-5">
+                    </div>
+                    <div class="col-md-7 d-flex justify-content-end">
+                        <!-- navigation code from bootstrap lib -->
+                        <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+                            <div class="container-fluid">
+
+                                <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link " aria-current="page" href="/">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " aria-current="page" href="/dashboard">Dashboard</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Datatracking</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item " style="color:#51548C" href="/datatrackingandanalytics">Datatracking</a></li>
+                                                <hr>
+                                                <li><a class="dropdown-item" href="/student">Student</a></li>
+                                                <li><a class="dropdown-item" href="/worksheet">Worksheet</a></li>
+                                                <li><a class="dropdown-item" href="/datatracking">Analytics</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/iep">IEP</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/files">Worksheets</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/about">About us</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-2 d-flex justify-content-center mt-2">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ml-5">
+                                <a href="/login">
+                                    <button type="submit" class="btn text-pastel-purple px-4 rounded rounded-pill" style=" background-color: #51548C; color:white;">
+                                        Log In
+                                    </button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- navbar ends here -->
+
+        <!-- main section starts here-->
+        <!-- start of section -->
+        <section id="element-to-print">
+            <div class="container bg-white rounded shadow-sm mt-3 py-5" style="background-image: url('../public/img/watermark.png'); background-repeat: repeat-y; background-size:99% ;">
+
+                <div class="container">
+                    <!-- the big title -->
+                    <div class="row my-2">
+                        <div class="col-12 d-flex justify-content-center">
+                            <h4 class="text-pastel-purple mt-2 ">Academic IEP (Language: Perception)</h4>
+                        </div>
+                    </div>
+                    <!-- the big title ends here -->
+
+                    <hr class="text-pastel-purple my-3" width="auto" style="height:3px;border:none;">
+
+                    <!-- Coversheets details here -->
+                    <div class="row my-2">
+                        <div class="col-12">
+                            <div class="container">
+                                <!-- Coversheet starts here  -->
+                                <div class="row mt-3 d-flex align-items-center">
+                                    <div class="col-2">
+                                        <label for="Stdname">Name of the student:</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" name="Stdname" placeholder="Full name here" class=" form-control" autocomplete="on">
+                                    </div>
+
+                                </div>
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-2">
+                                        <label for="concerns">Presenting Concerns</label>
+                                    </div>
+                                    <div class="col-2">
+                                        <input class="form-check-input" type="checkbox" name="academic" autocomplete="on">
+                                        <label for="academic">Academic</label>
+                                    </div>
+                                    <div class="col-2">
+                                        <input class="form-check-input" type="checkbox" name="behaviour" autocomplete="on">
+                                        <label for="behaviour">Behaviour</label>
+                                    </div>
+                                    <div class="col-2">
+                                        <input class="form-check-input" type="checkbox" name="social" autocomplete="on">
+                                        <label for="social">Social/ Emotional</label>
+                                    </div>
+
+                                </div>
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-2">
+                                        <label for="DOB">Date of birth</label>
+                                    </div>
+                                    <div class="col-2">
+                                        <input type="date" name="DOB" class="form-control p-2" autocomplete="on">
+                                    </div>
+                                </div>
+                                <div class="row d-flex align-items-center my-1">
+                                    <div class="col-2">
+                                        <label for="StdID">Student ID Number</label>
+                                    </div>
+                                    <div class="col-2">
+                                        <input type="text" class="form-control" autocomplete="on">
+                                    </div>
+                                    <div class="col-2">
+                                        <label for="Grade">Grade: </label>
+                                    </div>
+                                    <div class="col-2">
+                                        <input type="text" class="form-control" autocomplete="on">
+                                    </div>
+                                </div> <br>
+                                <div class="row d-flex align-self-center mt-2">
+                                    <div class="col-3">
+                                        Name of Support Teacher:
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="text" class="form-control" autocomplete="on">
+                                    </div>
+                                </div>
+                                <div class="row d-flex align-self-center">
+                                    <div class="col-3">
+                                        Name of class teacher
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="text" class="form-control" autocomplete="on">
+                                    </div>
+                                </div>
+                                <div class="row d-flex align-self-center mt-3">
+                                    <div class="col-3">
+                                        Accommodations
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="text" class="form-control" autocomplete="on">
+                                    </div>
+                                </div>
+                                <div class="row d-flex align-self-center mt-3">
+                                    <div class="col-3">
+                                        External testing reports if any
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="text" class="form-control" autocomplete="on">
+                                    </div>
+                                </div>
+
+                                <!-- cover sheet Ends here -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of Coversheets here   -->
+                    <hr class="text-pastel-purple my-5" width="auto" style="height:3px;border:none;">
+
+                    <!-- Language spelling and phonics starts here-->
+
+
+
+                    <!-- language spelling phonics table start -->
+                    <div class="row my-2">
+                        <div class="col-12">
+                            <div>
+                                <div class="container">
+                                    <!-- the title row -->
+                                    <div class="row">
+                                        <!-- <div class="col-1 border border-secondary d-flex align-items-center">
+                                            <strong>Area</strong>
+                                        </div> -->
+                                        <div class="col-4 border border-secondary d-flex justify-content-center align-items-center">
+                                            <strong>Current Level</strong>
+                                        </div>
+                                        <div class="col-4 border border-secondary d-flex justify-content-center align-items-center">
+                                            <strong>Goals for the week</strong>
+                                        </div>
+
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <strong>Begining</strong>
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <strong>Achieving</strong>
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <strong>Excelling</strong>
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <strong>Mastered</strong>
+                                        </div>
+                                    </div>
+                                    <!-- the end of title row -->
+                                    <% let i = 1; %>
+                                        <% iep.forEach(iep=>{ %>
+                                            <!-- the start of table row 1 -->
+                                            <div class="row" style="word-break: break-word;">
+                                                <div class="col-4 border border-secondary ">
+                                                    <div>
+                                                        <div class="row my-1 d-flex align-items-center">
+                                                            <div class="col-2 ">
+                                                                <!-- name value should be unique -->
+                                                                <input type="radio" class="form-check-input " name="<%= i %>">
+
+                                                            </div>
+                                                            <div class="col-9">
+                                                                <p>
+                                                                    <%= iep.current %>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-4 border border-secondary ">
+                                                    <%= iep.goal %>
+                                                </div>
+                                                <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                                    <input type="radio" class="form-check-input" name="<%= i %>">
+                                                </div>
+                                                <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                                    <input type="radio" class="form-check-input" name="<%= i %>">
+                                                </div>
+                                                <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                                    <input type="radio" class="form-check-input" name="<%= i %>">
+                                                </div>
+                                                <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                                    <input type="radio" class="form-check-input" name="<%= i %>">
+                                                </div>
+                                                <% i++; %>
+
+                                            </div>
+                                            <!-- end of the table row 1 -->
+                                            <% }); %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- language spelling phonics table end -->
+
+                    <!-- Language spelling and phonics ends here -->
+                </div>
+
+            </div>
+        </section>
+        <!-- end of section -->
+        <!-- end of the main section -->
+        <div class="container bg-white shadow rounded rounded-5x">
+            <div class="row d-flex justify-content-center">
+                <div class="col-11">
+                    <div class="container-fluid   mx-2  pt-4 px-5 pb-3 d-flex justify-content-center">
+                        <button id="generate-pdf" class="btn text-white rounded rounded-pill px-5" onclick="pdf()" style="  background-color: #51548C;">
+                        <h4>Generate Pdf</h4>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/js/html2pdf.bundle.min.js"></script>
+    <script>
+        var element = document.getElementById('element-to-print');
+
+        var opt = {
+            margin: 1,
+            pagebreak: {
+                mode: 'css',
+                avoid: ['.row']
+            },
+            filename: 'Academic IEP(Perception).pdf',
+            image: {
+                type: 'jpeg',
+                quality: 1
+            },
+            html2canvas: {
+                scale: 1
+            },
+            jsPDF: {
+                unit: 'in',
+                format: 'tabloid',
+                orientation: 'landscape'
+            }
+        };
+
+        function pdf() {
+            html2pdf().set(opt).from(element).save();
+        }
+
+        if ('matchMedia' in window) {
+            // Chrome, Firefox, and IE 10 support mediaMatch listeners
+            window.matchMedia('print').addListener(function(media) {
+                if (media.matches) {
+                    beforePrint();
+                } else {
+                    // Fires immediately, so wait for the first mouse movement
+                    $(document).one('mouseover', afterPrint);
+                }
+            });
+        } else {
+            // IE and Firefox fire before/after events
+            $(window).on('beforeprint', beforePrint);
+            $(window).on('afterprint', afterPrint);
+        }
+
+        function beforePrint() {
+            $("#AllContent").hide();
+            $(".PrintMessage").show();
+        }
+
+        function afterPrint() {
+            $(".PrintMessage").hide();
+            $("#AllContent").show();
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

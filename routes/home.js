@@ -53,5 +53,14 @@ router.get('/logout', function(req, res) {
     res.redirect('/');
 });
 
+// router.get('/one', (req, res) => {
+//     mysqlConnection = connectionRequest();
+//     mysqlConnection.query('SELECT * FROM perception;', (err, result) => {
+//         if (err) console.log(err);
+//         mysqlConnection.destroy();
+
+//         res.render('sample', { iep: result });
+//     })
+// })
 
 module.exports = router;

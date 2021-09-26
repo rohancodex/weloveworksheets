@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic IEP Perception</title>
+    <link rel="stylesheet" href="/css/weloveworksheets.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+        .PrintMessage {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-light" style="background-image: url(/img/blobs.svg); background-repeat: no-repeat;background-size: cover;">
+    <div class="PrintMessage">You are not authorized to print this document</div>
+    <div id="AllContent">
+        <!-- nav bar -->
+        <div class="jumbotron bg-white text-dark shadow-sm round">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+
+                    <div class="col-md-2 d-flex justify-content-center">
+                        <!-- Hav to add logo and stuff -->
+                        <img src="/img/logo.png" alt="" height="55px" width="55px" class="align-self-start mt-1 pl-5 ml-5">
+                    </div>
+                    <div class="col-md-7 d-flex justify-content-end">
+                        <!-- navigation code from bootstrap lib -->
+                        <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+                            <div class="container-fluid">
+
+                                <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link " aria-current="page" href="/">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " aria-current="page" href="/dashboard">Dashboard</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Datatracking</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item " style="color:#51548C" href="/datatrackingandanalytics">Datatracking</a></li>
+                                                <hr>
+                                                <li><a class="dropdown-item" href="/student">Student</a></li>
+                                                <li><a class="dropdown-item" href="/worksheet">Worksheet</a></li>
+                                                <li><a class="dropdown-item" href="/datatracking">Analytics</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/iep">IEP</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/files">Worksheets</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/about">About us</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-2 d-flex justify-content-center mt-2">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ml-5">
+                                <a href="/login">
+                                    <button type="submit" class="btn text-pastel-purple px-4 rounded rounded-pill" style=" background-color: #51548C; color:white;">
+                                        Log In
+                                    </button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- navbar ends here -->
+
+        <!-- main section starts here-->
+        <!-- start of section -->
+        <section id="element-to-print">
+            <div class="container bg-white rounded shadow-sm mt-3 py-5" style="background-image: url('../public/img/watermark.png'); background-repeat: repeat-y; background-size:99% ;">
+
+                <div class="container">
+                    <!-- the big title -->
+                    <div class="row my-2">
+                        <div class="col-12 d-flex justify-content-center">
+                            <h4 class="text-pastel-purple mt-2 ">Academic IEP (Language: Perception)</h4>
+                        </div>
+                    </div>
+                    <!-- the big title ends here -->
+
+                    <hr class="text-pastel-purple my-3" width="auto" style="height:3px;border:none;">
+
+                    <!-- Coversheets details here -->
+                    <div class="row my-2">
+                        <div class="col-12">
+                            <div class="container">
+                                <!-- Coversheet starts here  -->
+                                <div class="row mt-3 d-flex align-items-center">
+                                    <div class="col-2">
+                                        <label for="Stdname">Name of the student:</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" name="Stdname" placeholder="Full name here" class=" form-control" autocomplete="on">
+                                    </div>
+
+                                </div>
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-2">
+                                        <label for="concerns">Presenting Concerns</label>
+                                    </div>
+                                    <div class="col-2">
+                                        <input class="form-check-input" type="checkbox" name="academic" autocomplete="on">
+                                        <label for="academic">Academic</label>
+                                    </div>
+                                    <div class="col-2">
+                                        <input class="form-check-input" type="checkbox" name="behaviour" autocomplete="on">
+                                        <label for="behaviour">Behaviour</label>
+                                    </div>
+                                    <div class="col-2">
+                                        <input class="form-check-input" type="checkbox" name="social" autocomplete="on">
+                                        <label for="social">Social/ Emotional</label>
+                                    </div>
+
+                                </div>
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-2">
+                                        <label for="DOB">Date of birth</label>
+                                    </div>
+                                    <div class="col-2">
+                                        <input type="date" name="DOB" class="form-control p-2" autocomplete="on">
+                                    </div>
+                                </div>
+                                <div class="row d-flex align-items-center my-1">
+                                    <div class="col-2">
+                                        <label for="StdID">Student ID Number</label>
+                                    </div>
+                                    <div class="col-2">
+                                        <input type="text" class="form-control" autocomplete="on">
+                                    </div>
+                                    <div class="col-2">
+                                        <label for="Grade">Grade: </label>
+                                    </div>
+                                    <div class="col-2">
+                                        <input type="text" class="form-control" autocomplete="on">
+                                    </div>
+                                </div> <br>
+                                <div class="row d-flex align-self-center mt-2">
+                                    <div class="col-3">
+                                        Name of Support Teacher:
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="text" class="form-control" autocomplete="on">
+                                    </div>
+                                </div>
+                                <div class="row d-flex align-self-center">
+                                    <div class="col-3">
+                                        Name of class teacher
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="text" class="form-control" autocomplete="on">
+                                    </div>
+                                </div>
+                                <div class="row d-flex align-self-center mt-3">
+                                    <div class="col-3">
+                                        Accommodations
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="text" class="form-control" autocomplete="on">
+                                    </div>
+                                </div>
+                                <div class="row d-flex align-self-center mt-3">
+                                    <div class="col-3">
+                                        External testing reports if any
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="text" class="form-control" autocomplete="on">
+                                    </div>
+                                </div>
+
+                                <!-- cover sheet Ends here -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of Coversheets here   -->
+                    <hr class="text-pastel-purple my-5" width="auto" style="height:3px;border:none;">
+
+                    <!-- Language spelling and phonics starts here-->
+
+
+
+                    <!-- language spelling phonics table start -->
+                    <div class="row my-2">
+                        <div class="col-12">
+                            <div>
+                                <div class="container">
+                                    <!-- the title row -->
+                                    <div class="row">
+                                        <!-- <div class="col-1 border border-secondary d-flex align-items-center">
+                                            <strong>Area</strong>
+                                        </div> -->
+                                        <div class="col-4 border border-secondary d-flex justify-content-center align-items-center">
+                                            <strong>Current Level</strong>
+                                        </div>
+                                        <div class="col-4 border border-secondary d-flex justify-content-center align-items-center">
+                                            <strong>Goals for the week</strong>
+                                        </div>
+
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <strong>Begining</strong>
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <strong>Achieving</strong>
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <strong>Excelling</strong>
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <strong>Mastered</strong>
+                                        </div>
+                                    </div>
+                                    <!-- the end of title row -->
+
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="1">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Visual perception activities in 3 out 5 situations for the following;
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Visual perception activities in 3 out 5 situations for the following;
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="1">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="1">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="1">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="1">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="2">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Visual awareness – focusing attention on a specific visual stimuli
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Visual awareness – focusing attention on a specific visual stimuli
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="2">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="2">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="2">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="2">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="3">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Focus and figure ground – focusing attention on a specific visual stimuli when background stimuli is present
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Focus and figure ground – focusing attention on a specific visual stimuli when background stimuli is present
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="3">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="3">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="3">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="3">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="4">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Visual tracking – following moving object with the eyes (essential pre-reading skill) .
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Visual tracking – following moving object with the eyes (essential pre-reading skill) .
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="4">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="4">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="4">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="4">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="5">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Visual discrimination of quantity – recognizing/demonstrating how much or how many.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Visual discrimination of quantity – recognizing/demonstrating how much or how many.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="5">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="5">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="5">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="5">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="6">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Visual discrimination of direction – recognizing/demonstrating up/down, right/left, etc.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Visual discrimination of direction – recognizing/demonstrating up/down, right/left, etc.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="6">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="6">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="6">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="6">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="7">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Visual discrimination of distance.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Visual discrimination of distance.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="7">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="7">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="7">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="7">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="8">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Visual memory – recalling something that was seen.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Visual memory – recalling something that was seen.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="8">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="8">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="8">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="8">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="9">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Visual sequencing – recalling something that was seen in order
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Visual sequencing – recalling something that was seen in order
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="9">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="9">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="9">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="9">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="10">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Complete_________ piece interlocking puzzles.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Complete_________ piece interlocking puzzles.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="10">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="10">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="10">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="10">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="11">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Complete ________piece non-interlocking puzzles.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Complete ________piece non-interlocking puzzles.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="11">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="11">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="11">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="11">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="12">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Copy a simple block pattern using 2 to 5 blocks.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Copy a simple block pattern using 2 to 5 blocks.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="12">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="12">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="12">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="12">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="13">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Copy a complex block pattern using 6 to 10 blocks.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Copy a complex block pattern using 6 to 10 blocks.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="13">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="13">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="13">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="13">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="14">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Create a simple block pattern using 2 to 5 blocks.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Create a simple block pattern using 2 to 5 blocks.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="14">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="14">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="14">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="14">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="15">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Create a complex block pattern using 6 to 10 blocks.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Create a complex block pattern using 6 to 10 blocks.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="15">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="15">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="15">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="15">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="16">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Locate items within notebook or folder.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Locate items within notebook or folder.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="16">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="16">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="16">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="16">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="17">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Locate items within a backpack.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Locate items within a backpack.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="17">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="17">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="17">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="17">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="18">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Locate items within a desk.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Locate items within a desk.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="18">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="18">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="18">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="18">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="19">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Locate items within a locker.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Locate items within a locker.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="19">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="19">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="19">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="19">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="20">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Locate items within a classroom.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Locate items within a classroom.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="20">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="20">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="20">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="20">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="21">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Auditory Perception activities in 3 out of 5 situations for the following;
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Auditory Perception activities in 3 out of 5 situations for the following;
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="21">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="21">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="21">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="21">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="22">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Sound Awareness – discriminating between sounds.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Sound Awareness – discriminating between sounds.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="22">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="22">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="22">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="22">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="23">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Sound Localization – discriminating where sound is coming from
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Sound Localization – discriminating where sound is coming from
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="23">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="23">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="23">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="23">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="24">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Sound discrimination of intensity – loud vs. soft.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Sound discrimination of intensity – loud vs. soft.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="24">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="24">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="24">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="24">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="25">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Sound discrimination of duration – difference between different tempos, rhythms, meters
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Sound discrimination of duration – difference between different tempos, rhythms, meters
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="25">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="25">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="25">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="25">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="26">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Sound discrimination of pitch – recognizing same and different, high and low, up and down as they relate to a melody
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Sound discrimination of pitch – recognizing same and different, high and low, up and down as they relate to a melody
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="26">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="26">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="26">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="26">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="27">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Sound discrimination of timbre – recognizing sound quality or identifying characteristics of a sound
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Sound discrimination of timbre – recognizing sound quality or identifying characteristics of a sound
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="27">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="27">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="27">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="27">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="28">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Visual discrimination of color – recognizing/identifying different hues
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Visual discrimination of color – recognizing/identifying different hues
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="28">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="28">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="28">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="28">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="29">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Visual discrimination of shape – recognizing objects by their distinctive
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Visual discrimination of shape – recognizing objects by their distinctive
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="29">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="29">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="29">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="29">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="30">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            form
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            form
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="30">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="30">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="30">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="30">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="31">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Visual discrimination of size – recognizing how large and small things are
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Visual discrimination of size – recognizing how large and small things are
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="31">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="31">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="31">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="31">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="32">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Visual discrimination of quantity – recognizing/demonstrating how much or how many
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Visual discrimination of quantity – recognizing/demonstrating how much or how many
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="32">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="32">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="32">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="32">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="33">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Visual discrimination of direction – recognizing/demonstrating up/down, right/left, etc.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Visual discrimination of direction – recognizing/demonstrating up/down, right/left, etc.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="33">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="33">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="33">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="33">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="34">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Auditory Figure Ground – Identifying a specific sound when lots of sounds are present in the environment.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Auditory Figure Ground – Identifying a specific sound when lots of sounds are present in the environment.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="34">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="34">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="34">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="34">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                    <!-- the start of table row 1 -->
+                                    <div class="row" style="word-break: break-word;">
+                                        <div class="col-4 border border-secondary ">
+                                            <div>
+                                                <div class="row my-1 d-flex align-items-center">
+                                                    <div class="col-2 ">
+                                                        <!-- name value should be unique -->
+                                                        <input type="radio" class="form-check-input " name="35">
+
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <p>
+                                                            Auditory memory and sequencing – recalling things you learned by rote or by listening.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 border border-secondary ">
+                                            Auditory memory and sequencing – recalling things you learned by rote or by listening.
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="35">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="35">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="35">
+                                        </div>
+                                        <div class="col-1 border border-secondary d-flex justify-content-center align-items-center">
+                                            <input type="radio" class="form-check-input" name="35">
+                                        </div>
+
+
+                                    </div>
+                                    <!-- end of the table row 1 -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- language spelling phonics table end -->
+
+                    <!-- Language spelling and phonics ends here -->
+                </div>
+
+            </div>
+        </section>
+        <!-- end of section -->
+        <!-- end of the main section -->
+        <div class="container bg-white shadow rounded rounded-5x">
+            <div class="row d-flex justify-content-center">
+                <div class="col-11">
+                    <div class="container-fluid   mx-2  pt-4 px-5 pb-3 d-flex justify-content-center">
+                        <button id="generate-pdf" class="btn text-white rounded rounded-pill px-5" onclick="pdf()" style="  background-color: #51548C;">
+                        <h4>Generate Pdf</h4>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/js/html2pdf.bundle.min.js"></script>
+    <script>
+        var element = document.getElementById('element-to-print');
+
+        var opt = {
+            margin: 1,
+            pagebreak: {
+                mode: 'css',
+                avoid: ['.row']
+            },
+            filename: 'Academic IEP(Perception).pdf',
+            image: {
+                type: 'jpeg',
+                quality: 1
+            },
+            html2canvas: {
+                scale: 1
+            },
+            jsPDF: {
+                unit: 'in',
+                format: 'tabloid',
+                orientation: 'landscape'
+            }
+        };
+
+        function pdf() {
+            html2pdf().set(opt).from(element).save();
+        }
+
+        if ('matchMedia' in window) {
+            // Chrome, Firefox, and IE 10 support mediaMatch listeners
+            window.matchMedia('print').addListener(function(media) {
+                if (media.matches) {
+                    beforePrint();
+                } else {
+                    // Fires immediately, so wait for the first mouse movement
+                    $(document).one('mouseover', afterPrint);
+                }
+            });
+        } else {
+            // IE and Firefox fire before/after events
+            $(window).on('beforeprint', beforePrint);
+            $(window).on('afterprint', afterPrint);
+        }
+
+        function beforePrint() {
+            $("#AllContent").hide();
+            $(".PrintMessage").show();
+        }
+
+        function afterPrint() {
+            $(".PrintMessage").hide();
+            $("#AllContent").show();
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

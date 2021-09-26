@@ -355,6 +355,7 @@
             });
             $("#response" + cardId).val(true);
             console.log($("#response" + cardId).val())
+            $("#modal-right").trigger("click");
         })
 
         $("#modal-incorrect").click(function() {
@@ -366,7 +367,9 @@
                 "border-color": "rgb(236, 108, 108)"
             });
             $("#response" + cardId).val(false);
-            console.log($("#response" + cardId).val())
+            console.log($("#response" + cardId).val());
+
+            $("#modal-right").trigger("click");
         })
 
         $("#modal-left").click(function() {
