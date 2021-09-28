@@ -351,3 +351,8 @@ body::-webkit-scrollbar-thumb {
     border: "solid";
     border-color: rgb(236, 108, 108);
 }
+
+#footer {
+    /* position: relative; */
+    width: 100%;
+}
