@@ -42,7 +42,6 @@ router.get('/', (req, res) => {
             res.render('student', { title: 'Student List', data: results });
         }
     });
-
 });
 
 router.get('/edit/(:id)', (req, res) => {

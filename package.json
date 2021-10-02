@@ -20,6 +20,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "chart.js": "^3.4.0",
+    "chokidar": "^3.5.2",
     "cookie-parser": "^1.4.5",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
@@ -32,6 +33,7 @@
     "method-override": "^3.0.0",
     "multer": "^1.4.2",
     "mysql2": "^2.2.5",
-    "papaparse": "^5.3.1"
+    "papaparse": "^5.3.1",
+    "pm2": "^5.1.2"
   }
 }
