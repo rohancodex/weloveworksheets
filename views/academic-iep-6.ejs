@@ -6877,16 +6877,37 @@
                         <button id="generate-pdf" class="btn text-white rounded rounded-pill px-5" onclick="pdf()" style="  background-color: #51548C;">
                             <h4>Generate Pdf</h4>
                         </button>
+                        <button onclick="dashboard()" class="btn text-white rounded rounded-pill px-5"
+                            style="  background-color: #51548C;">
+                            <h4>Back to Dashboard</h4>
+                        </button>
+                        <a href="/iep/academiciep/perception">
+                            <button class="btn text-white rounded rounded-pill px-5"
+                                style="  background-color: #51548C;">
+                                <h4>Next Page</h4>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="/js/html2pdf.bundle.min.js"></script>
     <script>
-        var element = document.getElementById('element-to-print');
+       var element = document.getElementById('element-to-print');
+        let academic6 = localStorage.getItem("academic_iep6");
+        let paymentid = localStorage.getItem("payment_id");
+
+        function dashboard() {
+            location.href = '/iep/iep-dashboard?payment_id=' + paymentid;
+        }
+
+
+        if (academic6 === "false") {
+            location.href = '/iep/iep-dashboard?payment_id=' + paymentid;
+        }
 
         var opt = {
             margin: 1,
@@ -6908,9 +6929,35 @@
                 orientation: 'landscape'
             }
         };
+        //uncheck radio on second click
+        $("input:radio").on("click", function (e) {
+            var inp = $(this);
+            if (inp.is(".theone")) {
+                inp.prop("checked", false).removeClass("theone");
+            } else {
+                $("input:radio[name='" + inp.prop("name") + "'].theone").removeClass("theone");
+                inp.addClass("theone");
+            }
 
-        function pdf() {
-            html2pdf().set(opt).from(element).save();
+        });
+          async function pdf() {
+            if(academic6==="false"){
+                alert("You have already generated a PDF!");
+                return
+            }
+            var res = confirm("By clicking ok you are using your one-time pdf generation. Once you click ok this cannot be reverted. Do you want to continue?");
+            if (res == true) {
+                if (academic6 === "true") {
+                    localStorage.setItem("academic_iep6", "false");
+                    academic6 = "false";
+                    await html2pdf().set(opt).from(element).save();
+                }
+                
+            }
+            else {
+                return
+            }
+
         }
 
         if ('matchMedia' in window) {

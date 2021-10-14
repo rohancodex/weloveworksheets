@@ -1,7 +1,7 @@
 const express = require("express");
 var createError = require('http-errors');
 const app = express();
-
+const Razorpay = require('razorpay');
 const bodyParser = require("body-parser");
 const ejs = require('ejs');
 var flash = require('express-flash');
@@ -79,7 +79,18 @@ app.use(expressLayouts);
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-
+var instance = new Razorpay({
+    key_id: process.env.RAZORPAY_ID,
+    key_secret: process.env.RAZORPAY_SECRET
+  });
+  var options = {
+    amount: 50000,  // amount in the smallest currency unit
+    currency: "USD",
+    receipt: "order_rcptid_11"
+  };
+  instance.orders.create(options, function(err, order) {
+    console.log(order);
+  });
 
 
 

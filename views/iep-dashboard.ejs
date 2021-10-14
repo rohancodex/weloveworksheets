@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic IEP Spelling Phonics</title>
+    <title>Academic IEP</title>
     <link rel="stylesheet" href="/css/weloveworksheets.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
     <style>
@@ -25,23 +26,37 @@
             -webkit-transition-property: color, background-color;
             transition-property: color, background-color;
         }
-        
+
         .hvr-fade:hover,
         .hvr-fade:focus,
         .hvr-fade:active {
             background-color: #EFF6FF;
             color: #111827;
         }
-        
+
         a {
             color: #111827;
             text-decoration: none;
         }
-        
+
         .skroll {
-            max-height: 450px;
             overflow-y: scroll;
             overflow-x: hidden;
+            max-height: 300px;
+        }
+
+        .blockheight {
+            height: 500px;
+        }
+
+        /* footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        } */
+        .bigWrapper {
+            min-height: 100vh;
         }
     </style>
 
@@ -49,292 +64,252 @@
 
 </head>
 
-<body class="bg-light" style="background-image: url(/img/blobs.svg);">
+<body class="bg-light"
+    style="background-image: url(../public/img/blobs.svg);background-repeat: no-repeat; background-size:cover ;">
+    <div class="bigWrapper">
+        <!-- update nav bar -->
+        <div class="jumbotron bg-white text-dark shadow-sm round">
+            <div class="container-fluid">
+                <div class="row justify-content-right">
 
-    <!-- update nav bar -->
-    <div class="jumbotron bg-white text-dark shadow-sm round">
-        <div class="container-fluid">
-            <div class="row justify-content-right">
+                    <div class="col-md-2 d-flex justify-content-center">
+                        <!-- Hav to add logo and stuff -->
+                        <img src="/img/logo.png" alt="" height="55px" width="55px"
+                            class="align-self-start mt-1 pl-5 ml-5">
+                    </div>
+                    <div class="col-md-7 d-flex justify-content-end">
+                        <!-- navigation code from bootstrap lib -->
+                        <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+                            <div class="container-fluid">
 
-                <div class="col-md-2 d-flex justify-content-center">
-                    <!-- Hav to add logo and stuff -->
-                    <img src="/img/logo.png" alt="background-image" height="55px" width="55px" class="align-self-start mt-1 pl-5 ml-5">
-                </div>
-                <div class="col-md-7 d-flex justify-content-end">
-                    <!-- navigation code from bootstrap lib -->
-                    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
-                        <div class="container-fluid">
+                                <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">About us</a>
+                                        </li>
 
-                            <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">About us</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">IEP's Info</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Contact Us</a>
-                                    </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">IEP's Info</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Contact Us</a>
+                                        </li>
 
 
-                                </ul>
+                                    </ul>
 
+                                </div>
                             </div>
-                        </div>
-                    </nav>
-                </div>
-                <div class="col-2 d-flex justify-content-center mt-2">
-                    <ul class="navbar-nav">
-                        <li class="nav-item ml-5">
-                            <button type="submit" class="btn text-white col-12" style=" background-color: #51548C">Subscribe</button>
-                        </li>
-                    </ul>
+                        </nav>
+                    </div>
+                    <div class="col-2 d-flex justify-content-center mt-2">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ml-5">
+                                <button type="submit" class="btn text-white col-12"
+                                    style=" background-color: #51548C">Subscribe</button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- navbar ends here -->
+        <!-- navbar ends here -->
 
 
-    <div class="container my-3 ">
-        <div class="row">
-            <div class="col-6">
+        <div class="container my-3 ">
+            <div class="row ">
+                <div class="col-6 ">
+                    <div class="blockheight container d-flex align-items-center  bg-white shadow-sm rounded py-3  ">
+                        <div class="row">
+                            <div class="col-12 text-center text-pastel-purple">
+                                <h3>Welcome to Academic IEP</h3>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <img src="/img/dizzy-education.png" alt="" height="auto" width="350 px">
+                            </div>
+                            <div class="col-12">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="col-10">
+                                            <p>
+                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et veritatis unde quod voluptas expedita neque? Accusantium, error vero. Magni veniam ea ex vero obcaecati? Sint impedit nam error aspernatur quidem.
+                                            </p>
+                                        </div>
+                                    </div>
 
-                <div class="container  bg-white shadow-sm rounded py-3">
-                    <div class="row">
-                        <div class="col-12 text-center text-pastel-purple">
-                            <h3>Academic IEP</h3>
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
-                    <hr>
-                    <!-- Iep Options row start -->
-                    <div class="row my-1 p-2  ">
-
-                        <div class="col-2">
-                            Sr no
-                        </div>
-                        <div class="col-8">
-                            <p>Section</p>
-                        </div>
-                        <div class="col-2">
-                            Credits
-                        </div>
-
-
-
-                    </div>
-                    <div class="skroll">
-                        <!-- Iep Options row end -->
-                        <!-- Iep spelling phonics row start -->
-                        <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
-
-                            <div class="col-2">
-                                1
-                            </div>
-                            <div class="col-8">
-                                <a href="/iep/academiciep/spellingandphonics">Academic IEP(Language: Spelling Phonics)</a>
-                            </div>
-                            <div class="col-2">
-                                1
-                            </div>
-
-
-
-                        </div>
-                        <!-- Iep spelling phonics row end -->
-                        <!-- Iep reading row start -->
-                        <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
-
-                            <div class="col-2">
-                                2
-                            </div>
-                            <div class="col-8">
-                                <a href="/iep/academiciep/reading">Academic IEP(Language: Reading)</a>
-                            </div>
-                            <div class="col-2">
-                                1
-                            </div>
-
-
-
-                        </div>
-                        <!-- Iep reading row end -->
-                        <!-- Iep reading comprehension row start -->
-                        <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
-
-                            <div class="col-2">
-                                3
-                            </div>
-                            <div class="col-8">
-                                <a href="/iep/academiciep/readingcomprehension">Academic IEP(Language: Reading-Comprehension)</a>
-                            </div>
-                            <div class="col-2">
-                                1
-                            </div>
-
-
-
-                        </div>
-                        <!-- Iep reading comprehension row end -->
-                        <!-- Iep writing row start -->
-                        <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
-
-                            <div class="col-2">
-                                4
-                            </div>
-                            <div class="col-8">
-                                <a href="/iep/academiciep/grammar">Academic IEP(Language: Writing)</a>
-                            </div>
-                            <div class="col-2">
-                                1
-                            </div>
-
-
-
-                        </div>
-                        <!-- Iep writing row end -->
-                        <!-- Iep grammar row start -->
-                        <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
-
-                            <div class="col-2">
-                                5
-                            </div>
-                            <div class="col-8">
-                                <a href="/iep/academiciep/writing">Academic IEP(Language: Grammar)</a>
-                            </div>
-                            <div class="col-2">
-                                1
-                            </div>
-
-
-
-                        </div>
-                        <!-- Iep grammar row end -->
-                        <!-- Iep math row start -->
-                        <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
-
-                            <div class="col-2">
-                                6
-                            </div>
-                            <div class="col-8">
-                                <a href="/iep/academiciep/math">Academic IEP(Language: Math)</a>
-                            </div>
-                            <div class="col-2">
-                                1
-                            </div>
-
-
-
-                        </div>
-                        <!-- Iep math row end -->
-                        <!-- Iep perception row start -->
-                        <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
-
-                            <div class="col-2">
-                                7
-                            </div>
-                            <div class="col-8">
-                                <a href="/iep/academiciep/perception">Academic IEP(Language: Perception)</a>
-                            </div>
-                            <div class="col-2">
-                                1
-                            </div>
-
-
-
-                        </div>
-                        <!-- Iep perception row end -->
-
 
                     </div>
-
                 </div>
-            </div>
-            <div class="col-6">
-                <div class="container  bg-white shadow-sm rounded py-3">
-                    <div class="row">
-                        <div class="col-12 text-center text-pastel-purple">
-                            <h3>Behavioural IEP</h3>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- Iep Options row start -->
-                    <div class="row my-1 p-2  ">
+                <!-- academic IEP options and credits system starts here -->
+                <div class="col-6">
 
-                        <div class="col-2">
-                            Sr no
+                    <div class="container  bg-white shadow-sm rounded py-3 blockheight">
+                        <div class="row">
+                            <div class="col-12 text-center text-pastel-purple">
+                                <h3>Academic IEP</h3>
+                            </div>
                         </div>
-                        <div class="col-8">
-                            <p>Section</p>
-                        </div>
-                        <div class="col-2">
-                            Credits
-                        </div>
-
-
-
-                    </div>
-                    <div class="skroll">
-                        <!-- Iep Options row end -->
-                        <!-- Iep spelling phonics row start -->
-                        <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
+                        <hr>
+                        <!-- Iep Options row start -->
+                        <div class="row my-1 p-3  ">
 
                             <div class="col-2">
-                                1
+                                Sr no
                             </div>
                             <div class="col-8">
-                                <a href="/iep/behavioural-iep/">Behavioural IEP(Perception)</a>
+                                <p>Section</p>
                             </div>
                             <div class="col-2">
-                                1
+                                Credits
                             </div>
 
 
 
                         </div>
-                        <!-- Iep spelling phonics row end -->
-                        <!-- Iep reading row start -->
-                        <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
-
-                            <div class="col-2">
-                                2
+                        <div class="skroll">
+                            <!-- Iep Options row end -->
+                            <!-- Iep spelling phonics row start -->
+                            <a id="academic1link" href="/iep/academiciep/spellingandphonics">
+                                <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
+                                    <div class="col-2">
+                                        1
+                                    </div>
+                                    <div class="col-8">
+                                        Academic IEP(Language: Spelling Phonics)
+                                    </div>
+                                    <div id="academic1" class="col-2">
+                                      <i class="bi bi-circle-fill text-success academic1green"></i>
+                                      <i class="bi bi-circle-fill text-danger visually-hidden academic1red"></i>
+                                   </div>
+                                </div>
+                            </a>
+                            <!-- Iep spelling phonics row end -->
+                            <!-- Iep reading row start -->
+                            <a id="academic2link" href="/iep/academiciep/reading">
+                                <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
+                                    <div class="col-2">
+                                        2
+                                    </div>
+                                    <div class="col-8">
+                                        Academic IEP(Language: Reading)
+                                    </div>
+                                    <div id="academic2" class="col-2">
+                                <i class="bi bi-circle-fill text-success academic2green"></i>
+                                <i class="bi bi-circle-fill text-danger visually-hidden academic2red"></i>
                             </div>
-                            <div class="col-8">
-                                <a href="/iep/behavioural-iep">Behavioural IEP(Social/Emotional)</a>
+                                </div>
+                            </a>
+                            <!-- Iep reading row end -->
+                            <!-- Iep reading comprehension row start -->
+                            <a id="academic3link" href="/iep/academiciep/readingcomprehension">
+                                <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
+                                    <div class="col-2">
+                                        3
+                                    </div>
+                                    <div class="col-8">
+                                        Academic IEP(Language: Reading-Comprehension)
+                                    </div>
+                                    <div id="academic3" class="col-2">
+                                <i class="bi bi-circle-fill text-success academic3green"></i>
+                                <i class="bi bi-circle-fill text-danger visually-hidden academic3red"></i>
                             </div>
-                            <div class="col-2">
-                                1
+                                </div>
+                            </a>
+                            <!-- Iep reading comprehension row end -->
+                            <!-- Iep writing row start -->
+                            <a id="academic4link" href="/iep/academiciep/grammar">
+                                <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
+                                    <div class="col-2">
+                                        4
+                                    </div>
+                                    <div class="col-8">
+                                        Academic IEP(Language: Grammar)
+                                    </div>
+                                    <div id="academic4" class="col-2">
+                                <i class="bi bi-circle-fill text-success academic4green"></i>
+                                <i class="bi bi-circle-fill text-danger visually-hidden academic4red" ></i>
                             </div>
-
+                                </div>
+                            </a>
+                            <!-- Iep writing row end -->
+                            <!-- Iep grammar row start -->
+                            <a id="academic5link" href="/iep/academiciep/writing">
+                                <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
+                                    <div class="col-2">
+                                        5
+                                    </div>
+                                    <div class="col-8">
+                                        Academic IEP(Language: Writing)
+                                    </div>
+                                    <div id="academic5" class="col-2">
+                                <i class="bi bi-circle-fill text-success academic5green"></i>
+                                <i class="bi bi-circle-fill text-danger visually-hidden academic5red" ></i>
+                            </div>
+                                </div>
+                            </a>
+                            <!-- Iep grammar row end -->
+                            <!-- Iep math row start -->
+                            <a id="academic6link" href="/iep/academiciep/math">
+                                <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
+                                    <div class="col-2">
+                                        6
+                                    </div>
+                                    <div class="col-8">
+                                        Academic IEP(Language: Math)
+                                    </div>
+                                   <div id="academic6" class="col-2">
+                                <i class="bi bi-circle-fill text-success academic6green"></i>
+                                <i class="bi bi-circle-fill text-danger visually-hidden academic6red"></i>
+                            </div>
+                                </div>
+                            </a>
+                            <!-- Iep math row end -->
+                            <!-- Iep perception row start -->
+                            <a id="academic7link" href="/iep/academiciep/perception">
+                                <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
+                                    <div class="col-2">
+                                        7
+                                    </div>
+                                    <div class="col-8">
+                                        Academic IEP(Language: Perception)
+                                    </div>
+                                    <div id="academic7" class="col-2">
+                                <i class="bi bi-circle-fill text-success academic7green"></i>
+                                <i class="bi bi-circle-fill text-danger visually-hidden academic7red"></i>
+                            </div>
+                                </div>
+                            </a>
+                            <!-- Iep perception row end -->
 
 
                         </div>
-                        <!-- Iep reading row end -->
-
-
 
                     </div>
-
                 </div>
+                <!-- academic IEp options and credits system ends here -->
             </div>
         </div>
     </div>
 
-
-    <footer id="footer" class="pastel-purple">
+    <footer class="pastel-purple">
         <div>
             <div class="container mt-5"> <br>
-                <div class="row d-flex align-items-center justify-content-center text-center">
-
-                    <a href="/Terms and Conditions.pdf" class="text-white col-4 p-5 " style="text-decoration: none;" target="_blank">Terms and conditions</a>
-                    <a href="/returnspolicy.pdf" class="text-white col-4 p-5 " style="text-decoration: none;" target="_blank">Returns Policy</a>
-                    <a href="/Privacy Policy.pdf" class="text-white col-4 p-5 " style="text-decoration: none;" target="_blank">Privacy Policy</a>
-
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="col-6 text-white d-flex py-5" style="justify-content: space-between;">
+                        <a href="/Terms and Conditions.pdf" class="text-white" style="text-decoration: none;"
+                            target="_blank">Terms and conditions</a>
+                        <a href="/returnspolicy.pdf" class="text-white" style="text-decoration: none;"
+                            target="_blank">Returns Policy</a>
+                        <a href="/Privacy Policy.pdf" class="text-white" style="text-decoration: none;"
+                            target="_blank">Privacy Policy</a>
+                    </div>
 
                 </div>
                 <div class="row text-center text-white">
@@ -342,10 +317,13 @@
                 </div>
             </div>
         </div>
-
-
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/iep.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
