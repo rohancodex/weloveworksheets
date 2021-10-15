@@ -145,6 +145,10 @@
                                         <input class="form-check-input" type="checkbox" name="social" autocomplete="on">
                                         <label for="social">Social/ Emotional</label>
                                     </div>
+                                    <div class="col-2">
+                                        <input class="form-check-input" type="checkbox" name="other" autocomplete="on">
+                                        <label for="other">Other</label>
+                                    </div>
 
                                 </div>
                                 <div class="row d-flex align-items-center">
@@ -6751,25 +6755,41 @@
 
                     <!-- Language spelling and phonics ends here -->
                 </div>
-
+                
             </div>
+           
         </section>
         <!-- end of section -->
         <!-- end of the main section -->
         <div class="container bg-white shadow rounded rounded-5x">
             <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <!-- link to review starts here -->
+                    <div class="container d-flex justify-content-center align-items-center">
+                        <a href="#element-to-print">
+                            <h3 class="text-center text-dark btn btn-lg ">
+                                <u>
+                                    Click here to review your inputs
+                                </u>
+                            </h3>
+                        </a>
+                    </div>
+                    <!-- link to review ends here -->
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
                 <div class="col-11">
                     <div class="container-fluid   mx-2  pt-4 px-5 pb-3 d-flex justify-content-center">
-                        <button id="generate-pdf" class="btn text-white rounded rounded-pill px-5" onclick="pdf()"
+                        <button id="generate-pdf" class="btn text-white rounded rounded-pill  mx-2 px-5" onclick="pdf()"
                             style="  background-color: #51548C;">
                             <h4>Generate Pdf</h4>
                         </button>
-                        <button onclick="dashboard()" class="btn text-white rounded rounded-pill px-5"
+                        <button onclick="dashboard()" class="btn text-white rounded rounded-pill  mx-2 px-5"
                             style="  background-color: #51548C;">
                             <h4>Back to Dashboard</h4>
                         </button>
                         <a href="/iep/academiciep/readingcomprehension">
-                            <button class="btn text-white rounded rounded-pill px-5"
+                            <button class="btn text-white rounded rounded-pill  mx-2 px-5"
                                 style="  background-color: #51548C;">
                                 <h4>Next Page</h4>
                             </button>
@@ -6779,8 +6799,22 @@
             </div>
         </div>
     </div>
-
-
+    
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <!-- <img src="..." class="rounded me-2" alt="..."> -->
+                <strong class="me-auto">PDF Generation Started</strong>
+                <small>1min ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                The PDF generation has started. Make sure to save it when available!
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="/js/html2pdf.bundle.min.js"></script>
     <script>
         var element = document.getElementById('element-to-print');
@@ -6840,7 +6874,13 @@
                 if (academic2 === "true") {
                     localStorage.setItem("academic_iep2", "false");
                     academic2 = "false";
+                    var toastTrigger = document.getElementById('generate-pdf')
+                    var toastLiveExample = document.getElementById('liveToast')
+                    var toast = new bootstrap.Toast(toastLiveExample);
+                    toast.show()
+                    
                     await html2pdf().set(opt).from(element).save();
+                    
                 }               
             }
             else {
@@ -6874,10 +6914,10 @@
             $(".PrintMessage").hide();
             $("#AllContent").show();
         }
+
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>

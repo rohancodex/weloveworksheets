@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behavioral IEP</title>
+    <link rel="stylesheet" href="/css/weloveworksheets.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <style>
+        .hvr-fade {
+            /* display: inline-block; */
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            overflow: hidden;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: color, background-color;
+            transition-property: color, background-color;
+        }
+
+        .hvr-fade:hover,
+        .hvr-fade:focus,
+        .hvr-fade:active {
+            background-color: #EFF6FF;
+            color: #111827;
+        }
+
+        a {
+            color: #111827;
+            text-decoration: none;
+        }
+
+        .skroll {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            max-height: 300px;
+        }
+
+        .blockheight {
+            height: 500px;
+        }
+
+        /* footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        } */
+        .bigWrapper {
+            min-height: 100vh;
+        }
+    </style>
+
+
+
+</head>
+
+<body class="bg-light"
+    style="background-image: url(/img/blobs.svg);background-repeat: no-repeat; background-size:cover ;">
+    <div class="bigWrapper">
+        <!-- update nav bar -->
+        <div class="jumbotron bg-white text-dark shadow-sm round">
+            <div class="container-fluid">
+                <div class="row justify-content-right">
+
+                    <div class="col-md-2 d-flex justify-content-center">
+                        <!-- Hav to add logo and stuff -->
+                        <img src="/img/logo.png" alt="" height="55px" width="55px"
+                            class="align-self-start mt-1 pl-5 ml-5">
+                    </div>
+                    <div class="col-md-7 d-flex justify-content-end">
+                        <!-- navigation code from bootstrap lib -->
+                        <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+                            <div class="container-fluid">
+
+                                <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">About us</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">IEP's Info</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Contact Us</a>
+                                        </li>
+
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-2 d-flex justify-content-center mt-2">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ml-5">
+                                <button type="submit" class="btn text-white col-12"
+                                    style=" background-color: #51548C">Subscribe</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- navbar ends here -->
+
+
+        <div class="container my-3 ">
+            <div class="row ">
+                <div class="col-6 ">
+                    <div class="blockheight container d-flex align-items-center  bg-white shadow-sm rounded py-3  ">
+                        <div class="row">
+                            <div class="col-12 text-center text-pastel-purple">
+                                <h3>Welcome to Behavioral IEP</h3>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <img src="/img/dizzy-relaxed-time.png" alt="" height="auto" width="350 px">
+                            </div>
+                            <div class="col-12">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="col-10">
+                                            <p>
+                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus sint ex error neque est dolor obcaecati doloremque asperiores pariatur similique. Iste adipisci officia sint ducimus minima neque, quia suscipit modi.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- academic IEp options and credits system starts here -->
+                <div class="col-6">
+
+                    <div class="container  bg-white shadow-sm rounded py-3 blockheight">
+                        <div class="row">
+                            <div class="col-12 text-center text-pastel-purple">
+                                <h3>Behavioral IEP</h3>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- Iep Options row start -->
+                        <div class="row my-1 p-3  ">
+
+                            <div class="col-2">
+                                Sr no
+                            </div>
+                            <div class="col-8">
+                                <p>Section</p>
+                            </div>
+                            <div class="col-2">
+                                Credits
+                            </div>
+
+
+
+                        </div>
+                        <div class="skroll">
+                            <!-- Iep Options row end -->
+                            <!-- Iep spelling phonics row start -->
+                            <a id="behaviour1link" href="/iep/behaviouraliep/perception">
+                                <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
+                                    <div class="col-2">
+                                        1
+                                    </div>
+                                    <div class="col-8">
+                                        Behavioural IEP(Perception)
+                                    </div>
+                                    <div id="behavioural1" class="col-2 text-center">
+                                        <i class="bi bi-circle-fill text-success behaviour1green"></i>
+                                        <i class="bi bi-circle-fill text-danger visually-hidden behaviour1red"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- Iep spelling phonics row end -->
+                            <!-- Iep reading row start -->
+                            <a id="behaviour2link" href="/iep/behaviouraliep/behavioural">
+                                <div class="row hvr-fade  shadow-sm rounded rounded-5 my-1 p-3  ">
+                                    <div class="col-2">
+                                        2
+                                    </div>
+                                    <div class="col-8">
+                                        Behavioural IEP(Social/Emotional)
+                                    </div>
+                                    <div id="behavioural2" class="col-2 text-center">
+                                        <i class="bi bi-circle-fill text-success behaviour2green"></i>
+                                        <i class="bi bi-circle-fill text-danger visually-hidden behaviour2red"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- Iep reading row end -->
+                        </div>
+
+                    </div>
+                </div>
+                <!-- academic IEp options and credits system ends here -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="pastel-purple">
+        <div>
+            <div class="container mt-5"> <br>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="col-6 text-white d-flex py-5" style="justify-content: space-between;">
+                        <a href="/Terms and Conditions.pdf" class="text-white" style="text-decoration: none;"
+                            target="_blank">Terms and conditions</a>
+                        <a href="/returnspolicy.pdf" class="text-white" style="text-decoration: none;"
+                            target="_blank">Returns Policy</a>
+                        <a href="/Privacy Policy.pdf" class="text-white" style="text-decoration: none;"
+                            target="_blank">Privacy Policy</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="/js/behavioural.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
