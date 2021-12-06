@@ -12,46 +12,37 @@ var session = require('express-session');
 var cookieParser = require('cookie-parser');
 
 
-// console.log(session);
 const studentRoutes = require("./routes/student");
 const homeRoutes = require("./routes/home");
 const authRoutes = require("./routes/auth");
 const iepRoutes = require("./routes/iep");
 const adminRoute = require("./routes/admin.js");
-// const sheet = require('./sheets');
+const paymentRoute = require("./routes/payment");
+
 const mysqlConnection = require('./config/database');
-// const ejsLint = require('ejs-lint');
+
 
 const expressLayouts = require('express-ejs-layouts');
 const files = require('./routes/files');
 const dataRoutes = require('./routes/datatracking');
 const worksheetRoutes = require('./routes/worksheets');
-// const teacher = require('./routes/auth/sess')
+
 app.use(cookieParser());
 
 
 
 
-// var myLogger = function(req, res, next) {
-//         console.log('LOGGED')
-//         next()
-//     }
-// app.use(myLogger);
 
 
 
+// session secret
 app.use(session({
     secret: 'worksheetswelove',
     resave: true,
     saveUninitialized: true,
     maxAge: Date.now() + (30 * 86400 * 1000)
-})); // session secret
+})); 
 
-
-// var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
-// if(fullUrl!== 'http://localhost:3000/login'){
-// res.redirect('/login');
-// }
 
 
 
@@ -60,9 +51,6 @@ app.use(session({
 
 // USE BODY-PARSER MIDDLEWARE
 app.use(express.urlencoded({ extended: false }));
-// app.use(passport.initialize());
-// app.use(passport.session());
-
 
 app.use('/datatracking', dataRoutes);
 app.use('/student', studentRoutes);
@@ -72,6 +60,7 @@ app.use('/worksheet', worksheetRoutes);
 app.use('/files', files);
 app.use('/iep', iepRoutes);
 app.use('/admin', adminRoute);
+app.use('/pricing',paymentRoute );
 app.use(express.json());
 
 // SET VIEW ENGINE
@@ -79,19 +68,18 @@ app.use(expressLayouts);
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-var instance = new Razorpay({
-    key_id: process.env.RAZORPAY_ID,
-    key_secret: process.env.RAZORPAY_SECRET
-  });
-  var options = {
-    amount: 50000,  // amount in the smallest currency unit
-    currency: "USD",
-    receipt: "order_rcptid_11"
-  };
-  instance.orders.create(options, function(err, order) {
-    console.log(order);
-  });
-
+// var instance = new Razorpay({
+//     key_id: process.env.RAZORPAY_ID,
+//     key_secret: process.env.RAZORPAY_SECRET
+//   });
+//   var options = {
+//     amount: 50000,  // amount in the smallest currency unit
+//     currency: "USD",
+//     receipt: "order_rcptid_11"
+//   };
+//   instance.orders.create(options, function(err, order) {
+//     console.log(order);
+//   });
 
 
 

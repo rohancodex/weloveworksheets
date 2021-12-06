@@ -36,7 +36,7 @@ router.post('/register', (req, res) => {
                 let hashedPassword = await bcrypt.hash(password, 8);
 
 
-                mysqlConnection.query('INSERT INTO teachers (name,email,password) values (?,?,?)', [name, email, hashedPassword], (err, results) => {
+                mysqlConnection.query('INSERT INTO teachers (name,email,password,isActive) values (?,?,?,?)', [name, email, hashedPassword,true], (err, results) => {
                     if (err) {
                         mysqlConnection.destroy();
                         console.error(err);

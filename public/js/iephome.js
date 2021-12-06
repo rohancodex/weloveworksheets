@@ -26,7 +26,7 @@ function behaviour(){
     location.href = url2;
 }
 
-alert("behaviour1 : "+behaviour1);
+
 if(behaviour1==="true"||behaviour2==="true"){
     $("#behaviourbuy").addClass('visually-hidden');
     $("#behaviourlink").removeClass('visually-hidden');

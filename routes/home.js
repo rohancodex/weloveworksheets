@@ -20,16 +20,19 @@ router.get('/', (req, res) => {
 })
 
 router.get('/register', (req, res) => {
-    res.render('register', { message: '' });
+    if (!req.session.loggedin) {
+        res.render('register', { message: '' });
+    } 
+    res.redirect('/dashboard'); 
 })
 
 router.get('/login', (req, res) => {
-    if (req.session.loggedin) {
-        res.redirect('/dashboard');
-    } else {
+    if (!req.session.loggedin) {
         res.render('login', { message: '' });
-    }
-});
+    } 
+    res.redirect('/dashboard');
+ 
+    });
 
 router.get('/datatrackingandanalytics', (req, res) => {
     res.render('datatracking-landing');
@@ -39,11 +42,20 @@ router.get('/about', function(req, res) {
     res.render('about');
 });
 
+router.get('/contact', function(req, res) {
+    res.render('contact');
+});
+
+router.post('/contact', function(req, res) {
+    res.render('contact');
+});
+
 router.get('/dashboard', function(req, res) {
     if (!req.session.loggedin) {
         res.redirect('/login');
         return;
     }
+    console.log(req.session.user[0]);
     res.render('dashboard');
 });
 
@@ -53,14 +65,5 @@ router.get('/logout', function(req, res) {
     res.redirect('/');
 });
 
-// router.get('/one', (req, res) => {
-//     mysqlConnection = connectionRequest();
-//     mysqlConnection.query('SELECT * FROM perception;', (err, result) => {
-//         if (err) console.log(err);
-//         mysqlConnection.destroy();
-
-//         res.render('sample', { iep: result });
-//     })
-// })
 
 module.exports = router;

@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
     // console.log(sess);
     //view values
 
-    var sql_correct = 'SELECT dayname(created_at) as day, count(correct) as correct, count(incorrect) as incorrect from datatracking  WHERE YEARWEEK(created_at)=YEARWEEK(NOW()) AND teacher_id = ? GROUP BY dayname(created_at);SELECT full_name,count(correct) as correct,COUNT(incorrect) as incorrect FROM datatracking WHERE teacher_id = ? GROUP BY full_name;';
+    var sql_correct = 'SELECT dayname(created_at) as day, count(correct) as correct, count(incorrect) as incorrect from datatracking  WHERE YEARWEEK(created_at)=YEARWEEK(NOW()) AND teacher_id = ? GROUP BY dayname(created_at);SELECT full_name,count(correct) as correct,COUNT(incorrect) as incorrect FROM datatracking WHERE YEARWEEK(created_at)=YEARWEEK(NOW()) AND teacher_id = ? GROUP BY full_name;';
     mysqlConnection = connectionRequest();
     mysqlConnection.query(sql_correct, [teacher, teacher], (err, results) => {
         if (err) {

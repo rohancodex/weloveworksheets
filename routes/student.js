@@ -18,19 +18,26 @@ var cookieParser = require('cookie-parser');
 
 router.use(cookieParser());
 
-
+const isLoggedIn = require("./authorization.js");
 
 // router.use(flash());
 router.use(bodyParser.urlencoded({ extended: true }));
 
 
 //view and retrieve data
-router.get('/', (req, res) => {
-    // exports sess = req.session; 
-    if (!req.session.loggedin) {
-        res.redirect('/login');
-        return;
-    }
+router.get('/',isLoggedIn, (req, res) => {
+    
+    // if (!req.session.loggedin) {
+    //     res.redirect('/login');
+    //     return;
+    // }
+    // if(req.session.user[0].isActive!==1 && req.session.loggedin){
+    //     res.redirect('/pricing');
+    //     return;
+    // }
+    
+    
+    
     var id = req.session.user[0].id;
     mysqlConnection = connectionRequest();
     mysqlConnection.query('SELECT * FROM students WHERE teacher_id = ?', [id], (err, results) => {
@@ -39,6 +46,7 @@ router.get('/', (req, res) => {
             console.error(err);
         } else {
             mysqlConnection.destroy();
+            console.log(results);
             res.render('student', { title: 'Student List', data: results });
         }
     });
@@ -46,6 +54,10 @@ router.get('/', (req, res) => {
 
 router.get('/edit/(:id)', (req, res) => {
 
+    if(req.session.user[0].isActive!==1 && req.session.loggedin){
+        res.redirect('/pricing');
+        return;
+    }
     console.log(req.session.loggedin);
     let id = req.params.id;
     mysqlConnection = connectionRequest();
@@ -256,8 +268,6 @@ router.post("/create-bulk", upload.any(), (req, res) => {
             });
         }
     });
-
-
 })
 
 //obtain data

@@ -115,7 +115,7 @@ router.post('/', (req, res) => {
             } else {
                 console.log(result);
                 mysqlConnection.destroy();
-                res.redirect('/worksheet');
+                res.redirect('/datatracking');
             }
         })
     } else {
@@ -124,27 +124,4 @@ router.post('/', (req, res) => {
     }
 });
 
-// router.get('/(:typeid)',(req,res)=>{
-//     if(!req.session.loggedin){
-//         res.redirect('/login');
-//         return;
-//     }
-
-
-//     var type = req.type;
-//     var teacher = req.session.user[0].id;
-//     if(type){
-//         var sql = "SELECT * FROM worksheets where type_id = ?;SELECT * FROM students WHERE teacher_id = ?;";
-//         mysqlConnection.query(sql,[type,teacher],(err,results,fields)=>{
-//         if(err) throw err;
-//         console.log(results[1]);
-//         console.log(results[0]);
-//         res.render('worksheets',{result: results[0], student: results[1]});
-//     });
-//     }
-//     // var id = req.params.typeid;
-//     var teacher = req.session.user[0].id;
-//     console.log(teacher);
-
-//     })
 module.exports = router;

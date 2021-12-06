@@ -154,9 +154,9 @@
                                 <!-- end of drop down -->
                             </div>
                             <div class="col-5">
-
-                                <select id="student" onchange=url(this.value); class="form-select pastel-purple border-white " aria-label="Default select example">
-                  <option selected>Select a student</option>
+                                <form id="response" action="" class="hide-submit" method="POST">
+                                <select id="student" onchange=url(this.value); class="form-select pastel-purple border-white " aria-label="Default select example" required>
+                  <option value="" selected>Select a student</option>
                   <% if(student.length> 0) { %>
                     <% student.forEach(student=>{ %>
                       <option value="<%= student.sid%>">
@@ -176,7 +176,7 @@
 
 
                 <!-- this is the row thats holding the word cards -->
-                <form id="response" action="" class="hide-submit" method="POST">
+                
                     <div class="row">
                         <!-- working of the card -->
                         <% if(result.length> 0) { %>
