@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/weloveworksheets.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
+</head>
+<body class="bg-light" style="background-image: url(/img/blobs.svg);">
+     <!-- nav bar -->
+     <div class="jumbotron bg-white text-dark shadow-sm round">
+      <div class="container-fluid">
+          <div class="row justify-content-center">
+
+              <div class="col-md-2 d-flex justify-content-center">
+                  <!-- Hav to add logo and stuff -->
+                  <img src="/img/logo.png" alt="" height="55px" width="55px"
+                      class="align-self-start mt-1 pl-5 ml-5">
+              </div>
+              <div class="col-md-7 d-flex justify-content-end">
+                  <!-- navigation code from bootstrap lib -->
+                  <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+                      <div class="container-fluid">
+
+                          <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+                              <ul class="navbar-nav">
+                                  <li class="nav-item">
+                                      <a class="nav-link " aria-current="page" href="/">Home</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link " aria-current="page" href="/dashboard">Dashboard</a>
+                                  </li>
+                                  <li class="nav-item dropdown">
+                                      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                                          role="button" aria-expanded="false">Datatracking</a>
+                                      <ul class="dropdown-menu">
+                                          <li><a class="dropdown-item " style="color:#51548C"
+                                                  href="/datatrackingandanalytics">Datatracking</a></li>
+                                          <hr>
+                                          <li><a class="dropdown-item" href="/student">Student</a></li>
+                                          <li><a class="dropdown-item" href="/worksheet">Worksheet</a></li>
+                                          <li><a class="dropdown-item" href="/datatracking">Analytics</a></li>
+
+
+
+                                      </ul>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="/iep">IEP</a>
+                                  </li>
+
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="/files">Worksheets</a>
+                                  </li>
+
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="/about">About us</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="/contact">Contact us</a>
+                                  </li>
+                              </ul>
+
+                          </div>
+                      </div>
+                  </nav>
+              </div>
+              <div class="col-2 d-flex justify-content-center mt-2">
+                  <ul class="navbar-nav">
+                      <li class="nav-item ml-5">
+                          <a href="/logout">
+                              <button type="submit" class="btn text-pastel-purple px-4 rounded rounded-pill"
+                                  style=" background-color: #51548C; color:white;">
+                                  Log Out
+                              </button>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- navbar ends here -->
+    
+    <div class="bigWrapper container-fluid">
+        <div class="row">
+            <!-- side nave bar starts here -->
+          <div class="col-2 align-self-left bg-white shadow-sm mt-0 fullHeight py-3" >
+              <!-- <div class="d-flex justify-content-center"> <img src="../public/img/logo.png" alt="" height="75px" width="75px" class="align-self-center"></div> -->
+              
+            <h5 class=" text-pastel-purple pt-2 px-3">Navigations</h5>
+              <ul class="nav flex-column pt-1 px-1">
+                  
+                  <hr>
+                  <li class="nav-item">
+                    <a class="nav-link active text-dark" href="#"><i class="bi bi-person-fill  text-secondary"></i>   Students</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link text-dark" href="#"><i class="bi bi-file-earmark-word-fill text-secondary"></i>   Worksheets</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link text-dark" href="#"><i class="bi bi-graph-up text-secondary"></i>   Data tracking</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link text-dark" href="#"><i class="bi bi-card-list text-secondary"></i>   Iep Info</a>
+                  </li>
+                  
+                  
+                </ul>
+
+                <h5 class=" text-pastel-purple pt-4 px-3">Account</h5>
+                <ul class="nav flex-column pt-1 px-1">
+                    
+                    <hr>
+                    <li class="nav-item">
+                      <a class="nav-link active text-dark" href="#"><i class="bi bi-person-circle text-secondary"></i>   Profile</a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link text-dark" href="#"><i class="bi bi-box-arrow-in-left text-secondary"></i>   Sign out</a>
+                    </li>
+                     
+                    
+                    
+                  </ul>
+  
+               
+              
+          </div>
+          <!-- side bar ends here -->
+          
+          <!-- the main section starts here -->
+          <div class="col-10">
+              <div class="container d-flex justify-content-center">
+                <div class=" bg-white  rounded-5 shadow-sm mt-5 pb-5  col-8">
+                    <div style="background-color: #51548C;" class="text-white text-lg text-center">
+                       <h3  class="py-2"> Profile</h3 > 
+                    </div>
+                    <div class="container">
+                        <div class="row d-flex justify-content-center">
+                         
+                            <div class="col-6 mt-2">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Name:</label>
+                                        <label for="nametext" class="form-label" id="exampleInputEmail1" aria-describedby="emailHelp" >Rayyyy</label>
+
+                                      </div>
+                                    <div class="mb-3">
+                                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="sample@gmail.com">
+                                      
+                                    </div>
+                                    <div class="mb-3">
+                                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                                      <input type="password" class="form-control" id="exampleInputPassword1">
+                                    </div>
+                            
+                                    <button type="submit" class="btn text-white col-12" style=" background-color: #51548C">Update Profile</button>
+                                  </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+          <!-- the main section ends here -->
+        </div>
+    </div>      
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> 
+</body>
+</html>

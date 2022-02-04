@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Payment</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="/css/weloveworksheets.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: "lato", sans-serif;
+            -webkit-font-smoothing: antialiased;
+
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+        }
+
+        .wrapper-card {
+            display: flex;
+            flex-wrap: nowrap;
+            margin: 40px auto;
+            width: 40%;
+        }
+
+        .card {
+
+
+            background: #fff;
+            border-radius: 3px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+            flex: 1;
+            /* margin: 8px;
+        padding: 30px; */
+            position: relative;
+            text-align: center;
+            transition: all 0.5s ease-in-out;
+        }
+
+
+
+
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+
+
+
+
+
+        .card-title h3 {
+            color: rgba(0, 0, 0, 0.3);
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+
+        .card-title h4 {
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+
+        .card-price h1 {
+            font-size: 46px;
+        }
+
+        .card-price h1 sup {
+            font-size: 15px;
+            display: inline-block;
+            margin-left: -20px;
+            width: 10px;
+        }
+
+        .card-price h1 small {
+            color: rgba(0, 0, 0, 0.3);
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body style="background-image: url(/img/blobsBg.png); background-size:cover; background-repeat: no-repeat;">
+    <div style="min-height: 90vh;">
+        <!-- master div -->
+        <div>
+            <!-- nav bar -->
+            <div class="jumbotron bg-white text-dark shadow-sm round">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+
+                        <div class="col-md-2 d-flex justify-content-center">
+                            <!-- Hav to add logo and stuff -->
+                            <img src="/img/logo.png" alt="" height="55px" width="55px"
+                                class="align-self-start mt-1 pl-5 ml-5">
+                        </div>
+                        <div class="col-md-7 d-flex justify-content-end">
+                            <!-- navigation code from bootstrap lib -->
+                            <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+                                <div class="container-fluid">
+
+                                    <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item">
+                                                <a class="nav-link " aria-current="page" href="/">Home</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link " aria-current="page" href="/dashboard">Dashboard</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                                                    role="button" aria-expanded="false">Datatracking</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item " style="color:#51548C"
+                                                            href="/datatrackingandanalytics">Datatracking</a></li>
+                                                    <hr>
+                                                    <li><a class="dropdown-item" href="/student">Student</a></li>
+                                                    <li><a class="dropdown-item" href="/worksheet">Worksheet</a></li>
+                                                    <li><a class="dropdown-item" href="/datatracking">Analytics</a></li>
+
+
+
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/iep">IEP</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/files">Worksheets</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/about">About us</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/contact">Contact us</a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="col-2 d-flex justify-content-center mt-2">
+                            <ul class="navbar-nav">
+                                <li class="nav-item ml-5">
+                                    <a href="/logout">
+                                        <button type="submit" class="btn text-pastel-purple px-4 rounded rounded-pill"
+                                            style=" background-color: #51548C; color:white;">
+                                            Log Out
+                                        </button>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- navbar ends here -->
+            
+            <div class="wrapper-card d-flex align-items-center my-5">
+                <!-- monthly plan starts -->
+                <div class="card pt-5">
+                    <div class="text-pastel-purple">
+                        <h1>Confirmation</h1>
+
+                    </div>
+
+                    <div class="card-description">
+                        
+                        <% if(plan==="monthly"){%>
+                            <p>Are you sure you want to purchase a monthly plan? </p>
+                            <%}else{ %> 
+                            <p>Are you sure you want to purchase an annual plan? </p>
+                        <% } %> 
+                    </div>
+                    <div class="card-price">
+                        <h1>
+                            &#8377; 
+                            <% if(plan==="monthly"){%>
+                                600
+                                <small>/Month</small>
+                            <%}  else{ %> 
+                                6120
+                                
+                            <small>/Year</small>
+                            <% } %> 
+                        </h1>
+
+                    </div>
+                    <div class="card-action">
+                        <div class="buttons mt-3">
+                            <a href="#">
+                                <button id="rzp-button1" class="blob-btn">
+                                    Buy Now
+                                    <span class="blob-btn__inner">
+                                        <span class="blob-btn__blobs">
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                        </span>
+                                    </span>
+                                </button></a>
+                            <br />
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- monthly plan  ends      -->
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- footer starts here -->
+    <footer id="footer" class="pastel-purple">
+        <div>
+            <div class="container mt-5"> <br>
+                <div class="row d-flex align-items-center justify-content-center text-center">
+
+                    <a href="/Terms and Conditions.pdf" class="text-white col-4 p-5 " style="text-decoration: none;"
+                        target="_blank">Terms and conditions</a>
+                    <a href="/returnspolicy.pdf" class="text-white col-4 p-5 " style="text-decoration: none;"
+                        target="_blank">Returns Policy</a>
+                    <a href="/Privacy Policy.pdf" class="text-white col-4 p-5 " style="text-decoration: none;"
+                        target="_blank">Privacy Policy</a>
+
+
+                </div>
+                <div class="row text-center text-white">
+                    <p>TRP Media Services 2021</p>
+                </div>
+            </div>
+        </div>
+        <!-- svg codes for button starts here -->
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                        result="goo">
+                    </feColorMatrix>
+                    <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                </filter>
+            </defs>
+        </svg>
+
+        <!-- svg codes for button ends here -->
+
+
+
+    </footer>
+
+
+
+    <!-- footer ends here -->
+</body>
+
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    var options = {
+        "key": "rzp_test_E1O0oftFBF0DQA", // Enter the Key ID generated from the Dashboard
+        "subscription_id": "<%=sub_id%>",
+        "amount": "60000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+        "currency": "INR",
+        "description": "Test Transaction",
+        "handler": function (response) {
+            // alert(response.razorpay_payment_id);
+            // alert(response.razorpay_signature);
+            console.log(response);
+            axios({
+                method: 'post',
+                url: '/pricing/verification',
+                params: {
+                    payment_id: response.razorpay_payment_id,
+                    signature: response.razorpay_signature
+                }
+            })
+                .then(function (response) {
+                    alert('Payment Verification Success');
+                    window.location = "/dashboard";
+                })
+                .catch(function (error) {
+                    alert(error);
+                });
+        },
+        "prefill": {
+            "name": "<%=name%>",
+            "email": "<%=email%>"
+        },
+        "notes": {
+            "address": "Razorpay Corporate Office"
+        },
+        "theme": {
+            "color": "#51548C"
+        }
+    };
+    var rzp1 = new Razorpay(options);
+    rzp1.on('payment.failed', function (response) {
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+    });
+    document.getElementById('rzp-button1').onclick = function (e) {
+        rzp1.open();
+        e.preventDefault();
+    }
+</script>
+
+</html>

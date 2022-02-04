@@ -4,7 +4,7 @@ const connectionRequest = require("../config/database");
 const path = require('path');
 const app = require('../app');
 const bodyParser = require("body-parser");
-const ejsLint = require('ejs-lint');
+
 const ejs = require('ejs');
 var flash = require('express-flash');
 const multer = require('multer');
@@ -52,13 +52,13 @@ router.get('/',isLoggedIn, (req, res) => {
     });
 });
 
-router.get('/edit/(:id)', (req, res) => {
+router.get('/edit/(:id)',isLoggedIn, (req, res) => {
 
-    if(req.session.user[0].isActive!==1 && req.session.loggedin){
-        res.redirect('/pricing');
-        return;
-    }
-    console.log(req.session.loggedin);
+    // if(req.session.user[0].isActive!==1 && req.session.loggedin){
+    //     res.redirect('/pricing');
+    //     return;
+    // }
+    // console.log(req.session.loggedin);
     let id = req.params.id;
     mysqlConnection = connectionRequest();
     mysqlConnection.query('SELECT * FROM students WHERE sid = ' + id, function(err, rows, fields) {
@@ -91,7 +91,7 @@ router.get('/edit/(:id)', (req, res) => {
 
 
 // update student data
-router.post('/update/:id', function(req, res, next) {
+router.post('/update/:id',isLoggedIn, function(req, res, next) {
     mysqlConnection = connectionRequest();
     let id = req.params.id;
     let full_name = req.body.name;
@@ -151,8 +151,8 @@ router.post('/update/:id', function(req, res, next) {
 
 
 // delete data
-router.get('/delete/(:id)', function(req, res, next) {
-    console.log(req.session.loggedin);
+router.get('/delete/(:id)',isLoggedIn, function(req, res, next) {
+    // console.log(req.session.loggedin);
     let id = req.params.id;
     deleteResponses(id);
     mysqlConnection = connectionRequest();
@@ -195,8 +195,8 @@ function deleteResponses(id) {
 
 
 //post data
-router.post("/create", (req, res) => {
-    console.log(req);
+router.post("/create",isLoggedIn, (req, res) => {
+    // console.log(req);
 
     function capitalizeFirstLetter(str) {
 

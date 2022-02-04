@@ -1,66 +1,77 @@
-// const express = require ('express');
-// const router = express();
-// const serveIndex = require('serve-index');
-// const mysqlConnection = require("../database");
 
-// router.use(
-//     '/ftp',
-//     express.static('public/ftp'),
-//     serveIndex('public/ftp', { icons: true })
-//   )
-
+const logger = require('../config/logger')
 const express = require('express');
 var router = express.Router();
 const connectionRequest = require("../config/database");
 const ejs = require('ejs');
+const isLoggedIn = require("./authorization.js");
 router.use(express.static("public"));
 
-router.get('/', (req, res) => {
-    res.render('index');
+//landing page
+router.get('/', async(req, res) => {
+   await res.render('index');
 })
 
-router.get('/register', (req, res) => {
+//register page
+router.get('/register', async(req, res) => {
     if (!req.session.loggedin) {
-        res.render('register', { message: '' });
+       await res.render('register', { message: '' });
     } 
-    res.redirect('/dashboard'); 
+    else{
+        await res.redirect('/dashboard'); 
+    }
 })
 
-router.get('/login', (req, res) => {
+//login page
+router.get('/login', async(req, res) => {
     if (!req.session.loggedin) {
-        res.render('login', { message: '' });
+        await res.render('login', { message: '' });
     } 
-    res.redirect('/dashboard');
- 
+    else{
+        await res.redirect('/dashboard');
+    }
     });
 
-router.get('/datatrackingandanalytics', (req, res) => {
-    res.render('datatracking-landing');
+//datatracking landing
+router.get('/datatrackingandanalytics', async(req, res) => {
+   await res.render('datatracking-landing');
 })
 
-router.get('/about', function(req, res) {
-    res.render('about');
+//about page
+router.get('/about', async function(req, res) {
+    await res.render('about');
 });
 
-router.get('/contact', function(req, res) {
-    res.render('contact');
+//contact page
+router.get('/contact',async function(req, res) {
+    await res.render('contact');
 });
 
-router.post('/contact', function(req, res) {
-    res.render('contact');
+router.post('/contact',async function(req, res) {
+    await res.render('contact');
 });
 
-router.get('/dashboard', function(req, res) {
-    if (!req.session.loggedin) {
-        res.redirect('/login');
-        return;
+//dashboard
+router.get('/dashboard',isLoggedIn,async function(req, res) {
+    
+    await res.render('dashboard');
+});
+
+//profile
+//landing page
+router.get('/profile',isLoggedIn, async(req, res) => {
+    
+    try{
+        res.render('profile');
     }
-    console.log(req.session.user[0]);
-    res.render('dashboard');
-});
+    catch(err){
+        console.log(err)
+    }
+ })
 
-/* GET users listing. */
-router.get('/logout', function(req, res) {
+//logout
+router.get('/logout',async function(req, res) {
+    
     req.session.destroy();
     res.redirect('/');
 });

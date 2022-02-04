@@ -13,7 +13,7 @@ router.use(bodyParser.urlencoded({ extended: false }));
 
 
 
-router.post('/register', (req, res) => {
+router.post('/register', async(req, res) => {
     console.log(req.body);
 
     const { name, email, password, confirmPassword } = req.body;
@@ -36,7 +36,7 @@ router.post('/register', (req, res) => {
                 let hashedPassword = await bcrypt.hash(password, 8);
 
 
-                mysqlConnection.query('INSERT INTO teachers (name,email,password,isActive) values (?,?,?,?)', [name, email, hashedPassword,true], (err, results) => {
+                mysqlConnection.query('INSERT INTO teachers (name,email,password,isActive) values (?,?,?,?)', [name, email, hashedPassword,false], (err, results) => {
                     if (err) {
                         mysqlConnection.destroy();
                         console.error(err);
@@ -54,9 +54,9 @@ router.post('/register', (req, res) => {
 
 });
 
-router.post('/login', (req, res) => {
+router.post('/login', async(req, res) => {
 
-    console.log(req.body);
+    // console.log(req.body);
     const { email, password } = req.body;
     if (!email || !password) {
         res.redirect('/login');
@@ -87,33 +87,6 @@ router.post('/login', (req, res) => {
     })
 });
 
-// exports.getteacherid(req,res);
 
-// exports.auth = (req,res,next) =>{
-//     if (req.session.loggedin) {
-//         var hour = 3600000;
-//         req.session.cookie.expires = new Date(Date.now() + hour);
-//         console.log('logged');
-//         next()   
-//     } 
-//     else{
-//         res.redirect('/login');
-//     }
-//   };
-
-// exports.authenticate = (req,res)=>{
-
-// } 
-// module.exports.isAuth = function (req,res,next) {
-//     if (req.session.loggedin) {
-//                 var hour = 3600000;
-//                 req.session.cookie.expires = new Date(Date.now() + hour);
-//                 console.log('loggedin');
-//                 return next()
-//             } 
-//             else{
-//                 return;
-//             }
-//           }
 
 module.exports = router;

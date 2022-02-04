@@ -1,11 +1,11 @@
 const express = require("express");
-var createError = require('http-errors');
+
 const app = express();
 const Razorpay = require('razorpay');
 const bodyParser = require("body-parser");
 const ejs = require('ejs');
-var flash = require('express-flash');
 
+const logger = require('./config/logger');
 app.use(express.static("public"));
 var session = require('express-session');
 
@@ -29,12 +29,6 @@ const worksheetRoutes = require('./routes/worksheets');
 
 app.use(cookieParser());
 
-
-
-
-
-
-
 // session secret
 app.use(session({
     secret: 'worksheetswelove',
@@ -42,12 +36,6 @@ app.use(session({
     saveUninitialized: true,
     maxAge: Date.now() + (30 * 86400 * 1000)
 })); 
-
-
-
-
-
-
 
 // USE BODY-PARSER MIDDLEWARE
 app.use(express.urlencoded({ extended: false }));
@@ -68,35 +56,6 @@ app.use(expressLayouts);
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-// var instance = new Razorpay({
-//     key_id: process.env.RAZORPAY_ID,
-//     key_secret: process.env.RAZORPAY_SECRET
-//   });
-//   var options = {
-//     amount: 50000,  // amount in the smallest currency unit
-//     currency: "USD",
-//     receipt: "order_rcptid_11"
-//   };
-//   instance.orders.create(options, function(err, order) {
-//     console.log(order);
-//   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.listen('50000', () => {
     console.log("server started on port 50000");
 });
@@ -106,8 +65,3 @@ module.exports = app;
 
 
 
-// app.use(
-//     '/ftp',
-//     express.static('public'),
-//     serveIndex('public', { icons: true })
-//   )

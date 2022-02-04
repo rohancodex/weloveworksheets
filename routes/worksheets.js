@@ -10,14 +10,14 @@ const app = require('../app');
 const ejs = require('ejs');
 const studentRoutes = require('./student');
 const authRoutes = require("./auth");
+const isLoggedIn = require("./authorization.js");
 
 
-
-router.get('/', (req, res) => {
-    if (!req.session.loggedin) {
-        res.redirect('/login');
-        return;
-    }
+router.get('/',isLoggedIn, (req, res) => {
+    // if (!req.session.loggedin) {
+    //     res.redirect('/login');
+    //     return;
+    // }
     var type = req.query.type;
     var teacher = req.session.user[0].id;
     if (type !== null) {
@@ -29,8 +29,8 @@ router.get('/', (req, res) => {
                 console.log(err);
                 res.redirect('/worksheet');
             } else {
-                console.log(results[1]);
-                console.log(results[0]);
+                // console.log(results[1]);
+                // console.log(results[0]);
                 mysqlConnection.destroy();
                 res.render('worksheets', { result: results[0], student: results[1] });
             }
@@ -53,11 +53,11 @@ router.get('/', (req, res) => {
 
 })
 
-router.post('/', (req, res) => {
-    if (!req.session.loggedin) {
-        res.redirect('/login');
-        return;
-    }
+router.post('/',isLoggedIn, (req, res) => {
+    // if (!req.session.loggedin) {
+    //     res.redirect('/login');
+    //     return;
+    // }
 
     let word_id = req.body.wordid;
     let result = req.body.response;
